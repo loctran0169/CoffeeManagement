@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class Form1 : Form
+    public partial class ORDER : Form
     {
-        public Form1()
+        public ORDER()
         {
             InitializeComponent();
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
