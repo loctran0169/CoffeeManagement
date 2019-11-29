@@ -39,6 +39,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>..\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
@@ -79,6 +82,12 @@
     <Compile Include="CTHD.Designer.cs">
       <DependentUpon>CTHD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="CTHD.resx">
       <DependentUpon>CTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NV.resx">
       <DependentUpon>NV.cs</DependentUpon>
