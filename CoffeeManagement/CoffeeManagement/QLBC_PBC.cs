@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class NV : Form
+    public partial class QLBC_PBC : Form
     {
-        public NV()
+        public QLBC_PBC()
         {
             InitializeComponent();
-        }
-
-        private void bunifuTextBox2_TextChange(object sender, EventArgs e)
-        {
-
         }
     }
 }

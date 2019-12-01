@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class Form1 : Form
+    public partial class QLPN_CTPN : Form
     {
-        public Form1()
+        public QLPN_CTPN()
         {
             InitializeComponent();
         }

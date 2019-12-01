@@ -76,23 +76,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CTHD.cs">
+    <Compile Include="QLBC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CTHD.Designer.cs">
-      <DependentUpon>CTHD.cs</DependentUpon>
+    <Compile Include="QLBC.Designer.cs">
+      <DependentUpon>QLBC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="QLBC_PBC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="QLBC_PBC.Designer.cs">
+      <DependentUpon>QLBC_PBC.cs</DependentUpon>
     </Compile>
-    <Compile Include="NV.cs">
+    <Compile Include="QLHD_CTHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NV.Designer.cs">
-      <DependentUpon>NV.cs</DependentUpon>
+    <Compile Include="QLHD_CTHD.Designer.cs">
+      <DependentUpon>QLHD_CTHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLK.Designer.cs">
+      <DependentUpon>QLK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPN_CTPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPN_CTPN.Designer.cs">
+      <DependentUpon>QLPN_CTPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_NV.Designer.cs">
+      <DependentUpon>QLNV_NV.cs</DependentUpon>
     </Compile>
     <Compile Include="ORDER.cs">
       <SubType>Form</SubType>
@@ -114,14 +132,41 @@
     <Compile Include="QLNV.Designer.cs">
       <DependentUpon>QLNV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CTHD.resx">
-      <DependentUpon>CTHD.cs</DependentUpon>
+    <Compile Include="QLPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPN.Designer.cs">
+      <DependentUpon>QLPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPX.Designer.cs">
+      <DependentUpon>QLPX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPX_CTPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPX_CTPX.Designer.cs">
+      <DependentUpon>QLPX_CTPX.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QLBC.resx">
+      <DependentUpon>QLBC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="QLBC_PBC.resx">
+      <DependentUpon>QLBC_PBC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NV.resx">
-      <DependentUpon>NV.cs</DependentUpon>
+    <EmbeddedResource Include="QLHD_CTHD.resx">
+      <DependentUpon>QLHD_CTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLK.resx">
+      <DependentUpon>QLK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPN_CTPN.resx">
+      <DependentUpon>QLPN_CTPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_NV.resx">
+      <DependentUpon>QLNV_NV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER.resx">
       <DependentUpon>ORDER.cs</DependentUpon>
@@ -140,6 +185,15 @@
     </Compile>
     <EmbeddedResource Include="QLNV.resx">
       <DependentUpon>QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPN.resx">
+      <DependentUpon>QLPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPX.resx">
+      <DependentUpon>QLPX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPX_CTPX.resx">
+      <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

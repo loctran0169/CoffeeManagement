@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class CTHD : Form
+    public partial class QLPX : Form
     {
-        public CTHD()
+        public QLPX()
         {
             InitializeComponent();
-        }
-
-        private void bunifuTextBox2_TextChange(object sender, EventArgs e)
-        {
-
         }
     }
 }
