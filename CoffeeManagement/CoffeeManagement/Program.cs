@@ -16,7 +16,7 @@ namespace CoffeeManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLNV());
+            Application.Run(new frmDangNhap());
         }
         public static bool IsInDesignMode()
         {
