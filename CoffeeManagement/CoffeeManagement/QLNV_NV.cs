@@ -21,5 +21,15 @@ namespace CoffeeManagement
         {
 
         }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

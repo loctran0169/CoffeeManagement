@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class QLBC : Form
+    public partial class frmDangNhap : Form
     {
-        public QLBC()
+        public frmDangNhap()
         {
             InitializeComponent();
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            new CoffeeManagement.transparentBg1(this, new QLBC_PBC());
         }
     }
 }

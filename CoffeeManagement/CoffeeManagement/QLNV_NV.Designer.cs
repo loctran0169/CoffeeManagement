@@ -179,7 +179,7 @@
             // 
             // bunifuRadioButton2
             // 
-            this.bunifuRadioButton2.Checked = true;
+            this.bunifuRadioButton2.Checked = false;
             this.bunifuRadioButton2.Location = new System.Drawing.Point(151, 179);
             this.bunifuRadioButton2.Name = "bunifuRadioButton2";
             this.bunifuRadioButton2.OutlineColor = System.Drawing.Color.Purple;
@@ -415,6 +415,7 @@
             this.bunifuButton1.Size = new System.Drawing.Size(140, 48);
             this.bunifuButton1.TabIndex = 18;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // bunifuButton2
             // 
@@ -447,8 +448,9 @@
             this.bunifuButton2.Size = new System.Drawing.Size(140, 48);
             this.bunifuButton2.TabIndex = 19;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
-            // NV
+            // QLNV_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -474,7 +476,8 @@
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NV";
+            this.Name = "QLNV_NV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NV";
             this.ResumeLayout(false);
 
