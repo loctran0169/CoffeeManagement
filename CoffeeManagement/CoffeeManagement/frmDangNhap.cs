@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class QLNV_NV : Form
+    public partial class frmDangNhap : Form
     {
-        public QLNV_NV()
+        public frmDangNhap()
         {
             InitializeComponent();
-        }
-
-        private void bunifuTextBox2_TextChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

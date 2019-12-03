@@ -114,6 +114,7 @@
             this.bunifuButton1.Size = new System.Drawing.Size(161, 35);
             this.bunifuButton1.TabIndex = 3;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // bunifuCustomDataGrid1
             // 

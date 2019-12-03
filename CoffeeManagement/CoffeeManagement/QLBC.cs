@@ -16,5 +16,10 @@ namespace CoffeeManagement
         {
             InitializeComponent();
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            new CoffeeManagement.transparentBg1(this, new QLBC_PBC());
+        }
     }
 }

@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLBC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,15 @@
     <Compile Include="QLPX_CTPX.Designer.cs">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </Compile>
+    <Compile Include="transparentBg1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transparentBg1.Designer.cs">
+      <DependentUpon>transparentBg1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLBC.resx">
       <DependentUpon>QLBC.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLPX_CTPX.resx">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transparentBg1.resx">
+      <DependentUpon>transparentBg1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
