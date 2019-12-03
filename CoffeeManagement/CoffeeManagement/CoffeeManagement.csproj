@@ -101,6 +101,12 @@
     <Compile Include="QLK.Designer.cs">
       <DependentUpon>QLK.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLMENU_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMENU_ADD.Designer.cs">
+      <DependentUpon>QLMENU_ADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLPN_CTPN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     <Compile Include="QLPX_CTPX.Designer.cs">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </Compile>
+    <Compile Include="QL_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_MENU.Designer.cs">
+      <DependentUpon>QL_MENU.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="QLBC.resx">
       <DependentUpon>QLBC.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLK.resx">
       <DependentUpon>QLK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLMENU_ADD.resx">
+      <DependentUpon>QLMENU_ADD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLPN_CTPN.resx">
       <DependentUpon>QLPN_CTPN.cs</DependentUpon>
@@ -195,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLPX_CTPX.resx">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_MENU.resx">
+      <DependentUpon>QL_MENU.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
