@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -23,7 +24,7 @@ namespace DAL
         public bool them(CTHoaDonDTO bn)
         {
             string query = string.Empty;
-            query += "INSERT INTO cthoadon(mahd,masp,soluong,dongia,thanhtien) VALUES (@mahd,@masp,@soluong,@dongia,@thanhtien)";
+            query += "INSERT INTO cthoadon(mahd,masp,soluong,thanhtien) VALUES (@mahd,@masp,@soluong,@thanhtien)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand cmd = new MySqlCommand())
@@ -34,7 +35,6 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@mahd", bn.MaHD1);
                     cmd.Parameters.AddWithValue("@masp", bn.MaSP1);
                     cmd.Parameters.AddWithValue("@soluong", bn.SoLuong1);
-                    cmd.Parameters.AddWithValue("@dongia", bn.DonGia1);
                     cmd.Parameters.AddWithValue("@thanhtien", bn.ThanhTien1);
                     try
                     {
@@ -92,9 +92,7 @@ namespace DAL
                 string query = null;
                 query += "SELECT s.tensp,dv.tendv,ct.soluong,s.dongia, (ct.soluong*s.dongia) as 'thanhtien'";
                 query += "from sanpham s,cthoadon ct, donvi dv";
-                query += "where s.masp = ct.masp and s.madv = dv.madv and ct.mahd=@mahd";
-                query += "group by t.MaThuoc";
-                //string sql = "SELECT TenThuoc,dv.TenDonVi ,sum(SoLuong) as   'SoLuong', count(TenThuoc) as 'SoLanDung' FROM CHITIETHOADON ct, HOADON hd, THUOC t,DONVITINH dv where month(hd.NgayLap) = @month and hd.MaHD = ct.MaHD and t.MaThuoc = ct.MaThuoc and dv.MaDV = t.MaDV group by t.MaThuoc";
+                query += "where s.masp = ct.masp and s.madv = dv.madv and ct.mahd=@mahd";             
                 MySqlCommand cmd = new MySqlCommand(query, kn);
                 cmd.Parameters.AddWithValue("@mahd", mahd);
                 kn.Open();
@@ -105,8 +103,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                string s = e.Message;
-                int a = 3;
+                MessageBox.Show(e.Message);
             }
             return k;
         }

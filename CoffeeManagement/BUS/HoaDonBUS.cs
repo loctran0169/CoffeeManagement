@@ -39,13 +39,17 @@ namespace BUS
         {
             return bdal.select();
         }
-        public List<HoaDonDTO> selectByKeyWord(string sKeyword)
+        public DataTable selectByKeyWord(string sKeyword)
         {
             return bdal.selectByKeyWord(sKeyword);
         }
         public DataTable loadToDataTable()
         {
             return bdal.loadToDataTable();
+        }
+        public DataTable loadToDataTable(DateTime a, DateTime b)
+        {
+            return bdal.loadToDataTable(a,b);
         }
     }
 }
