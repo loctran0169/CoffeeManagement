@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,6 +85,17 @@ namespace CoffeeManagement
                 dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
             }
+        }
+
+        private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selected = e.RowIndex;
+            HoaDonDTO hd = new HoaDonDTO();
+            hd.MaHD1 = dt.Rows[0][0].ToString();
+            hd.MaNV1 = dt.Rows[0][1].ToString();
+            hd.NgayLap1 = DateTime.Parse(dt.Rows[0][2].ToString());
+            hd.TongTien1 = float.Parse(dt.Rows[0][3].ToString());
+            new CoffeeManagement.transparentBg1(this, new QLHD_CTHD(hd));
         }
     }
 }

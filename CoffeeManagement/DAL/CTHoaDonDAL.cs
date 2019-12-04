@@ -91,7 +91,7 @@ namespace DAL
             {
                 string query = null;
                 query += "SELECT s.tensp,dv.tendv,ct.soluong,s.dongia, (ct.soluong*s.dongia) as 'thanhtien'";
-                query += "from sanpham s,cthoadon ct, donvi dv";
+                query += "from sanpham s,cthoadon ct, donvi dv ";
                 query += "where s.masp = ct.masp and s.madv = dv.madv and ct.mahd=@mahd";             
                 MySqlCommand cmd = new MySqlCommand(query, kn);
                 cmd.Parameters.AddWithValue("@mahd", mahd);
