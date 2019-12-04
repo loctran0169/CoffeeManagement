@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    class PhanQuyenBUS
+    public class PhanQuyenBUS
     {
         private PhanQuyenDAL qhDAL;
         public PhanQuyenBUS()
