@@ -51,7 +51,7 @@ namespace CoffeeManagement
                     us.MatKhau1 = k.Rows[0][2].ToString();
                     us.MaPQ1 = k.Rows[0][3].ToString();
                     MessageBox.Show("Đăng nhập thành công");
-                    QLHD f = new QLHD();
+                    frmGui f = new frmGui(us);
                     this.Hide();
                     f.ShowDialog();//hiển thị form chính                    
                 }

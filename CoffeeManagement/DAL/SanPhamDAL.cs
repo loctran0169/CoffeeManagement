@@ -182,10 +182,8 @@ namespace DAL
             query += " OR (tensp LIKE CONCAT('%',@sKeyword,'%'))";
 
             List<SanPhamDTO> listthuoc = new List<SanPhamDTO>();
-
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
-
                 using (MySqlCommand cmd = new MySqlCommand())
                 {
                     cmd.Connection = con;
