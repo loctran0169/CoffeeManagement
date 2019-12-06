@@ -14,6 +14,7 @@ namespace DTO
         private string MaPQ;
         private string GhiChu;
 
+  
         public string MaTK1 { get => MaTK; set => MaTK = value; }
         public string TaiKhoan1 { get => TaiKhoan; set => TaiKhoan = value; }
         public string MatKhau1 { get => MatKhau; set => MatKhau = value; }
