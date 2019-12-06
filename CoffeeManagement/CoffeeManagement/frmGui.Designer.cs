@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_nhanvien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,7 +44,6 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btn_nhanvien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -96,6 +96,41 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 516);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_nhanvien
+            // 
+            this.btn_nhanvien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nhanvien.BorderRadius = 0;
+            this.btn_nhanvien.ButtonText = "Nhân viên";
+            this.btn_nhanvien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_nhanvien.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_nhanvien.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_nhanvien.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_nhanvien.Iconimage")));
+            this.btn_nhanvien.Iconimage_right = null;
+            this.btn_nhanvien.Iconimage_right_Selected = null;
+            this.btn_nhanvien.Iconimage_Selected = null;
+            this.btn_nhanvien.IconMarginLeft = 0;
+            this.btn_nhanvien.IconMarginRight = 0;
+            this.btn_nhanvien.IconRightVisible = true;
+            this.btn_nhanvien.IconRightZoom = 0D;
+            this.btn_nhanvien.IconVisible = true;
+            this.btn_nhanvien.IconZoom = 90D;
+            this.btn_nhanvien.IsTab = false;
+            this.btn_nhanvien.Location = new System.Drawing.Point(0, 410);
+            this.btn_nhanvien.Name = "btn_nhanvien";
+            this.btn_nhanvien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_nhanvien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_nhanvien.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_nhanvien.selected = false;
+            this.btn_nhanvien.Size = new System.Drawing.Size(200, 40);
+            this.btn_nhanvien.TabIndex = 6;
+            this.btn_nhanvien.Text = "Nhân viên";
+            this.btn_nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhanvien.Textcolor = System.Drawing.Color.White;
+            this.btn_nhanvien.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhanvien.Click += new System.EventHandler(this.btn_nhanvien_Click);
             // 
             // bunifuFlatButton7
             // 
@@ -356,41 +391,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(884, 516);
             this.mainPanel.TabIndex = 2;
-            // 
-            // btn_nhanvien
-            // 
-            this.btn_nhanvien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_nhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nhanvien.BorderRadius = 0;
-            this.btn_nhanvien.ButtonText = "Nhân viên";
-            this.btn_nhanvien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_nhanvien.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_nhanvien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_nhanvien.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_nhanvien.Iconimage")));
-            this.btn_nhanvien.Iconimage_right = null;
-            this.btn_nhanvien.Iconimage_right_Selected = null;
-            this.btn_nhanvien.Iconimage_Selected = null;
-            this.btn_nhanvien.IconMarginLeft = 0;
-            this.btn_nhanvien.IconMarginRight = 0;
-            this.btn_nhanvien.IconRightVisible = true;
-            this.btn_nhanvien.IconRightZoom = 0D;
-            this.btn_nhanvien.IconVisible = true;
-            this.btn_nhanvien.IconZoom = 90D;
-            this.btn_nhanvien.IsTab = false;
-            this.btn_nhanvien.Location = new System.Drawing.Point(0, 410);
-            this.btn_nhanvien.Name = "btn_nhanvien";
-            this.btn_nhanvien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_nhanvien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_nhanvien.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_nhanvien.selected = false;
-            this.btn_nhanvien.Size = new System.Drawing.Size(200, 40);
-            this.btn_nhanvien.TabIndex = 6;
-            this.btn_nhanvien.Text = "Nhân viên";
-            this.btn_nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhanvien.Textcolor = System.Drawing.Color.White;
-            this.btn_nhanvien.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhanvien.Click += new System.EventHandler(this.btn_nhanvien_Click);
             // 
             // frmGui
             // 
