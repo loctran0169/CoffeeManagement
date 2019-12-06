@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -32,7 +33,7 @@ namespace DAL
             try
             {
                 kn.Open();
-                string sql = "select * from nhanvien";
+                string sql = "select manv, tennv, ngaysinh, gioitinh, sdt from nhanvien";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
@@ -169,6 +170,34 @@ namespace DAL
                 }
             }
             return true;
+        }
+
+        public DataTable selectByKeyWord(string sKeyword)
+        {
+
+            string query = string.Empty;
+            query += " SELECT manv, tennv, ngaysinh, gioitinh, sdt";
+            query += " FROM nhanvien";
+            query += " WHERE (manv LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+            query += " OR (upper(tennv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
+            {
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
+                MessageBox.Show(e.Message);
+            }
+            return k;
         }
     }
 }

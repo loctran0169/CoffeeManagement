@@ -37,10 +37,10 @@
             this.dateRight = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.DimGray;
             this.bunifuTextBox1.BorderRadius = 30;
             this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.bunifuTextBox1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuTextBox1.HideSelection = true;
             this.bunifuTextBox1.IconLeft = null;
@@ -195,17 +195,11 @@
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.DodgerBlue;
             this.bunifuDataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellDoubleClick);
             // 
-            // tongtien
+            // MaHD
             // 
-            this.tongtien.DataPropertyName = "tongtien";
-            this.tongtien.HeaderText = "Tổng Tiền";
-            this.tongtien.Name = "tongtien";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "ngaylap";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
+            this.MaHD.DataPropertyName = "mahd";
+            this.MaHD.HeaderText = "Mã HĐ";
+            this.MaHD.Name = "MaHD";
             // 
             // TenNV
             // 
@@ -213,11 +207,17 @@
             this.TenNV.HeaderText = "Nhân Viên";
             this.TenNV.Name = "TenNV";
             // 
-            // MaHD
+            // NgayLap
             // 
-            this.MaHD.DataPropertyName = "mahd";
-            this.MaHD.HeaderText = "Mã HĐ";
-            this.MaHD.Name = "MaHD";
+            this.NgayLap.DataPropertyName = "ngaylap";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // tongtien
+            // 
+            this.tongtien.DataPropertyName = "tongtien";
+            this.tongtien.HeaderText = "Tổng Tiền";
+            this.tongtien.Name = "tongtien";
             // 
             // QLHD
             // 

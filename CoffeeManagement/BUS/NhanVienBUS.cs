@@ -52,5 +52,9 @@ namespace BUS
 
             return re;
         }
+        public DataTable selectByKeyWord(string s)
+        {
+            return nvDAL.selectByKeyWord(s);
+        }
     }
 }

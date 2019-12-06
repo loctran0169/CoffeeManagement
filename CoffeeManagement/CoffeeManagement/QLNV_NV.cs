@@ -12,9 +12,12 @@ namespace CoffeeManagement
 {
     public partial class QLNV_NV : Form
     {
-        public QLNV_NV()
+        private string userId;
+        private bool isDetails;
+        public QLNV_NV(string _userID,bool _isDetails)
         {
             InitializeComponent();
+            this.userId = _userID;this.isDetails = _isDetails;
         }
 
         private void bunifuTextBox2_TextChange(object sender, EventArgs e)
