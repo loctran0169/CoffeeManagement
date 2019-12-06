@@ -23,7 +23,6 @@ namespace DAL
 
         public bool them(TaiKhoanDTO us)
         {
-
             string query = string.Empty;
             query += "INSERT INTO taikhoan (matk,taikhoan,matkhau,mapq,ghichu) VALUES (@matk,@taikhoan,@matkhau,@mapq,@ghichu)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
