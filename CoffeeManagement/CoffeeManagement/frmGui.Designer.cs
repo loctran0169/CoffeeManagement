@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGui));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -138,7 +138,7 @@
             this.btn_nhanvien.IconVisible = true;
             this.btn_nhanvien.IconZoom = 90D;
             this.btn_nhanvien.IsTab = false;
-            this.btn_nhanvien.Location = new System.Drawing.Point(4, 361);
+            this.btn_nhanvien.Location = new System.Drawing.Point(3, 380);
             this.btn_nhanvien.Name = "btn_nhanvien";
             this.btn_nhanvien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_nhanvien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -174,7 +174,7 @@
             this.btn_donvi.IconVisible = true;
             this.btn_donvi.IconZoom = 90D;
             this.btn_donvi.IsTab = false;
-            this.btn_donvi.Location = new System.Drawing.Point(4, 324);
+            this.btn_donvi.Location = new System.Drawing.Point(3, 339);
             this.btn_donvi.Name = "btn_donvi";
             this.btn_donvi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_donvi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -210,7 +210,7 @@
             this.btn_xuathang.IconVisible = true;
             this.btn_xuathang.IconZoom = 90D;
             this.btn_xuathang.IsTab = false;
-            this.btn_xuathang.Location = new System.Drawing.Point(5, 285);
+            this.btn_xuathang.Location = new System.Drawing.Point(3, 298);
             this.btn_xuathang.Name = "btn_xuathang";
             this.btn_xuathang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_xuathang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -246,7 +246,7 @@
             this.btn_nhaphang.IconVisible = true;
             this.btn_nhaphang.IconZoom = 90D;
             this.btn_nhaphang.IsTab = false;
-            this.btn_nhaphang.Location = new System.Drawing.Point(4, 247);
+            this.btn_nhaphang.Location = new System.Drawing.Point(3, 257);
             this.btn_nhaphang.Name = "btn_nhaphang";
             this.btn_nhaphang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_nhaphang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -282,7 +282,7 @@
             this.btn_nguyenlieu.IconVisible = true;
             this.btn_nguyenlieu.IconZoom = 90D;
             this.btn_nguyenlieu.IsTab = false;
-            this.btn_nguyenlieu.Location = new System.Drawing.Point(4, 208);
+            this.btn_nguyenlieu.Location = new System.Drawing.Point(3, 216);
             this.btn_nguyenlieu.Name = "btn_nguyenlieu";
             this.btn_nguyenlieu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_nguyenlieu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -318,7 +318,7 @@
             this.btn_douong.IconVisible = true;
             this.btn_douong.IconZoom = 90D;
             this.btn_douong.IsTab = false;
-            this.btn_douong.Location = new System.Drawing.Point(5, 169);
+            this.btn_douong.Location = new System.Drawing.Point(3, 175);
             this.btn_douong.Name = "btn_douong";
             this.btn_douong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_douong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -354,7 +354,7 @@
             this.btn_hoadon.IconVisible = true;
             this.btn_hoadon.IconZoom = 90D;
             this.btn_hoadon.IsTab = false;
-            this.btn_hoadon.Location = new System.Drawing.Point(3, 139);
+            this.btn_hoadon.Location = new System.Drawing.Point(3, 134);
             this.btn_hoadon.Name = "btn_hoadon";
             this.btn_hoadon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_hoadon.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -390,7 +390,7 @@
             this.btn_banhang.IconVisible = true;
             this.btn_banhang.IconZoom = 90D;
             this.btn_banhang.IsTab = false;
-            this.btn_banhang.Location = new System.Drawing.Point(6, 93);
+            this.btn_banhang.Location = new System.Drawing.Point(3, 93);
             this.btn_banhang.Name = "btn_banhang";
             this.btn_banhang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.btn_banhang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
@@ -424,22 +424,22 @@
             // 
             this.panel_animation.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide;
             this.panel_animation.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.panel_animation.DefaultAnimation = animation3;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.panel_animation.DefaultAnimation = animation4;
             this.panel_animation.TimeStep = 0.03F;
             // 
             // panel3
