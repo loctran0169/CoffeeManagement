@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,11 +24,11 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(this,new QLNV_NV("",false));
+            new CoffeeManagement.transparentBg1(this,new QLNV_NV("","Thêm"));
         }
 
         private void QLNV_Load(object sender, EventArgs e)
-        {
+        {         
             loadData();
         }
 
@@ -37,18 +38,21 @@ namespace CoffeeManagement
         }
         private void loadData()
         {
-            dt = bus.loadToDataTable();
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                bunifuDataGridView1.DataSource = dt;
-            }
-            else
-                MessageBox.Show("Không có thông tin hóa đơn");
+                dt = bus.loadToDataTable();
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));
+            
         }
 
         private void tb_name_nv_OnIconRightClick(object sender, EventArgs e)
         {
+            
             dt = bus.selectByKeyWord(tb_name_nv.Text);
             if (dt.Rows.Count > 0)
             {
@@ -64,8 +68,7 @@ namespace CoffeeManagement
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int selected = e.RowIndex;       
-            new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[0][0].ToString(),true));
+            new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
         }
     }
 }

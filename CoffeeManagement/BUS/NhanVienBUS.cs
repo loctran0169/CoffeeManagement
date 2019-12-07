@@ -56,5 +56,9 @@ namespace BUS
         {
             return nvDAL.selectByKeyWord(s);
         }
+        public DataTable loadOneNhanVien(string s)
+        {
+            return nvDAL.loadOneNhanVien(s);
+        }
     }
 }

@@ -30,8 +30,8 @@ namespace CoffeeManagement
             {
                 QLHD forms = new QLHD();
                 forms.TopLevel = false;
-                panel3.Controls.Clear();
-                panel3.Controls.Add(forms);
+                content.Controls.Clear();
+                content.Controls.Add(forms);
                 forms.Dock = DockStyle.Fill;
                 forms.Show();
             }
@@ -41,29 +41,19 @@ namespace CoffeeManagement
             }
             changeColor(btn_hoadon);
         }
-        private Form kiemtraform(Type ftype)
-        {
-            foreach (Form f in this.panel3.Controls)
-            {
-                if (f.GetType() == ftype)
-                {
-                    return f;
-                }
-            }
-            return null;
-        }
-
+        
         private void btn_nhanvien_Click(object sender, EventArgs e)
         {
             pnl_leftbar.Height = btn_nhanvien.Height;
-            pnl_leftbar.Top = btn_nhanvien.Top;
+            pnl_leftbar.Top = btn_nhanvien.Top;            
+            changeColor(btn_nhanvien);
             Form frm = kiemtraform(typeof(QLNV));
             if (frm == null)
             {
                 QLNV forms = new QLNV();
                 forms.TopLevel = false;
-                panel3.Controls.Clear();
-                panel3.Controls.Add(forms);
+                content.Controls.Clear();
+                content.Controls.Add(forms);
                 forms.Dock = DockStyle.Fill;
                 forms.Show();
             }
@@ -71,12 +61,11 @@ namespace CoffeeManagement
             {
                 frm.Activate();
             }
-            changeColor(btn_nhanvien);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void btn_banhang_Click(object sender, EventArgs e)
@@ -84,6 +73,20 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_banhang.Height;
             pnl_leftbar.Top = btn_banhang.Top;
             changeColor(btn_banhang);
+            Form frm = kiemtraform(typeof(ORDER));
+            if (frm == null)
+            {
+                ORDER forms = new ORDER();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btn_douong_Click(object sender, EventArgs e)
@@ -91,6 +94,20 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_douong.Height;
             pnl_leftbar.Top = btn_douong.Top;
             changeColor(btn_douong);
+            Form frm = kiemtraform(typeof(QLMENU));
+            if (frm == null)
+            {
+                QLMENU forms = new QLMENU();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btn_nguyenlieu_Click(object sender, EventArgs e)
@@ -98,6 +115,20 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_nguyenlieu.Height;
             pnl_leftbar.Top = btn_nguyenlieu.Top;
             changeColor(btn_nguyenlieu);
+            Form frm = kiemtraform(typeof(QLK));
+            if (frm == null)
+            {
+                QLK forms = new QLK();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -110,6 +141,20 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_nhaphang.Height;
             pnl_leftbar.Top = btn_nhaphang.Top;
             changeColor(btn_nhaphang);
+            Form frm = kiemtraform(typeof(QLPN));
+            if (frm == null)
+            {
+                QLPN forms = new QLPN();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btn_xuathang_Click(object sender, EventArgs e)
@@ -117,6 +162,20 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_xuathang.Height;
             pnl_leftbar.Top = btn_xuathang.Top;
             changeColor(btn_xuathang);
+            Form frm = kiemtraform(typeof(QLPX));
+            if (frm == null)
+            {
+                QLPX forms = new QLPX();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btn_donvi_Click(object sender, EventArgs e)
@@ -124,10 +183,24 @@ namespace CoffeeManagement
             pnl_leftbar.Height = btn_donvi.Height;
             pnl_leftbar.Top = btn_donvi.Top;
             changeColor(btn_donvi);
+            Form frm = kiemtraform(typeof(QLDV));
+            if (frm == null)
+            {
+                QLDV forms = new QLDV();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
         public void changeColor(Bunifu.Framework.UI.BunifuFlatButton tb)
         {
-            foreach(Control i in panel2.Controls)
+            foreach(Control i in drawer.Controls)
             {
                 if (i.GetType()==tb.GetType())
                 {
@@ -141,23 +214,54 @@ namespace CoffeeManagement
 
         private void btn_menu_Click(object sender, EventArgs e)
         {
-            if (!isShow)
+            if (isShow)
             {
                 isShow = false;
-                panel2.Width = 200;
-                panel2.Visible = false;
-                
-                panel_animation.ShowSync(panel2);
-                //logo_animation.ShowSync(btn_menu);    
+                drawer.Width = 50;
+                drawer.Visible = false;
+                tshow.Show(drawer);                           
+
             }
             else
+            {
                 isShow = true;
-                //logo_animation.Hide(btn_menu);
-                panel2.Visible = false;
-                panel2.Width = 50;
-                panel_animation.ShowSync(panel2);
+                drawer.Width = 200;
+                drawer.Visible = false;
+                tshow.ShowSync(drawer);
+            }
         }
 
+        private Form kiemtraform(Type ftype)
+        {
+            foreach (Form f in this.content.Controls)
+            {
+                if (f.GetType() == ftype)
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
 
+        private void frmGui_Load(object sender, EventArgs e)
+        {
+            pnl_leftbar.Height = btn_banhang.Height;
+            pnl_leftbar.Top = btn_banhang.Top;
+            changeColor(btn_banhang);
+            Form frm = kiemtraform(typeof(ORDER));
+            if (frm == null)
+            {
+                ORDER forms = new ORDER();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }

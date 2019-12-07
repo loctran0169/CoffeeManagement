@@ -14,6 +14,7 @@ namespace DTO
         private string GioiTinh;
         private string DiaChi;
         private string SDT;
+        private string Email;
         private string MaTK;
         private string GhiChu;
 
@@ -25,5 +26,6 @@ namespace DTO
         public string SDT1 { get => SDT; set => SDT = value; }
         public string MaTK1 { get => MaTK; set => MaTK = value; }
         public string GhiChu1 { get => GhiChu; set => GhiChu = value; }
+        public string Email1 { get => Email; set => Email = value; }
     }
 }

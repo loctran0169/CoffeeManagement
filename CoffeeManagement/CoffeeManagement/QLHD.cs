@@ -35,8 +35,6 @@ namespace CoffeeManagement
                 bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
                 bunifuDataGridView1.DataSource = dt;
             }
-            else
-                MessageBox.Show("Không có thông tin hóa đơn");
         }
 
         private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
