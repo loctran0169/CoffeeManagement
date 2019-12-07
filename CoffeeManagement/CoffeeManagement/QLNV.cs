@@ -23,11 +23,11 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(this,new QLNV_NV("",false));
+            new CoffeeManagement.transparentBg1(this,new QLNV_NV("","Thêm"));
         }
 
         private void QLNV_Load(object sender, EventArgs e)
-        {
+        {         
             loadData();
         }
 
@@ -64,8 +64,7 @@ namespace CoffeeManagement
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int selected = e.RowIndex;       
-            new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[0][0].ToString(),true));
+            new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
         }
     }
 }

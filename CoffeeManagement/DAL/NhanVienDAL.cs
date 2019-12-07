@@ -71,7 +71,7 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += "INSERT INTO NHANVIEN(manv,tennv,ngaysinh,gioitinh,diachi,sdt,matk,ghichu) VALUES (@manv,@tennv,@ngaysinh,@gioitinh,@diachi,@sdt,@matk,@ghichu)";
+            query += "INSERT INTO NHANVIEN(tennv,ngaysinh,gioitinh,diachi,sdt,matk,email,ghichu) VALUES (@tennv,@ngaysinh,@gioitinh,@diachi,@sdt,@matk,@email,@ghichu)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
 
@@ -80,13 +80,13 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@manv", nv.MaNV1);
                     cmd.Parameters.AddWithValue("@tennv", nv.TenNV1);
                     cmd.Parameters.AddWithValue("@ngaysinh", nv.NgaySinh1);
                     cmd.Parameters.AddWithValue("@gioitinh", nv.GioiTinh1);
                     cmd.Parameters.AddWithValue("@diachi", nv.DiaChi1);
                     cmd.Parameters.AddWithValue("@sdt", nv.SDT1);
                     cmd.Parameters.AddWithValue("@matk", nv.MaTK1);
+                    cmd.Parameters.AddWithValue("@email", nv.Email1);
                     cmd.Parameters.AddWithValue("@ghichu", nv.GhiChu1);
                     try
                     {
@@ -108,7 +108,7 @@ namespace DAL
         public bool sua(NhanVienDTO nv)
         {
             string query = string.Empty;
-            query += "UPDATE nhanvien SET manv = @manv, tennv = @tennv, ngaysinh = @ngaysinh, gioitinh = @gioitinh,diachi = @diachi,sdt=@sdt, matk=@matk, ghichu=@ghichu WHERE manv = @manv";
+            query += "UPDATE nhanvien SET tennv = @tennv, ngaysinh = @ngaysinh, gioitinh = @gioitinh,diachi = @diachi,sdt=@sdt, email=@email, ghichu=@ghichu WHERE manv = @manv";
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
 
@@ -123,7 +123,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@gioitinh", nv.GioiTinh1);
                     cmd.Parameters.AddWithValue("@diachi", nv.DiaChi1);
                     cmd.Parameters.AddWithValue("@sdt", nv.SDT1);
-                    cmd.Parameters.AddWithValue("@matk", nv.MaTK1);
+                    cmd.Parameters.AddWithValue("@email", nv.Email1);
                     cmd.Parameters.AddWithValue("@ghichu", nv.GhiChu1);
                     try
                     {
@@ -134,6 +134,7 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
+                        MessageBox.Show(ex.Message);
                         con.Close();
                         return false;
                     }
@@ -196,6 +197,32 @@ namespace DAL
             {
                 return new DataTable();
                 MessageBox.Show(e.Message);
+            }
+            return k;
+        }
+
+        public DataTable loadOneNhanVien(string sKeyword)
+        {
+
+            string query = string.Empty;
+            query += " SELECT *";
+            query += " FROM nhanvien";
+            query += " WHERE manv='" + sKeyword.ToUpper()+ "'";
+
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
+            {
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
             }
             return k;
         }
