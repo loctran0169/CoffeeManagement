@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,18 +38,21 @@ namespace CoffeeManagement
         }
         private void loadData()
         {
-            dt = bus.loadToDataTable();
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                bunifuDataGridView1.DataSource = dt;
-            }
-            else
-                MessageBox.Show("Không có thông tin hóa đơn");
+                dt = bus.loadToDataTable();
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));
+            
         }
 
         private void tb_name_nv_OnIconRightClick(object sender, EventArgs e)
         {
+            
             dt = bus.selectByKeyWord(tb_name_nv.Text);
             if (dt.Rows.Count > 0)
             {
