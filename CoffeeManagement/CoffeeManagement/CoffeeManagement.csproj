@@ -106,6 +106,18 @@
     <Compile Include="QLBC_PBC.Designer.cs">
       <DependentUpon>QLBC_PBC.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDV.Designer.cs">
+      <DependentUpon>QLDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDV_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDV_ADD.Designer.cs">
+      <DependentUpon>QLDV_ADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLHD_CTHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLBC_PBC.resx">
       <DependentUpon>QLBC_PBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDV.resx">
+      <DependentUpon>QLDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDV_ADD.resx">
+      <DependentUpon>QLDV_ADD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLHD_CTHD.resx">
       <DependentUpon>QLHD_CTHD.cs</DependentUpon>
