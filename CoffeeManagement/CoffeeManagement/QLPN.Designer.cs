@@ -33,11 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +61,7 @@
             this.bunifuTextBox1.IconPadding = 10;
             this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(46, 29);
             this.bunifuTextBox1.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
@@ -75,7 +73,7 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(388, 35);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(320, 35);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 3;
             this.bunifuTextBox1.TabStop = false;
@@ -103,7 +101,7 @@
             this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkTurquoise;
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(627, 12);
+            this.bunifuButton1.Location = new System.Drawing.Point(650, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.BorderRadius = 1;
@@ -134,7 +132,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -164,54 +162,21 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 70);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 96);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(776, 370);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(831, 408);
             this.bunifuDataGridView1.TabIndex = 5;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // bunifuButton2
-            // 
-            this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
-            this.bunifuButton2.ButtonText = "Chi tiết phiếu nhập";
-            this.bunifuButton2.ButtonTextMarginLeft = 0;
-            this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IconPadding = 10;
-            this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
-            this.bunifuButton2.IdleBorderRadius = 35;
-            this.bunifuButton2.IdleBorderThickness = 0;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.DarkTurquoise;
-            this.bunifuButton2.IdleIconLeftImage = null;
-            this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(444, 12);
-            this.bunifuButton2.Name = "bunifuButton2";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties2;
-            this.bunifuButton2.Size = new System.Drawing.Size(161, 35);
-            this.bunifuButton2.TabIndex = 6;
-            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // QLPN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bunifuButton2);
+            this.ClientSize = new System.Drawing.Size(855, 516);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.bunifuTextBox1);
@@ -228,6 +193,5 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
     }
 }

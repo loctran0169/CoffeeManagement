@@ -34,11 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLDV));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -94,14 +95,64 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 72);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 96);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(776, 366);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(831, 408);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // MaDV
+            // 
+            this.MaDV.DataPropertyName = "MaDV";
+            this.MaDV.HeaderText = "Mã đơn vị";
+            this.MaDV.Name = "MaDV";
+            // 
+            // TenDV
+            // 
+            this.TenDV.DataPropertyName = "TenDV";
+            this.TenDV.HeaderText = "Tên đơn vị";
+            this.TenDV.Name = "TenDV";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.ButtonText = "Thêm phiếu xuất";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.bunifuButton1.IdleBorderRadius = 35;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkTurquoise;
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Location = new System.Drawing.Point(650, 29);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.Size = new System.Drawing.Size(161, 35);
+            this.bunifuButton1.TabIndex = 13;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuTextBox1
             // 
@@ -125,7 +176,7 @@
             this.bunifuTextBox1.IconPadding = 10;
             this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(46, 29);
             this.bunifuTextBox1.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
@@ -137,74 +188,23 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(363, 35);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(320, 35);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 33;
+            this.bunifuTextBox1.TabIndex = 12;
             this.bunifuTextBox1.TabStop = false;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox1.TextMarginLeft = 5;
-            this.bunifuTextBox1.TextPlaceholder = "Nhập mã hoặc tên đơn vị...";
+            this.bunifuTextBox1.TextPlaceholder = "Nhập mã phiếu...";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.OnIconRightClick += new System.EventHandler(this.bunifuTextBox1_OnIconRightClick);
-            // 
-            // bunifuButton1
-            // 
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.ButtonText = "Thêm mới";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
-            this.bunifuButton1.IdleBorderRadius = 35;
-            this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkTurquoise;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(640, 12);
-            this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
-            this.bunifuButton1.Size = new System.Drawing.Size(133, 35);
-            this.bunifuButton1.TabIndex = 32;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MaDV
-            // 
-            this.MaDV.DataPropertyName = "MaDV";
-            this.MaDV.HeaderText = "Mã đơn vị";
-            this.MaDV.Name = "MaDV";
-            // 
-            // TenDV
-            // 
-            this.TenDV.DataPropertyName = "TenDV";
-            this.TenDV.HeaderText = "Tên đơn vị";
-            this.TenDV.Name = "TenDV";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // QLDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bunifuTextBox1);
+            this.ClientSize = new System.Drawing.Size(855, 516);
             this.Controls.Add(this.bunifuButton1);
+            this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.bunifuDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDV";
@@ -218,10 +218,10 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
     }
 }

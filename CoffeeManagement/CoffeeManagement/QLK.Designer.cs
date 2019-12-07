@@ -65,7 +65,7 @@
             this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkTurquoise;
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(505, 9);
+            this.bunifuButton1.Location = new System.Drawing.Point(537, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.BorderRadius = 1;
@@ -100,7 +100,7 @@
             this.bunifuTextBox3.IconPadding = 10;
             this.bunifuTextBox3.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox3.IconRight")));
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox3.Location = new System.Drawing.Point(12, 9);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(46, 29);
             this.bunifuTextBox3.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(100, 35);
@@ -112,7 +112,7 @@
             this.bunifuTextBox3.SelectionLength = 0;
             this.bunifuTextBox3.SelectionStart = 0;
             this.bunifuTextBox3.ShortcutsEnabled = true;
-            this.bunifuTextBox3.Size = new System.Drawing.Size(363, 35);
+            this.bunifuTextBox3.Size = new System.Drawing.Size(320, 35);
             this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox3.TabIndex = 31;
             this.bunifuTextBox3.TabStop = false;
@@ -140,7 +140,7 @@
             this.bunifuButton2.IdleFillColor = System.Drawing.Color.DarkTurquoise;
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(658, 9);
+            this.bunifuButton2.Location = new System.Drawing.Point(690, 29);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 1;
@@ -207,12 +207,12 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(9, 62);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 96);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(769, 375);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(831, 408);
             this.bunifuDataGridView1.TabIndex = 33;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -246,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(793, 450);
+            this.ClientSize = new System.Drawing.Size(855, 516);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.bunifuTextBox3);

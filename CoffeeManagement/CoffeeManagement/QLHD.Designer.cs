@@ -66,7 +66,7 @@
             this.bunifuTextBox1.IconPadding = 10;
             this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.Location = new System.Drawing.Point(33, 31);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(45, 31);
             this.bunifuTextBox1.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
@@ -95,7 +95,7 @@
             this.dataLeft.ForeColor = System.Drawing.Color.Black;
             this.dataLeft.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dataLeft.FormatCustom = "dd/MM/yyyy";
-            this.dataLeft.Location = new System.Drawing.Point(349, 31);
+            this.dataLeft.Location = new System.Drawing.Point(402, 33);
             this.dataLeft.Name = "dataLeft";
             this.dataLeft.Size = new System.Drawing.Size(169, 36);
             this.dataLeft.TabIndex = 1;
@@ -109,7 +109,7 @@
             this.dateRight.ForeColor = System.Drawing.Color.Black;
             this.dateRight.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateRight.FormatCustom = "dd/MM/yyyy";
-            this.dateRight.Location = new System.Drawing.Point(588, 31);
+            this.dateRight.Location = new System.Drawing.Point(641, 33);
             this.dateRight.Name = "dateRight";
             this.dateRight.Size = new System.Drawing.Size(169, 36);
             this.dateRight.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(538, 41);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(591, 43);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(29, 16);
             this.bunifuCustomLabel1.TabIndex = 5;
@@ -185,12 +185,12 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 90);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 96);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(776, 360);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(831, 408);
             this.bunifuDataGridView1.TabIndex = 6;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.DodgerBlue;
             this.bunifuDataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellDoubleClick);
@@ -224,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(855, 516);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.dateRight);
