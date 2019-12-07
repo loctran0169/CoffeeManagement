@@ -48,5 +48,10 @@ namespace BUS
         {
             return bdal.loadDuLieuDonViTinh();
         }
+
+        public DataTable SelectByKeyWordDV(string sKeyword)
+        {
+            return bdal.selectByKeyWordDV(sKeyword);
+        }
     }
 }

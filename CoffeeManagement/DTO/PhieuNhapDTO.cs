@@ -21,3 +21,6 @@ namespace DTO
         public float TongTien1 { get => TongTien; set => TongTien = value; }
     }
 }
+
+
+
