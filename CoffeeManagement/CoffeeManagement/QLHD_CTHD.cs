@@ -30,10 +30,15 @@ namespace CoffeeManagement
 
         public void loadData()
         {
-            dt = bus.loadData(hd.MaHD1);
-            if (dt == null)
-                dt = new DataTable();
-            bunifuDataGridView1.DataSource = dt;
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dt = bus.loadData(hd.MaHD1);
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));
         }
     }
 }

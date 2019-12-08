@@ -16,5 +16,10 @@ namespace CoffeeManagement
         {
             InitializeComponent();
         }
+
+        private void QLPX_CTPX_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

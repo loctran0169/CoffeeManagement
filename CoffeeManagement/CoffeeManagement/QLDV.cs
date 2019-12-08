@@ -21,47 +21,58 @@ namespace CoffeeManagement
             InitializeComponent();
         }
 
-
-
-        public void loadData()
-        {
-            dt = bus.loadDuLieuDonViTinh();
-            if (dt.Rows.Count > 0)
-            {
-                bunifuDataGridView1.DataSource = dt;
-            }
-            else
-                MessageBox.Show("Không có thông tin đơn vị");
-         
-        }
-
         private void QLDV_Load(object sender, EventArgs e)
         {
             loadData();
         }
 
+        public void loadData()
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dt = bus.loadDuLieuDonViTinh();
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));         
+        }
+    
         private void bunifuTextBox1_OnIconRightClick(object sender, EventArgs e)
         {
-            dt = bus.SelectByKeyWordDV(bunifuTextBox1.Text);
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-
+                dt = bus.SelectByKeyWordDV(tb_name.Text);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
-            }
+            }));
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            new CoffeeManagement.transparentBg1(new QLDV_ADD());
+        }
+
+        private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-
-        //private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int selected = e.RowIndex;
-        //    HoaDonDTO hd = new HoaDonDTO();
-        //    hd.MaHD1 = dt.Rows[0][0].ToString();
-        //    hd.MaNV1 = dt.Rows[0][1].ToString();
-        //    hd.NgayLap1 = DateTime.Parse(dt.Rows[0][2].ToString());
-        //    hd.TongTien1 = float.Parse(dt.Rows[0][3].ToString());
-        //    new CoffeeManagement.transparentBg1(this, new QLHD_CTHD(hd));
-        //}
-
+        private void tb_name_OnIconRightClick(object sender, EventArgs e)
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dt = bus.SelectByKeyWordDV(tb_name.Text);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
+                bunifuDataGridView1.DataSource = dt;
+            }));
+        }
     }
 }

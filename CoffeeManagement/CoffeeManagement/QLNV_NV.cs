@@ -165,6 +165,7 @@ namespace CoffeeManagement
             else
                 MessageBox.Show("không có");
         }
+
         public void enableAll()
         {
             tb_name.Enabled = true;
@@ -176,6 +177,7 @@ namespace CoffeeManagement
             cb_nu.Enabled = true;
             date_birth.Enabled = true;
         }
+
         public void disableAll()
         {
             tb_name.Enabled = false;
