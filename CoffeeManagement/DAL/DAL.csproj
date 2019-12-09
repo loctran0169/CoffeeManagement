@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CTHoaDonDAL.cs" />
+    <Compile Include="CTPhieuXuatDAL.cs" />
     <Compile Include="DonViDAL.cs" />
     <Compile Include="HoaDonDAL.cs" />
     <Compile Include="NguyenLieuDAL.cs" />

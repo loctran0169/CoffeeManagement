@@ -12,9 +12,20 @@ namespace CoffeeManagement
 {
     public partial class QLPN_CTPN : Form
     {
-        public QLPN_CTPN()
+        private string mapn;
+        public QLPN_CTPN(string _mapn)
         {
             InitializeComponent();
+            this.mapn = _mapn;
+        }
+
+        private void QLPN_CTPN_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+        private void loadData()
+        {
+
         }
     }
 }

@@ -51,5 +51,15 @@ namespace CoffeeManagement
             }));
 
         }
+
+        private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new CoffeeManagement.transparentBg1(this, new QLPX_CTPX(dt.Rows[e.RowIndex][0].ToString()));
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
