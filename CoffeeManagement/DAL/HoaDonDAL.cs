@@ -172,12 +172,11 @@ namespace DAL
 
         public DataTable selectByKeyWord(string sKeyword)
         {
-
             string query = string.Empty;
-            query += " SELECT *";
-            query += " FROM hoadon";
-            query += " WHERE (mahd LIKE CONCAT('%','"+sKeyword.ToUpper()+"','%'))";
-            query += " OR (manv LIKE CONCAT('%','"+sKeyword.ToUpper()+"','%'))";
+            query += " SELECT hd.mahd, nv.tennv, hd.ngaylap, hd.tongtien";
+            query += " FROM hoadon hd, nhanvien nv";
+            query += " WHERE ((upper(hd.mahd) LIKE CONCAT('%','"+sKeyword.ToUpper()+ "','%')) and hd.manv=nv.manv)";
+            query += " OR ((upper(nv.tennv) LIKE CONCAT('%','"+sKeyword.ToUpper()+ "','%')) and hd.manv=nv.manv)";
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);

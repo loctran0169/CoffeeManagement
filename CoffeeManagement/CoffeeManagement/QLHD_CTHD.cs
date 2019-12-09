@@ -24,16 +24,24 @@ namespace CoffeeManagement
             tb_mahd_ct.Text = hs.MaHD1;
             tb_nv_cthd.Text = hs.MaNV1;
             tb_tien_cthd.Text = hs.TongTien1.ToString()+"Đ";
-            bunifuTextBox2.Text = hs.NgayLap1.ToString("dd-MM-yyyy");
+            bunifuTextBox2.Text = hs.NgayLap1.ToString("dd-MM-yyyy");           
+        }
+
+        private void QLHD_CTHD_Load(object sender, EventArgs e)
+        {
             loadData();
         }
 
         public void loadData()
         {
-            dt = bus.loadData(hd.MaHD1);
-            if (dt == null)
-                dt = new DataTable();
-            bunifuDataGridView1.DataSource = dt;
-        }
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dt = bus.loadData(hd.MaHD1);
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));
+        }       
     }
 }

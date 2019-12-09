@@ -26,7 +26,7 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += "INSERT INTO donvi (madv,tendv,ghichu) VALUES (@madv,@tendv,@ghichu)";
+            query += "INSERT INTO donvi (tendv,ghichu) VALUES (@tendv,@ghichu)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
 
@@ -35,7 +35,6 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@madv", dv.MaDV1);
                     cmd.Parameters.AddWithValue("@tendv", dv.TenDV1);
                     cmd.Parameters.AddWithValue("@ghichu", dv.GhiChu1);
                     try
@@ -163,7 +162,6 @@ namespace DAL
             }
             return listdonvi;
         }
-
 
         public List<DonViDTO> selectByKeyWord(string sKeyword)
         {

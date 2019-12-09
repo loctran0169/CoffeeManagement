@@ -29,60 +29,54 @@ namespace CoffeeManagement
         }
         public void loadData()
         {
-            dt = bus.loadToDataTable();
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                bunifuDataGridView1.DataSource = dt;
-            }
-        }
-
-        private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Console.WriteLine("vào");
-            }          
+                dt = bus.loadToDataTable();
+                if (dt.Rows.Count > 0)
+                {
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.DataSource = dt;
+                }
+            }));
         }
 
         private void bunifuTextBox1_OnIconRightClick(object sender, EventArgs e)
         {
-            dt = bus.selectByKeyWord(bunifuTextBox1.Text);
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dt = bus.selectByKeyWord(bunifuTextBox1.Text);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
-            }
+            }));       
         }
 
         private void dataLeft_onValueChanged(object sender, EventArgs e)
         {
-            dt = bus.loadToDataTable(dataLeft.Value.Date, dateRight.Value.Date);
-            if (dt != null && dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dt = bus.loadToDataTable(dataLeft.Value.Date, dateRight.Value.Date);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
-            }
-            else
-            {
-                dt.Rows.Clear();
-                bunifuDataGridView1.DataSource = dt;
-            }
+            }));
         }
 
         private void dateRight_onValueChanged(object sender, EventArgs e)
         {
-            dt = bus.loadToDataTable(dataLeft.Value.Date,dateRight.Value.Date);
-            if (dt != null && dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dt = bus.loadToDataTable(dataLeft.Value.Date, dateRight.Value.Date);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
-            }
-            else
-            {
-                dt.Rows.Clear();
-                bunifuDataGridView1.DataSource = dt;
-            }
+            }));
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

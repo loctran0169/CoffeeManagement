@@ -32,10 +32,6 @@ namespace CoffeeManagement
             loadData();
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-           // MessageBox.Show(dataGridNhanVien.SelectedRows.Count.ToString());
-        }
         private void loadData()
         {
             this.Invoke(new MethodInvoker(delegate
@@ -52,18 +48,16 @@ namespace CoffeeManagement
 
         private void tb_name_nv_OnIconRightClick(object sender, EventArgs e)
         {
-            
-            dt = bus.selectByKeyWord(tb_name_nv.Text);
-            if (dt.Rows.Count > 0)
+            this.Invoke(new MethodInvoker(delegate
             {
-                bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                
-            }
-            else
-            {
-                dt.Rows.Clear();
-            }
-            bunifuDataGridView1.DataSource = dt;
+                dt = bus.selectByKeyWord(tb_name_nv.Text);
+                if (dt.Rows.Count > 0)
+                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
+                    dt.Rows.Clear();
+                bunifuDataGridView1.DataSource = dt;
+            }));
+           
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -11,67 +11,21 @@ using System.Windows.Forms;
 
 namespace DAL
 {
-    public class NhanVienDAL
+    public class PhieuXuatDAL
     {
         private string connectionString;
 
-        public string ConnectionString
-        {
-            get { return connectionString; }
-            set { connectionString = value; }
-        }
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
 
-        public NhanVienDAL()
+        public PhieuXuatDAL()
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-
-        public DataTable loadDuLieuNhanVien()
-        {
-            DataTable k = new DataTable();
-            MySqlConnection kn = new MySqlConnection(connectionString);
-            try
-            {
-                kn.Open();
-                string sql = "select manv, tennv, ngaysinh, gioitinh, sdt from nhanvien";
-                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
-                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
-                kn.Close();
-                dt.Dispose();
-
-            }
-            catch (Exception e)
-            {
-
-            }
-            return k;
-        }
-
-        public DataTable loadDuLieuNhanVienTuMaUsers(string MaNv)
-        {
-            DataTable k = new DataTable();
-            MySqlConnection kn = new MySqlConnection(connectionString);
-
-            try
-            {
-                kn.Open();
-                string sql = "select * from nhanvien where MaNV='" + MaNv + "'";
-                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
-                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
-
-            }
-            catch (Exception e)
-            {
-
-            }
-            return k;
-        }
-
-        public bool them(NhanVienDTO nv)
+        public bool them(PhieuXuatDTO bn)
         {
 
             string query = string.Empty;
-            query += "INSERT INTO NHANVIEN(tennv,ngaysinh,gioitinh,diachi,sdt,matk,email,ghichu) VALUES (@tennv,@ngaysinh,@gioitinh,@diachi,@sdt,@matk,@email,@ghichu)";
+            query += "INSERT INTO phieuxuat (manv,ngayxuat,tongtien,tinhtrang) VALUES (@manv,@ngayxuat,@tongtien,@tinhtrang)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
 
@@ -80,14 +34,10 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@tennv", nv.TenNV1);
-                    cmd.Parameters.AddWithValue("@ngaysinh", nv.NgaySinh1);
-                    cmd.Parameters.AddWithValue("@gioitinh", nv.GioiTinh1);
-                    cmd.Parameters.AddWithValue("@diachi", nv.DiaChi1);
-                    cmd.Parameters.AddWithValue("@sdt", nv.SDT1);
-                    cmd.Parameters.AddWithValue("@matk", nv.MaTK1);
-                    cmd.Parameters.AddWithValue("@email", nv.Email1);
-                    cmd.Parameters.AddWithValue("@ghichu", nv.GhiChu1);
+                    cmd.Parameters.AddWithValue("@manv", bn.MaNV1);
+                    cmd.Parameters.AddWithValue("@ngayxuat", bn.NgayXuat1);
+                    cmd.Parameters.AddWithValue("@tongtien", bn.TongTien1);
+                    cmd.Parameters.AddWithValue("@tinhtrang", bn.TinhTrang1);
                     try
                     {
                         con.Open();
@@ -97,7 +47,6 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
                         con.Close();
                         return false;
                     }
@@ -106,10 +55,10 @@ namespace DAL
             return true;
         }
 
-        public bool sua(NhanVienDTO nv)
+        public bool sua(PhieuXuatDTO bn)
         {
             string query = string.Empty;
-            query += "UPDATE nhanvien SET tennv = @tennv, ngaysinh = @ngaysinh, gioitinh = @gioitinh,diachi = @diachi,sdt=@sdt, email=@email, ghichu=@ghichu WHERE manv = @manv";
+            query += "UPDATE phieuxuat SET manv = @manv,ngayxuat=@ngayxuat,tongtien = @tongtien, tinhtrang=@tinhtrang  WHERE mapx = @mapx";
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
 
@@ -118,14 +67,11 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@manv", nv.MaNV1);
-                    cmd.Parameters.AddWithValue("@tennv", nv.TenNV1);
-                    cmd.Parameters.AddWithValue("@ngaysinh", nv.NgaySinh1);
-                    cmd.Parameters.AddWithValue("@gioitinh", nv.GioiTinh1);
-                    cmd.Parameters.AddWithValue("@diachi", nv.DiaChi1);
-                    cmd.Parameters.AddWithValue("@sdt", nv.SDT1);
-                    cmd.Parameters.AddWithValue("@email", nv.Email1);
-                    cmd.Parameters.AddWithValue("@ghichu", nv.GhiChu1);
+                    cmd.Parameters.AddWithValue("@manv", bn.MaNV1);
+                    cmd.Parameters.AddWithValue("@ngayxuat", bn.NgayXuat1);
+                    cmd.Parameters.AddWithValue("@tongtien", bn.TongTien1);
+                    cmd.Parameters.AddWithValue("@tinhtrang", bn.TinhTrang1);
+
                     try
                     {
                         con.Open();
@@ -135,7 +81,6 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
                         con.Close();
                         return false;
                     }
@@ -144,10 +89,10 @@ namespace DAL
             return true;
         }
 
-        public bool xoa(NhanVienDTO nvDTO)
+        public bool xoa(PhieuXuatDTO bn)
         {
             string query = string.Empty;
-            query += "DELETE FROM nhanvien WHERE manv = @manv";
+            query += "DELETE FROM phieuxuat WHERE mapx = @mapx";
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
 
@@ -156,7 +101,7 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@manv", nvDTO.MaNV1);
+                    cmd.Parameters.AddWithValue("@mapx", bn.MaPX1);
                     try
                     {
                         con.Open();
@@ -176,12 +121,11 @@ namespace DAL
 
         public DataTable selectByKeyWord(string sKeyword)
         {
-
             string query = string.Empty;
-            query += " SELECT manv, tennv, ngaysinh, gioitinh, sdt";
-            query += " FROM nhanvien";
-            query += " WHERE (manv LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
-            query += " OR (upper(tennv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+            query += " SELECT px.mapx, nv.tennv, px.ngayxuat, px.tongtien,px.tinhtrang";
+            query += " FROM phieuxuat px, nhanvien nv";
+            query += " WHERE ((upper(px.mapx) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and px.manv=nv.manv)";
+            query += " OR ((upper(nv.tennv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and px.manv=nv.manv)";
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
@@ -196,26 +140,21 @@ namespace DAL
             }
             catch (Exception e)
             {
-                return new DataTable();
                 MessageBox.Show(e.Message);
             }
             return k;
         }
 
-        public DataTable loadOneNhanVien(string sKeyword)
+        public DataTable loadToDataTable()
         {
-
-            string query = string.Empty;
-            query += " SELECT *";
-            query += " FROM nhanvien";
-            query += " WHERE manv='" + sKeyword.ToUpper()+ "'";
-
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
             try
             {
                 kn.Open();
-                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                string sql = "select mapx, tennv, ngayxuat, tongtien, tinhtrang from phieuxuat px, nhanvien nv where px.manv = nv.manv";
+                //string sql = "select * from hoadon";
+                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
                 dt.Dispose();
@@ -223,7 +162,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                return new DataTable();
+                MessageBox.Show(e.Message);
             }
             return k;
         }

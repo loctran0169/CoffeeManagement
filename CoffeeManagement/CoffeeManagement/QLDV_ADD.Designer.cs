@@ -34,7 +34,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tb_name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.tb_note = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
@@ -84,8 +84,7 @@
             this.tb_name.ShortcutsEnabled = true;
             this.tb_name.Size = new System.Drawing.Size(296, 35);
             this.tb_name.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_name.TabIndex = 4;
-            this.tb_name.TabStop = false;
+            this.tb_name.TabIndex = 0;
             this.tb_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_name.TextMarginLeft = 5;
             this.tb_name.TextPlaceholder = "Họ và tên";
@@ -100,48 +99,47 @@
             this.bunifuCustomLabel7.TabIndex = 30;
             this.bunifuCustomLabel7.Text = "Ghi chú:";
             // 
-            // bunifuTextBox3
+            // tb_note
             // 
-            this.bunifuTextBox3.AcceptsReturn = false;
-            this.bunifuTextBox3.AcceptsTab = false;
-            this.bunifuTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox3.BackgroundImage")));
-            this.bunifuTextBox3.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox3.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox3.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox3.BorderColorIdle = System.Drawing.Color.DimGray;
-            this.bunifuTextBox3.BorderRadius = 30;
-            this.bunifuTextBox3.BorderThickness = 1;
-            this.bunifuTextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox3.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuTextBox3.HideSelection = true;
-            this.bunifuTextBox3.IconLeft = null;
-            this.bunifuTextBox3.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox3.IconPadding = 10;
-            this.bunifuTextBox3.IconRight = null;
-            this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox3.Location = new System.Drawing.Point(12, 116);
-            this.bunifuTextBox3.MaximumSize = new System.Drawing.Size(400, 100);
-            this.bunifuTextBox3.MaxLength = 32767;
-            this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(100, 35);
-            this.bunifuTextBox3.Modified = false;
-            this.bunifuTextBox3.Name = "bunifuTextBox3";
-            this.bunifuTextBox3.PasswordChar = '\0';
-            this.bunifuTextBox3.ReadOnly = false;
-            this.bunifuTextBox3.SelectedText = "";
-            this.bunifuTextBox3.SelectionLength = 0;
-            this.bunifuTextBox3.SelectionStart = 0;
-            this.bunifuTextBox3.ShortcutsEnabled = true;
-            this.bunifuTextBox3.Size = new System.Drawing.Size(296, 57);
-            this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox3.TabIndex = 29;
-            this.bunifuTextBox3.TabStop = false;
-            this.bunifuTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox3.TextMarginLeft = 5;
-            this.bunifuTextBox3.TextPlaceholder = "Note";
-            this.bunifuTextBox3.UseSystemPasswordChar = false;
+            this.tb_note.AcceptsReturn = false;
+            this.tb_note.AcceptsTab = false;
+            this.tb_note.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tb_note.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tb_note.BackColor = System.Drawing.Color.Transparent;
+            this.tb_note.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tb_note.BackgroundImage")));
+            this.tb_note.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tb_note.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tb_note.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tb_note.BorderColorIdle = System.Drawing.Color.DimGray;
+            this.tb_note.BorderRadius = 30;
+            this.tb_note.BorderThickness = 1;
+            this.tb_note.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tb_note.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_note.HideSelection = true;
+            this.tb_note.IconLeft = null;
+            this.tb_note.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.tb_note.IconPadding = 10;
+            this.tb_note.IconRight = null;
+            this.tb_note.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.tb_note.Location = new System.Drawing.Point(12, 116);
+            this.tb_note.MaximumSize = new System.Drawing.Size(400, 100);
+            this.tb_note.MaxLength = 32767;
+            this.tb_note.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tb_note.Modified = false;
+            this.tb_note.Name = "tb_note";
+            this.tb_note.PasswordChar = '\0';
+            this.tb_note.ReadOnly = false;
+            this.tb_note.SelectedText = "";
+            this.tb_note.SelectionLength = 0;
+            this.tb_note.SelectionStart = 0;
+            this.tb_note.ShortcutsEnabled = true;
+            this.tb_note.Size = new System.Drawing.Size(296, 57);
+            this.tb_note.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tb_note.TabIndex = 1;
+            this.tb_note.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_note.TextMarginLeft = 5;
+            this.tb_note.TextPlaceholder = "Note";
+            this.tb_note.UseSystemPasswordChar = false;
             // 
             // bunifuButton2
             // 
@@ -174,6 +172,7 @@
             this.bunifuButton2.Size = new System.Drawing.Size(140, 48);
             this.bunifuButton2.TabIndex = 34;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
             // bunifuButton1
             // 
@@ -206,6 +205,7 @@
             this.bunifuButton1.Size = new System.Drawing.Size(140, 48);
             this.bunifuButton1.TabIndex = 33;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // QLDV_ADD
             // 
@@ -216,11 +216,12 @@
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.bunifuCustomLabel7);
-            this.Controls.Add(this.bunifuTextBox3);
+            this.Controls.Add(this.tb_note);
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDV_ADD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QLDV_ADD";
             this.Load += new System.EventHandler(this.QLDV_ADD_Load);
             this.ResumeLayout(false);
@@ -232,7 +233,7 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_name;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox3;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_note;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }

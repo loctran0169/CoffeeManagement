@@ -97,8 +97,7 @@
             this.tb_name.ShortcutsEnabled = true;
             this.tb_name.Size = new System.Drawing.Size(296, 35);
             this.tb_name.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_name.TabIndex = 2;
-            this.tb_name.TabStop = false;
+            this.tb_name.TabIndex = 0;
             this.tb_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_name.TextMarginLeft = 5;
             this.tb_name.TextPlaceholder = "Họ và tên";
@@ -149,8 +148,7 @@
             this.tb_sdt.ShortcutsEnabled = true;
             this.tb_sdt.Size = new System.Drawing.Size(296, 35);
             this.tb_sdt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_sdt.TabIndex = 4;
-            this.tb_sdt.TabStop = false;
+            this.tb_sdt.TabIndex = 5;
             this.tb_sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_sdt.TextMarginLeft = 5;
             this.tb_sdt.TextPlaceholder = "Phone number";
@@ -173,7 +171,7 @@
             this.cb_nam.OutlineColor = System.Drawing.Color.Purple;
             this.cb_nam.RadioColor = System.Drawing.Color.Purple;
             this.cb_nam.Size = new System.Drawing.Size(25, 25);
-            this.cb_nam.TabIndex = 6;
+            this.cb_nam.TabIndex = 2;
             this.cb_nam.Text = null;
             // 
             // cb_nu
@@ -202,7 +200,7 @@
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(182, 182);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(92, 22);
-            this.bunifuCustomLabel5.TabIndex = 9;
+            this.bunifuCustomLabel5.TabIndex = 3;
             this.bunifuCustomLabel5.Text = "Nữ";
             // 
             // bunifuCustomLabel6
@@ -224,7 +222,7 @@
             this.date_birth.Location = new System.Drawing.Point(36, 106);
             this.date_birth.Name = "date_birth";
             this.date_birth.Size = new System.Drawing.Size(264, 36);
-            this.date_birth.TabIndex = 11;
+            this.date_birth.TabIndex = 1;
             this.date_birth.Value = new System.DateTime(2019, 12, 7, 0, 0, 0, 0);
             // 
             // tb_diachi
@@ -263,8 +261,7 @@
             this.tb_diachi.ShortcutsEnabled = true;
             this.tb_diachi.Size = new System.Drawing.Size(296, 51);
             this.tb_diachi.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_diachi.TabIndex = 12;
-            this.tb_diachi.TabStop = false;
+            this.tb_diachi.TabIndex = 6;
             this.tb_diachi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_diachi.TextMarginLeft = 5;
             this.tb_diachi.TextPlaceholder = "Address";
@@ -324,8 +321,7 @@
             this.tb_email.ShortcutsEnabled = true;
             this.tb_email.Size = new System.Drawing.Size(296, 35);
             this.tb_email.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_email.TabIndex = 15;
-            this.tb_email.TabStop = false;
+            this.tb_email.TabIndex = 4;
             this.tb_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_email.TextMarginLeft = 5;
             this.tb_email.TextPlaceholder = "Email";
@@ -376,8 +372,7 @@
             this.tb_ghichu.ShortcutsEnabled = true;
             this.tb_ghichu.Size = new System.Drawing.Size(296, 75);
             this.tb_ghichu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tb_ghichu.TabIndex = 17;
-            this.tb_ghichu.TabStop = false;
+            this.tb_ghichu.TabIndex = 7;
             this.tb_ghichu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_ghichu.TextMarginLeft = 5;
             this.tb_ghichu.TextPlaceholder = "Note";

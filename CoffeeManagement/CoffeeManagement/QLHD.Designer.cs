@@ -58,7 +58,7 @@
             this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.DimGray;
             this.bunifuTextBox1.BorderRadius = 30;
             this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuTextBox1.HideSelection = true;
             this.bunifuTextBox1.IconLeft = null;
@@ -90,6 +90,8 @@
             // 
             // dataLeft
             // 
+            this.dataLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataLeft.BackColor = System.Drawing.Color.DarkTurquoise;
             this.dataLeft.BorderRadius = 10;
             this.dataLeft.ForeColor = System.Drawing.Color.Black;
@@ -104,6 +106,8 @@
             // 
             // dateRight
             // 
+            this.dateRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateRight.BackColor = System.Drawing.Color.DarkTurquoise;
             this.dateRight.BorderRadius = 10;
             this.dateRight.ForeColor = System.Drawing.Color.Black;
@@ -118,6 +122,8 @@
             // 
             // bunifuCustomLabel1
             // 
+            this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(591, 43);
