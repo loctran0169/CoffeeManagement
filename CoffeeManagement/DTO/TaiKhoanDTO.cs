@@ -14,7 +14,19 @@ namespace DTO
         private string MaPQ;
         private string GhiChu;
 
-  
+        public TaiKhoanDTO()
+        {
+        }
+
+        public TaiKhoanDTO(string maTK, string taiKhoan, string matKhau, string maPQ, string ghiChu)
+        {
+            MaTK = maTK;
+            TaiKhoan = taiKhoan;
+            MatKhau = matKhau;
+            MaPQ = maPQ;
+            GhiChu = ghiChu;
+        }
+
         public string MaTK1 { get => MaTK; set => MaTK = value; }
         public string TaiKhoan1 { get => TaiKhoan; set => TaiKhoan = value; }
         public string MatKhau1 { get => MatKhau; set => MatKhau = value; }

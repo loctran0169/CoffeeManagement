@@ -199,12 +199,6 @@
     <Compile Include="QLPX_CTPX.Designer.cs">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLPX_CTPX_ADD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLPX_CTPX_ADD.Designer.cs">
-      <DependentUpon>QLPX_CTPX_ADD.cs</DependentUpon>
-    </Compile>
     <Compile Include="transparentBg1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,9 +273,6 @@
     <EmbeddedResource Include="QLPX_CTPX.resx">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLPX_CTPX_ADD.resx">
-      <DependentUpon>QLPX_CTPX_ADD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="transparentBg1.resx">
       <DependentUpon>transparentBg1.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,6 +18,9 @@ namespace CoffeeManagement
     {
         private string mapx;
         private bool cancel = true;
+        private int indexRow = -1;
+        private bool flagThem = true;
+
         DataTable dt = new DataTable();
         DataTable dtInfo = new DataTable();
         CTPhieuXuatBUS busCT = new CTPhieuXuatBUS();
@@ -26,6 +29,7 @@ namespace CoffeeManagement
         NguyenLieuBUS busSp = new NguyenLieuBUS();
         List<string> list = new List<string>();
 
+        PhieuXuatBUS busXuat = new PhieuXuatBUS();
         public QLPX_CTPX(string _mapx)
         {
             InitializeComponent();
@@ -39,13 +43,8 @@ namespace CoffeeManagement
             loadInfo();
             loadSP();
             disableAll();
+            bunifuImageButton1.Visible = true;
             showEdit.Hide(panelEdit);
-            dgv_ct.CellEndEdit += Dgv_ct_CellEndEdit;
-        }
-
-        private void Dgv_ct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            tongTien();         
         }
 
         //tổng tiền
@@ -56,7 +55,7 @@ namespace CoffeeManagement
             {
                 sum += float.Parse(row[5].ToString());
             }
-            tb_price.Text = sum.ToString() + "vnđ";
+            tb_price.Text = sum.ToString();
             return sum;
         }
         //chạy laod data
@@ -102,15 +101,14 @@ namespace CoffeeManagement
             tb_name.Text = dtInfo.Rows[0][1].ToString();
             date_ngayxuat.Value = DateTime.Parse(dtInfo.Rows[0][2].ToString());
             tb_diachi.Text = dtInfo.Rows[0][3].ToString();
-            tb_price.Text = dtInfo.Rows[0][4].ToString()+"VNĐ";
-            tb_ghichu.Text = dtInfo.Rows[0][5].ToString();
-            if (dtInfo.Rows[0][6].ToString() == "Chưa")
+            tb_price.Text = dtInfo.Rows[0][4].ToString();
+            if (dtInfo.Rows[0][5].ToString() == "False")
             {
                 cb_tt.Checked = false;
             }
             else
             {
-                btnEdit.Visible = false;
+                //btnEdit.Visible = false;
                 cb_tt.Checked = true;
             }
         }
@@ -126,13 +124,16 @@ namespace CoffeeManagement
         //ko cho sửa
         public void disableAll()
         {
-            panel1.Enabled = false;
-            date_ngayxuat.Enabled = true;
+            date_ngayxuat.Enabled = false;
+            tb_diachi.Enabled = false;
+            cb_tt.Enabled = false;
         }
         //cho sửa
         public void enableAll()
         {
-            panel1.Enabled = true;
+            date_ngayxuat.Enabled = true;
+            tb_diachi.Enabled = true;
+            cb_tt.Enabled = true;
         }
         //click double cell
         private void bunifuDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -140,16 +141,26 @@ namespace CoffeeManagement
             if (e.RowIndex == dgv_ct.NewRowIndex || e.RowIndex < 0)
                 return;
 
-            //Check if click is on specific column 
+            //kiểm tra xem bấm xóa ko
             if (e.ColumnIndex == dgv_ct.Columns["delete"].Index)
             {
-                //Put some logic here, for example to remove row from your binding list.
-                //yourBindingList.RemoveAt(e.RowIndex);
                 (dgv_ct.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                tongTien();
+                btnAdd.ButtonText = "Thêm";
+                cbb.Enabled = true;
+                flagThem = true;
+                emptyAdd();
                 return;
             }
-            cbb.SelectedIndex = cbb.FindString((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][1].ToString());
-            tb_soluong.Text = (dgv_ct.DataSource as DataTable).Rows[e.RowIndex][3].ToString();
+            else
+            {
+                btnAdd.ButtonText = "Sửa";
+                flagThem = false;
+                indexRow = e.RowIndex;
+                cbb.SelectedIndex = cbb.FindString((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][1].ToString());
+                tb_soluong.Text = (dgv_ct.DataSource as DataTable).Rows[e.RowIndex][3].ToString();
+                cbb.Enabled = false;
+            }
         }
         //bật tắt sửa
         private void btnEdit_Click(object sender, EventArgs e)
@@ -169,7 +180,7 @@ namespace CoffeeManagement
                 btn_confirm.Visible = false;
                 btnEdit.Image = Properties.Resources.pencil_tron;
                 infoToView();
-                dgv_ct.DataSource = dt.Copy();
+                dgv_ct.DataSource = dt;
                 disableAll();
             }
         }
@@ -216,10 +227,16 @@ namespace CoffeeManagement
 
             if (busCT.xoa(mapx))
             {
-                if (busCT.updateData(temp))
+                if (busCT.updateData(temp)
+                    &&busXuat.sua(new PhieuXuatDTO() {
+                        MaPX1 =mapx,
+                        NgayXuat1 =date_ngayxuat.Value.Date,
+                        DiaChi1=tb_diachi.Text,
+                        TinhTrang1=cb_tt.Checked.ToString(),
+                        TongTien1=float.Parse(tb_price.Text)}))
                 {
-                    dt = new DataTable();
-                    dt = (dgv_ct.DataSource as DataTable).Copy();
+                    //dt.Rows.Clear();
+                    dt = (dgv_ct.DataSource as DataTable);
                     MessageBox.Show("updated thành công");                    
                 }
                 else
@@ -236,31 +253,62 @@ namespace CoffeeManagement
         //thêm nguyên liệu
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            int index = cbb.SelectedIndex;
-
-            if (index != -1)
+            if (flagThem)
             {
-                list = (dgv_ct.DataSource as DataTable).AsEnumerable()
-                    .Select(r => r.Field<string>("manl"))
-                    .ToList();
-                if (list.Contains(dtCbb.Rows[index][0]))
+                int index = cbb.SelectedIndex;
+                if (index != -1)
                 {
-                    MessageBox.Show("Đã có trong danh sách");
+                    
+                    list = (dgv_ct.DataSource as DataTable).AsEnumerable()
+                        .Select(r => r.Field<string>("manl"))
+                        .ToList();
+                    if (list.Contains(dtCbb.Rows[index][0]))
+                    {
+                        MessageBox.Show("Đã có trong danh sách");
+                        emptyAdd();
+                        return;
+                    }
+                    else if (tb_soluong.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập số lượng");
+                        return;
+                    }
+                    DataRow row = (dgv_ct.DataSource as DataTable).NewRow();
+                    row[0] = dtCbb.Rows[index][0];
+                    row[1] = dtCbb.Rows[index][1];
+                    row[2] = dtCbb.Rows[index][3];
+                    row[3] = float.Parse(tb_soluong.Text);
+                    row[4] = dtCbb.Rows[index][6];
+                    row[5] = float.Parse(tb_soluong.Text) * float.Parse(dtCbb.Rows[index][6].ToString());
+                    (dgv_ct.DataSource as DataTable).Rows.Add(row);
+                    tongTien();
                     cbb.SelectedIndex = -1;
                     tb_soluong.Text = "";
-                    return;
                 }
-                DataRow row = (dgv_ct.DataSource as DataTable).NewRow();
-                row[0] = dtCbb.Rows[index][0];
-                row[1] = dtCbb.Rows[index][1];
-                row[2] = dtCbb.Rows[index][3];
-                row[3] = float.Parse(tb_soluong.Text);
-                row[4] = dtCbb.Rows[index][6];
-                row[5] = float.Parse(tb_soluong.Text) * float.Parse(dtCbb.Rows[index][6].ToString());
-                (dgv_ct.DataSource as DataTable).Rows.Add(row);
-                cbb.SelectedIndex = -1;
-                tb_soluong.Text = "";
+                else
+                    MessageBox.Show("Bạn chưa chọn guyên liệu cần thêm");
             }
+            else
+            {
+                DataGridViewRow newDataRow = dgv_ct.Rows[indexRow];
+                newDataRow.Cells[4].Value = tb_soluong.Text;
+                newDataRow.Cells[6].Value = float.Parse(newDataRow.Cells[4].Value.ToString()) * float.Parse(newDataRow.Cells[5].Value.ToString());
+                tongTien();
+                emptyAdd();
+                btnAdd.ButtonText = "Thêm";
+                flagThem = true;
+                cbb.Enabled = true;
+            }
+        }
+        public void emptyAdd()
+        {
+            cbb.SelectedIndex = -1;
+            tb_soluong.Text = "";
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

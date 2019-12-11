@@ -115,7 +115,7 @@ namespace DAL
             try
             {
                 string query = null;
-                query += "select px.mapx, nv.tennv, px.ngayxuat, px.diachi, px.tongtien, px.ghichu, px.tinhtrang ";
+                query += "select px.mapx, nv.tennv, px.ngayxuat, px.diachi, px.tongtien, px.tinhtrang ";
                 query += "from phieuxuat px, nhanvien nv ";
                 query += "where px.manv=nv.manv and px.mapx=@mapx";
                 MySqlCommand cmd = new MySqlCommand(query, kn);

@@ -60,7 +60,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLPX_ADD());
         }
     }
 }
