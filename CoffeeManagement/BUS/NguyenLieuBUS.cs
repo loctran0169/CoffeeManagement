@@ -9,52 +9,48 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class SanPhamBUS
+    public class NguyenLieuBUS
     {
-        private SanPhamDAL bdal;
+        private NguyenLieuDAL bdal;
 
-        public SanPhamBUS()
+        public NguyenLieuBUS()
         {
-            bdal = new SanPhamDAL();
+            bdal = new NguyenLieuDAL();
         }
-        public bool them(SanPhamDTO lb)
+        public bool them(NguyenLieuDTO lb)
         {
             bool re = bdal.them(lb);
             return re;
         }
 
-        public bool xoa(SanPhamDTO lb)
+        public bool xoa(NguyenLieuDTO lb)
         {
             bool re = bdal.xoa(lb);
             return re;
         }
 
-        public bool sua(SanPhamDTO lb)
+        public bool sua(NguyenLieuDTO lb)
         {
             bool re = bdal.sua(lb);
             return re;
         }
 
-        public List<SanPhamDTO> select()
+        public List<NguyenLieuDTO> select()
         {
             return bdal.select();
         }
-     
-
-        public DataTable selectByKeyWord(string sKeyWord)
+        public List<NguyenLieuDTO> selectByKeyWord(string sKeyword)
         {
-            return bdal.selectByKeyWord(sKeyWord);
+            return bdal.selectByKeyWord(sKeyword);
         }
-
-        public DataTable loadToDataTable()
+        public DataTable loadDuLieuNguyenLieu()
         {
-            return bdal.loadDuLieuSanPham();
+            return bdal.loadDuLieuNguyenLieu();
         }
         public DataTable loadDuLieuDonViTinh()
         {
             return bdal.loadDuLieuDonViTinh();
         }
-
         public DataTable loadToCombobox()
         {
             return bdal.loadToCombobox();

@@ -16,7 +16,8 @@ namespace CoffeeManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGui(new DTO.TaiKhoanDTO()));
+            //Application.Run(new frmGui(new DTO.TaiKhoanDTO()));
+            Application.Run(new frmGui(new DTO.TaiKhoanDTO("TK0001","admin","admin","PQ0001","")));
         }
         public static bool IsInDesignMode()
         {

@@ -125,7 +125,7 @@ namespace DAL
         public List<SanPhamDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT * ";
+            query += "SELECT masp,tensp ";
             query += "FROM sanpham";
 
             List<SanPhamDTO> listthuoc = new List<SanPhamDTO>();
@@ -149,12 +149,9 @@ namespace DAL
                         {
                             while (reader.Read())
                             {
-                                SanPhamDTO bn = GetBn();
-                                bn.MaSP1 = reader["MaSp"].ToString();
-                                bn.MaDV1 = reader["MaDV"].ToString();
+                                SanPhamDTO bn = new SanPhamDTO();
+                                bn.MaSP1 = reader["MaSP"].ToString();
                                 bn.TenSP1 = reader["TenSP"].ToString();
-                                bn.HinhAnh1 = reader["HinhAnh"].ToString();
-                                bn.DonGia1 = float.Parse(reader["DonGia"].ToString());
                                 listthuoc.Add(bn);
                             }
                         }
@@ -311,7 +308,28 @@ namespace DAL
       
             catch (Exception e)
             {
+                return new DataTable();
+            }
+            return k;
+        }
 
+        public DataTable loadToCombobox()
+        {
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+
+            try
+            {
+                kn.Open();
+                string sql = "select masp,tensp from sanpham";
+                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
             }
             return k;
         }

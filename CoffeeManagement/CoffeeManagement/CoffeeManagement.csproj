@@ -70,6 +70,7 @@
       <HintPath>..\ShadowPanel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -186,6 +187,12 @@
     <Compile Include="QLPX.Designer.cs">
       <DependentUpon>QLPX.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLPX_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPX_ADD.Designer.cs">
+      <DependentUpon>QLPX_ADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLPX_CTPX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +267,9 @@
     <EmbeddedResource Include="QLPX.resx">
       <DependentUpon>QLPX.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLPX_ADD.resx">
+      <DependentUpon>QLPX_ADD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLPX_CTPX.resx">
       <DependentUpon>QLPX_CTPX.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +311,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_tron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,7 +123,7 @@ namespace DAL
         public List<NguyenLieuDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT * ";
+            query += "SELECT manl,tennl,soluongton,gianhap,giaban ";
             query += "FROM nguyenlieu";
 
             List<NguyenLieuDTO> listthuoc = new List<NguyenLieuDTO>();
@@ -148,10 +148,12 @@ namespace DAL
                             while (reader.Read())
                             {
                                 NguyenLieuDTO bn = new NguyenLieuDTO();
-                                bn.MaNL1 = reader["MaNL"].ToString();
-                                bn.TenNL1 = reader["TenNL"].ToString();
-                                bn.MaDV1 = reader["MaDV"].ToString();
-                                bn.SoLuongTon1 = float.Parse(reader["SoLuongTon"].ToString());
+                                bn.MaNL1 = reader["manl"].ToString();
+                                bn.TenNL1 = reader["tennl"].ToString();
+                                bn.MaDV1 = reader["tendv"].ToString();
+                                bn.SoLuongTon1 = float.Parse(reader["soluongton"].ToString());
+                                bn.GiaNhap1 = float.Parse(reader["gianhap"].ToString());
+                                bn.GiaBan1 = float.Parse(reader["giaban"].ToString());
                                 listthuoc.Add(bn);
                             }
                         }
@@ -162,7 +164,7 @@ namespace DAL
                     catch (Exception ex)
                     {
                         con.Close();
-                        return null;
+                        return new List<NguyenLieuDTO>();
                     }
 
                 }
@@ -256,6 +258,29 @@ namespace DAL
             catch (Exception e)
             {
 
+            }
+            return k;
+        }
+
+        public DataTable loadToCombobox()
+        {
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+
+            try
+            {
+                kn.Open();
+                string sql = "select nl.manl, nl.tennl,dv.madv,dv.tendv, nl.soluongton,nl.gianhap,nl.giaban " +
+                    "from nguyenlieu nl, donvi dv " +
+                    "where nl.madv=dv.madv";
+                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
+                dt.Fill(k);
+                kn.Close();
+                dt.Dispose();
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
             }
             return k;
         }

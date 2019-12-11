@@ -166,7 +166,7 @@ namespace DAL
         public List<DonViDTO> selectByKeyWord(string sKeyword)
         {
             string query = string.Empty;
-            query += " SELECT *";
+            query += " SELECT SELECT madv,tendv,ghichu";
             query += " FROM donvi";
             query += " WHERE (madv LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR (tendv LIKE CONCAT('%',@sKeyword,'%'))";
@@ -218,7 +218,7 @@ namespace DAL
             try
             {
                 kn.Open();
-                string sql = "select * from donvi";
+                string sql = "select madv,tendv,ghichu from donvi";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
@@ -236,7 +236,7 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += " SELECT *";
+            query += " SELECT madv,tendv,ghichu";
             query += " FROM donvi";
             query += " WHERE (upper(madv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
             query += " OR (upper(tendv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";

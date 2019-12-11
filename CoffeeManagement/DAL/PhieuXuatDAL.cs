@@ -58,7 +58,7 @@ namespace DAL
         public bool sua(PhieuXuatDTO bn)
         {
             string query = string.Empty;
-            query += "UPDATE phieuxuat SET manv = @manv,ngayxuat=@ngayxuat,tongtien = @tongtien, tinhtrang=@tinhtrang  WHERE mapx = @mapx";
+            query += "UPDATE phieuxuat SET ngayxuat=@ngayxuat,diachi = @diachi, tinhtrang=@tinhtrang,tongtien = @tongtien  WHERE mapx = @mapx";
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
 
@@ -67,10 +67,11 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@manv", bn.MaNV1);
+                    cmd.Parameters.AddWithValue("@mapx", bn.MaPX1);
                     cmd.Parameters.AddWithValue("@ngayxuat", bn.NgayXuat1);
-                    cmd.Parameters.AddWithValue("@tongtien", bn.TongTien1);
+                    cmd.Parameters.AddWithValue("@diachi", bn.DiaChi1);
                     cmd.Parameters.AddWithValue("@tinhtrang", bn.TinhTrang1);
+                    cmd.Parameters.AddWithValue("@tongtien", bn.TongTien1);               
 
                     try
                     {

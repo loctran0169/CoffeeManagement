@@ -23,7 +23,7 @@ namespace BUS
             return re;
         }
 
-        public bool xoa(CTPhieuXuatDTO lb)
+        public bool xoa(string lb)
         {
             bool re = bdal.xoa(lb);
             return re;
@@ -31,6 +31,19 @@ namespace BUS
         public DataTable loadDuLieuChiTietPhieuXuat(string hd)
         {
             return bdal.loadDuLieuChiTietPhieuXuat(hd);
+        }
+        public DataTable loadInfo(string s)
+        {
+            return bdal.loadInfo(s);
+        }
+
+        public DataSet loadCTPhieuXuat(string s)
+        {
+            return bdal.loadCTPhieuXuat(s);
+        }
+        public bool updateData(DataTable ds)
+        {
+            return bdal.updateData(ds);
         }
     }
 }
