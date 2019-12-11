@@ -14,8 +14,8 @@ namespace DTO
         private float TongTien;
 
         public HoaDonDTO()
-
         {
+
         }
 
         public HoaDonDTO(string maHD, string maNV, DateTime ngayLap, float tongTien)

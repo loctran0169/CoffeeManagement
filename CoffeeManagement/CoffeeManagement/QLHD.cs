@@ -89,5 +89,10 @@ namespace CoffeeManagement
             hd.TongTien1 = float.Parse(dt.Rows[0][3].ToString());
             new CoffeeManagement.transparentBg1(this, new QLHD_CTHD(hd));
         }
+
+        private void bunifuTextBox1_TextChange(object sender, EventArgs e)
+        {
+
+        }
     }
 }

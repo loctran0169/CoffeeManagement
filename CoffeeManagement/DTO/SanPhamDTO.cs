@@ -14,6 +14,20 @@ namespace DTO
         private string MaDV;
         private float DonGia;
 
+        public SanPhamDTO()
+        {
+
+        }
+
+         public SanPhamDTO(string maSP, string tenSP, string hinhAnh, string maDV, float donGia)
+        {
+            MaSP = maSP;
+            TenSP = tenSP;
+            HinhAnh = hinhAnh;
+            MaDV = maDV;
+            DonGia = donGia;
+        }
+
         public string MaSP1 { get => MaSP; set => MaSP = value; }
         public string TenSP1 { get => TenSP; set => TenSP = value; }
         public string HinhAnh1 { get => HinhAnh; set => HinhAnh = value; }

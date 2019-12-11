@@ -149,7 +149,7 @@ namespace DAL
                         {
                             while (reader.Read())
                             {
-                                SanPhamDTO bn = new SanPhamDTO();
+                                SanPhamDTO bn = GetBn();
                                 bn.MaSP1 = reader["MaSp"].ToString();
                                 bn.MaDV1 = reader["MaDV"].ToString();
                                 bn.TenSP1 = reader["TenSP"].ToString();
@@ -173,73 +173,116 @@ namespace DAL
             return listthuoc;
         }
 
-        public List<SanPhamDTO> selectByKeyWord(string sKeyword)
+        private static SanPhamDTO GetBn()
         {
+            return new SanPhamDTO();
+        }
+
+
+        public DataTable selectByKeyWord(string sKeyword)
+        {
+
             string query = string.Empty;
-            query += " SELECT *";
+            query += " SELECT masp, tensp, hinhanh, madv, dongia";
             query += " FROM sanpham";
-            query += " WHERE (masp LIKE CONCAT('%',@sKeyword,'%'))";
-            query += " OR (tensp LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " WHERE (masp LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+            query += " OR (upper(tensp) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
 
-            List<SanPhamDTO> listthuoc = new List<SanPhamDTO>();
-            using (MySqlConnection con = new MySqlConnection(ConnectionString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand())
-                {
-                    cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-                    try
-                    {
-                        con.Open();
-                        MySqlDataReader reader = null;
-                        reader = cmd.ExecuteReader();
-                        if (reader.HasRows == true)
-                        {
-                            while (reader.Read())
-                            {
-                                SanPhamDTO bn = new SanPhamDTO();
-                                bn.MaSP1 = reader["MaSp"].ToString();
-                                bn.MaDV1 = reader["MaDV"].ToString();
-                                bn.TenSP1 = reader["TenSP"].ToString();
-                                bn.HinhAnh1 = reader["HinhAnh"].ToString();
-                                bn.DonGia1 = float.Parse(reader["DonGia"].ToString());
-                                listthuoc.Add(bn);
-                            }
-                        }
-
-                        con.Close();
-                        con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return null;
-                    }
-                }
-            }
-            return listthuoc;
-        }
-
-        public DataTable loadDuLieuDonViTinh()
-        {
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
-
             try
             {
                 kn.Open();
-                string sql = "select MaDV, tendv from donvi";
-                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
 
             }
             catch (Exception e)
             {
+                return new DataTable();
+               // MessageBox.Show(e.Message);
+            }   
+            return k;
+        }
+
+        //public List<SanPhamDTO> selectByKeyWord(string sKeyword)
+        //{
+        //    string query = string.Empty;
+        //    query += " SELECT *";
+        //    query += " FROM sanpham";
+        //    query += " WHERE (masp LIKE CONCAT('%',@sKeyword,'%'))";
+        //    query += " OR (tensp LIKE CONCAT('%',@sKeyword,'%'))";
+
+        //    List<SanPhamDTO> listthuoc = new List<SanPhamDTO>();
+        //    using (MySqlConnection con = new MySqlConnection(ConnectionString))
+        //    {
+        //        using (MySqlCommand cmd = new MySqlCommand())
+        //        {
+        //            cmd.Connection = con;
+        //            cmd.CommandType = System.Data.CommandType.Text;
+        //            cmd.CommandText = query;
+        //            cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
+        //            try
+        //            {
+        //                con.Open();
+        //                MySqlDataReader reader = null;
+        //                reader = cmd.ExecuteReader();
+        //                if (reader.HasRows == true)
+        //                {
+        //                    while (reader.Read())
+        //                    {
+        //                        SanPhamDTO bn = new SanPhamDTO();
+        //                        bn.MaSP1 = reader["MaSp"].ToString();
+        //                        bn.MaDV1 = reader["MaDV"].ToString();
+        //                        bn.TenSP1 = reader["TenSP"].ToString();
+        //                        bn.HinhAnh1 = reader["HinhAnh"].ToString();
+        //                        bn.DonGia1 = float.Parse(reader["DonGia"].ToString());
+        //                        listthuoc.Add(bn);
+        //                    }
+        //                }
+
+        //                con.Close();
+        //                con.Dispose();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                con.Close();
+        //                return null;
+        //            }
+        //        }
+        //    }
+        //    return listthuoc;
+        //}
+
+
+        public DataTable load1SP(string sKeyword)
+        {
+
+            string query = string.Empty;
+            query += " SELECT *";
+            query += " FROM nhanvien";
+            query += " WHERE manv='" + sKeyword.ToUpper() + "'";
+
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
+            {
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
             }
             return k;
         }
+
 
         public DataTable loadDuLieuSanPham()
         {
@@ -248,13 +291,24 @@ namespace DAL
 
             try
             {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            try
+            {
                 kn.Open();
-                string sql = "select masp,tensp,t.madv,hinhanh,dongia from donvi dv join sanpham t on dv.Madv = t.MaDV";
+                string sql = "select masp,tensp,madv,hinhanh,dongia from sanpham";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
                 dt.Dispose();
             }
+            
+      
             catch (Exception e)
             {
 

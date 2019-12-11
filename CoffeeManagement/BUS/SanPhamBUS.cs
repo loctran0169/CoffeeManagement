@@ -39,17 +39,16 @@ namespace BUS
         {
             return bdal.select();
         }
-        public List<SanPhamDTO> selectByKeyWord(string sKeyword)
+     
+
+        public DataTable selectByKeyWord(string sKeyWord)
         {
-            return bdal.selectByKeyWord(sKeyword);
+            return bdal.selectByKeyWord(sKeyWord);
         }
-        public DataTable loadDuLieuSanPham()
+
+        public DataTable loadToDataTable()
         {
             return bdal.loadDuLieuSanPham();
-        }
-        public DataTable loadDuLieuDonViTinh()
-        {
-            return bdal.loadDuLieuDonViTinh();
         }
     }
 }

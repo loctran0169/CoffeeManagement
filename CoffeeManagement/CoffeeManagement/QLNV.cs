@@ -64,5 +64,10 @@ namespace CoffeeManagement
         {
             new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
         }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

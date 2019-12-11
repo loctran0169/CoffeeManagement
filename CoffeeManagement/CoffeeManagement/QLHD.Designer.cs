@@ -86,6 +86,7 @@
             this.bunifuTextBox1.TextMarginLeft = 5;
             this.bunifuTextBox1.TextPlaceholder = "Nhập mã hóa đơn...";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
+            this.bunifuTextBox1.TextChange += new System.EventHandler(this.bunifuTextBox1_TextChange);
             this.bunifuTextBox1.OnIconRightClick += new System.EventHandler(this.bunifuTextBox1_OnIconRightClick);
             // 
             // dataLeft

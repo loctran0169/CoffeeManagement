@@ -39,8 +39,8 @@
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_cancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_save = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
             // bunifuTextBox4
@@ -251,69 +251,69 @@
             this.bunifuCustomLabel1.TabIndex = 16;
             this.bunifuCustomLabel1.Text = "Tên đồ uống";
             // 
-            // bunifuButton2
+            // btn_cancel
             // 
-            this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
-            this.bunifuButton2.ButtonText = "Hủy";
-            this.bunifuButton2.ButtonTextMarginLeft = 0;
-            this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IconPadding = 10;
-            this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.White;
-            this.bunifuButton2.IdleBorderRadius = 35;
-            this.bunifuButton2.IdleBorderThickness = 0;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.Firebrick;
-            this.bunifuButton2.IdleIconLeftImage = null;
-            this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(13, 342);
-            this.bunifuButton2.Name = "bunifuButton2";
+            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
+            this.btn_cancel.ButtonText = "Hủy";
+            this.btn_cancel.ButtonTextMarginLeft = 0;
+            this.btn_cancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btn_cancel.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btn_cancel.DisabledForecolor = System.Drawing.Color.White;
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_cancel.IconPadding = 10;
+            this.btn_cancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_cancel.IdleBorderColor = System.Drawing.Color.White;
+            this.btn_cancel.IdleBorderRadius = 35;
+            this.btn_cancel.IdleBorderThickness = 0;
+            this.btn_cancel.IdleFillColor = System.Drawing.Color.Firebrick;
+            this.btn_cancel.IdleIconLeftImage = null;
+            this.btn_cancel.IdleIconRightImage = null;
+            this.btn_cancel.Location = new System.Drawing.Point(13, 342);
+            this.btn_cancel.Name = "btn_cancel";
             stateProperties1.BorderColor = System.Drawing.Color.DarkRed;
             stateProperties1.BorderRadius = 35;
             stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.DarkRed;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties1;
-            this.bunifuButton2.Size = new System.Drawing.Size(140, 48);
-            this.bunifuButton2.TabIndex = 32;
-            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancel.onHoverState = stateProperties1;
+            this.btn_cancel.Size = new System.Drawing.Size(140, 48);
+            this.btn_cancel.TabIndex = 32;
+            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuButton1
+            // btn_save
             // 
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.ButtonText = "Lưu";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.White;
-            this.bunifuButton1.IdleBorderRadius = 35;
-            this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(169, 342);
-            this.bunifuButton1.Name = "bunifuButton1";
+            this.btn_save.BackColor = System.Drawing.Color.Transparent;
+            this.btn_save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_save.BackgroundImage")));
+            this.btn_save.ButtonText = "Lưu";
+            this.btn_save.ButtonTextMarginLeft = 0;
+            this.btn_save.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btn_save.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btn_save.DisabledForecolor = System.Drawing.Color.White;
+            this.btn_save.ForeColor = System.Drawing.Color.Black;
+            this.btn_save.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_save.IconPadding = 10;
+            this.btn_save.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_save.IdleBorderColor = System.Drawing.Color.White;
+            this.btn_save.IdleBorderRadius = 35;
+            this.btn_save.IdleBorderThickness = 0;
+            this.btn_save.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_save.IdleIconLeftImage = null;
+            this.btn_save.IdleIconRightImage = null;
+            this.btn_save.Location = new System.Drawing.Point(169, 342);
+            this.btn_save.Name = "btn_save";
             stateProperties2.BorderColor = System.Drawing.Color.Green;
             stateProperties2.BorderRadius = 35;
             stateProperties2.BorderThickness = 0;
             stateProperties2.FillColor = System.Drawing.Color.Green;
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties2;
-            this.bunifuButton1.Size = new System.Drawing.Size(140, 48);
-            this.bunifuButton1.TabIndex = 31;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_save.onHoverState = stateProperties2;
+            this.btn_save.Size = new System.Drawing.Size(140, 48);
+            this.btn_save.TabIndex = 31;
+            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // QLMENU_ADD
             // 
@@ -321,8 +321,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(321, 417);
-            this.Controls.Add(this.bunifuButton2);
-            this.Controls.Add(this.bunifuButton1);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.bunifuTextBox4);
             this.Controls.Add(this.bunifuCustomLabel8);
             this.Controls.Add(this.bunifuCustomLabel7);
@@ -348,7 +348,7 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cancel;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_save;
     }
 }
