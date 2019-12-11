@@ -104,6 +104,7 @@
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 96);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
+            this.bunifuDataGridView1.ReadOnly = true;
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -117,30 +118,35 @@
             this.MaPX.DataPropertyName = "mapx";
             this.MaPX.HeaderText = "Mã phiếu xuất";
             this.MaPX.Name = "MaPX";
+            this.MaPX.ReadOnly = true;
             // 
             // tennv
             // 
             this.tennv.DataPropertyName = "tennv";
             this.tennv.HeaderText = "Tên nhân viên";
             this.tennv.Name = "tennv";
+            this.tennv.ReadOnly = true;
             // 
             // ngayxuat
             // 
             this.ngayxuat.DataPropertyName = "ngayxuat";
             this.ngayxuat.HeaderText = "Ngày xuất";
             this.ngayxuat.Name = "ngayxuat";
+            this.ngayxuat.ReadOnly = true;
             // 
             // tongtien
             // 
             this.tongtien.DataPropertyName = "tongtien";
             this.tongtien.HeaderText = "Tổng tiền";
             this.tongtien.Name = "tongtien";
+            this.tongtien.ReadOnly = true;
             // 
             // tinhtrang
             // 
             this.tinhtrang.DataPropertyName = "tinhtrang";
             this.tinhtrang.HeaderText = "Tình Trạng";
             this.tinhtrang.Name = "tinhtrang";
+            this.tinhtrang.ReadOnly = true;
             // 
             // bunifuButton1
             // 

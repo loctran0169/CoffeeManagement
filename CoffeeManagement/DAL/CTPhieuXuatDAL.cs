@@ -53,7 +53,7 @@ namespace DAL
             return true;
         }
 
-        public bool xoa(CTPhieuXuatDTO bn)
+        public bool xoa(string bn)
         {
             string query = string.Empty;
             query += "DELETE FROM ctphieuxuat WHERE mapx = @mapx";
@@ -65,7 +65,7 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@mapx", bn.MaPX1);
+                    cmd.Parameters.AddWithValue("@mapx", bn);
                     try
                     {
                         con.Open();
@@ -106,6 +106,82 @@ namespace DAL
                 MessageBox.Show(e.Message);
             }
             return k;
+        }
+
+        public DataTable loadInfo(string mapx)
+        {
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+            try
+            {
+                string query = null;
+                query += "select px.mapx, nv.tennv, px.ngayxuat, px.diachi, px.tongtien, px.ghichu, px.tinhtrang ";
+                query += "from phieuxuat px, nhanvien nv ";
+                query += "where px.manv=nv.manv and px.mapx=@mapx";
+                MySqlCommand cmd = new MySqlCommand(query, kn);
+                cmd.Parameters.AddWithValue("@mapx", mapx);
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(cmd);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return k;
+        }
+
+        //load by dataset
+        public DataSet loadCTPhieuXuat(string mapx)
+        {
+            DataSet k = new DataSet();
+            MySqlConnection kn = new MySqlConnection(ConfigurationManager.AppSettings["ConnectionString"]);
+            try
+            {
+                string query = null;
+                query += "select * ";
+                query += "from ctphieuxuat ";
+                query += "where mapx=@mapx";
+                MySqlCommand cmd = new MySqlCommand(query, kn);
+                cmd.Parameters.AddWithValue("@mapx", mapx);
+                kn.Open();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(k,"ctphieuxuat");
+                kn.Close();
+                adapter.Dispose();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return k;
+        }
+
+        public bool updateData(DataTable ds)
+        {
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter("select * from ctphieuxuat",con))
+                {
+                    using (MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter))
+                        try
+                        {
+                            con.Open();
+                            adapter.Update(ds);
+                            con.Close();
+                            con.Dispose();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            con.Close();
+                            return false;
+                        }
+                }
+            }
+            return true;
         }
     }
 }

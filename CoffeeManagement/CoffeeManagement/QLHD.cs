@@ -87,7 +87,7 @@ namespace CoffeeManagement
             hd.MaNV1 = dt.Rows[0][1].ToString();
             hd.NgayLap1 = DateTime.Parse(dt.Rows[0][2].ToString());
             hd.TongTien1 = float.Parse(dt.Rows[0][3].ToString());
-            new CoffeeManagement.transparentBg1(this, new QLHD_CTHD(hd));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLHD_CTHD(hd));
         }
     }
 }

@@ -62,7 +62,7 @@ namespace CoffeeManagement
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new CoffeeManagement.transparentBg1(this, new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
         }
     }
 }

@@ -54,7 +54,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(new QLDV_ADD());
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0],new QLDV_ADD());
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
