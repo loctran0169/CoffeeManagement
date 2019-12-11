@@ -17,7 +17,17 @@ namespace CoffeeManagement
             InitializeComponent();
         }
 
+        private void QLPX_ADD_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

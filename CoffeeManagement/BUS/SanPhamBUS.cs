@@ -50,10 +50,6 @@ namespace BUS
         {
             return bdal.loadDuLieuSanPham();
         }
-        public DataTable loadDuLieuDonViTinh()
-        {
-            return bdal.loadDuLieuDonViTinh();
-        }
 
         public DataTable loadToCombobox()
         {

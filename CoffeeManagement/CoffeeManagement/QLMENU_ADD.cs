@@ -30,18 +30,18 @@ namespace CoffeeManagement
             {
                 btn_save.ButtonText = "Sửa";
                 loadData();
-                disableAll();
+                //disableAll();
             }
         }
             private void loadData()
             {
-                DataTable dt = bus.load1SP(userId);
-                if (dt != null && dt.Rows.Count > 0)
-                {
+                //DataTable dt = bus.load1SP(userId);
+                //if (dt != null && dt.Rows.Count > 0)
+                //{
                    
-                }
-                else
-                    MessageBox.Show("không có");
+                //}
+                //else
+                //    MessageBox.Show("không có");
             }
         }
 }
