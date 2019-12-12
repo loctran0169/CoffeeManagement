@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLMENU_ADD));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuTextBox4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -44,6 +45,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
@@ -278,13 +280,13 @@
             this.btn_cancel.IdleIconRightImage = null;
             this.btn_cancel.Location = new System.Drawing.Point(13, 389);
             this.btn_cancel.Name = "btn_cancel";
-            stateProperties1.BorderColor = System.Drawing.Color.DarkRed;
-            stateProperties1.BorderRadius = 35;
-            stateProperties1.BorderThickness = 0;
-            stateProperties1.FillColor = System.Drawing.Color.DarkRed;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btn_cancel.onHoverState = stateProperties1;
+            stateProperties5.BorderColor = System.Drawing.Color.DarkRed;
+            stateProperties5.BorderRadius = 35;
+            stateProperties5.BorderThickness = 0;
+            stateProperties5.FillColor = System.Drawing.Color.DarkRed;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.btn_cancel.onHoverState = stateProperties5;
             this.btn_cancel.Size = new System.Drawing.Size(140, 48);
             this.btn_cancel.TabIndex = 32;
             this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,13 +313,13 @@
             this.btn_save.IdleIconRightImage = null;
             this.btn_save.Location = new System.Drawing.Point(169, 389);
             this.btn_save.Name = "btn_save";
-            stateProperties2.BorderColor = System.Drawing.Color.Green;
-            stateProperties2.BorderRadius = 35;
-            stateProperties2.BorderThickness = 0;
-            stateProperties2.FillColor = System.Drawing.Color.Green;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btn_save.onHoverState = stateProperties2;
+            stateProperties6.BorderColor = System.Drawing.Color.Green;
+            stateProperties6.BorderRadius = 35;
+            stateProperties6.BorderThickness = 0;
+            stateProperties6.FillColor = System.Drawing.Color.Green;
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.btn_save.onHoverState = stateProperties6;
             this.btn_save.Size = new System.Drawing.Size(140, 48);
             this.btn_save.TabIndex = 31;
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,6 +358,11 @@
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // QLMENU_ADD
             // 
@@ -399,5 +406,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
