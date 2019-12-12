@@ -64,7 +64,6 @@ namespace CoffeeManagement
             this.Invoke(new MethodInvoker(delegate
             {
                 dt = busCT.loadDuLieuChiTietPhieuXuat(mapx);
-
                 dataToView();
             }));
         }
@@ -94,7 +93,7 @@ namespace CoffeeManagement
                 }
             }));
         }
-        //laod vào phần thông tin
+        //load vào phần thông tin
         public void infoToView()
         {
             tb_mapx.Text = dtInfo.Rows[0][0].ToString();
