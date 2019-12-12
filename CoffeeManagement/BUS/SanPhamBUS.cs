@@ -50,7 +50,6 @@ namespace BUS
         {
             return bdal.loadDuLieuSanPham();
         }
-       
 
         public DataTable loadToCombobox()
         {

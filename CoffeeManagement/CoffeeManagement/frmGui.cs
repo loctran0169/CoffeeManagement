@@ -14,11 +14,13 @@ namespace CoffeeManagement
     public partial class frmGui : Form
     {
         private bool isShow = true;
-        TaiKhoanDTO us = new TaiKhoanDTO();
-        public frmGui(TaiKhoanDTO _us)
+        public string manv;
+        public string tennv;
+        public frmGui(string _manv,string _tennv)
         {
             InitializeComponent();
-            this.us = _us;
+            this.manv = _manv;
+            this.tennv = _tennv;
         }
 
         private void btn_hoadon_Click(object sender, EventArgs e)

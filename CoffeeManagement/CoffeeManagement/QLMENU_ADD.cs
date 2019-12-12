@@ -30,24 +30,19 @@ namespace CoffeeManagement
             else if (tag == "Chi Tiết")
             {
                 btn_save.ButtonText = "Sửa";
-                //loadData();
+                loadData();
                 //disableAll();
             }
         }
-
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            private void loadData()
+            {
+                //DataTable dt = bus.load1SP(userId);
+                //if (dt != null && dt.Rows.Count > 0)
+                //{
+                   
+                //}
+                //else
+                //    MessageBox.Show("không có");
+            }
         }
-        //private void loadData()
-        //{
-        //    DataTable dt = bus.load1SP(userId);
-        //    if (dt != null && dt.Rows.Count > 0)
-        //    {
-
-        //    }
-        //    else
-        //        MessageBox.Show("không có");
-        //}
-    }
 }
