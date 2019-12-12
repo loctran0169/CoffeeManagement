@@ -189,5 +189,15 @@ namespace CoffeeManagement
             cb_nu.Enabled = false;
             date_birth.Enabled = false;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

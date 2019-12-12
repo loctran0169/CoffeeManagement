@@ -574,6 +574,17 @@
             this.bunifuCustomLabel4.TabIndex = 55;
             this.bunifuCustomLabel4.Text = "Sản phẩm:";
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 6);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(186, 25);
+            this.bunifuCustomLabel1.TabIndex = 0;
+            this.bunifuCustomLabel1.Text = "Lập phiếu xuất hàng";
+            // 
             // QLPX_ADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

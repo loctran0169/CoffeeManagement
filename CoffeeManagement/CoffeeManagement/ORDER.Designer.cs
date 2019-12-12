@@ -138,6 +138,7 @@
             this.bunifuButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton4.BackgroundImage")));
             this.bunifuButton4.ButtonText = "Drink";
             this.bunifuButton4.ButtonTextMarginLeft = 0;
+            this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton4.DisabledForecolor = System.Drawing.Color.White;
@@ -154,8 +155,8 @@
             this.bunifuButton4.Location = new System.Drawing.Point(59, 8);
             this.bunifuButton4.Name = "bunifuButton4";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
@@ -170,6 +171,7 @@
             this.bunifuButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton5.BackgroundImage")));
             this.bunifuButton5.ButtonText = "Food";
             this.bunifuButton5.ButtonTextMarginLeft = 0;
+            this.bunifuButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton5.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton5.DisabledForecolor = System.Drawing.Color.White;
@@ -186,8 +188,8 @@
             this.bunifuButton5.Location = new System.Drawing.Point(115, 9);
             this.bunifuButton5.Name = "bunifuButton5";
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 1;
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderThickness = 0;
             stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
@@ -202,6 +204,7 @@
             this.bunifuButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton3.BackgroundImage")));
             this.bunifuButton3.ButtonText = "All";
             this.bunifuButton3.ButtonTextMarginLeft = 0;
+            this.bunifuButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton3.DisabledForecolor = System.Drawing.Color.White;
@@ -218,8 +221,8 @@
             this.bunifuButton3.Location = new System.Drawing.Point(3, 8);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties3.BorderRadius = 1;
-            stateProperties3.BorderThickness = 1;
+            stateProperties3.BorderRadius = 35;
+            stateProperties3.BorderThickness = 0;
             stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties3.IconLeftImage = null;
             stateProperties3.IconRightImage = null;
@@ -282,6 +285,7 @@
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.ButtonText = "Thanh toán";
             this.bunifuButton2.ButtonTextMarginLeft = 0;
+            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
@@ -315,6 +319,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Lưu";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;

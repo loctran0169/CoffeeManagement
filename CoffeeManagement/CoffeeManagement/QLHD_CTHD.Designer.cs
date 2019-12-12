@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLHD_CTHD));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.btn_note_QLHD = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.tb_tien_cthd = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.tb_nv_cthd = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.tb_mahd_ct = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.tb_tien_cthd = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.tb_nv_cthd = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.tb_mahd_ct = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(645, 85);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(656, 94);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(111, 22);
             this.bunifuCustomLabel4.TabIndex = 5;
@@ -98,31 +100,31 @@
             this.bunifuCustomLabel5.TabIndex = 9;
             this.bunifuCustomLabel5.Text = "Ghi chú:";
             // 
-            // bunifuMetroTextbox1
+            // btn_note_QLHD
             // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.DimGray;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Enabled = false;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(26, 95);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(572, 50);
-            this.bunifuMetroTextbox1.TabIndex = 10;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_note_QLHD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_note_QLHD.BorderColorFocused = System.Drawing.Color.Blue;
+            this.btn_note_QLHD.BorderColorIdle = System.Drawing.Color.WhiteSmoke;
+            this.btn_note_QLHD.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.btn_note_QLHD.BorderThickness = 1;
+            this.btn_note_QLHD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btn_note_QLHD.Enabled = false;
+            this.btn_note_QLHD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_note_QLHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_note_QLHD.isPassword = false;
+            this.btn_note_QLHD.Location = new System.Drawing.Point(26, 95);
+            this.btn_note_QLHD.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_note_QLHD.Name = "btn_note_QLHD";
+            this.btn_note_QLHD.Size = new System.Drawing.Size(572, 50);
+            this.btn_note_QLHD.TabIndex = 10;
+            this.btn_note_QLHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuDataGridView1
             // 
             this.bunifuDataGridView1.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -130,14 +132,14 @@
             this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenSP,
@@ -161,14 +163,14 @@
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
@@ -184,9 +186,40 @@
             this.bunifuDataGridView1.TabIndex = 13;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "tensp";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // MaDV
+            // 
+            this.MaDV.DataPropertyName = "tendv";
+            this.MaDV.HeaderText = "Tên loại";
+            this.MaDV.Name = "MaDV";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "soluong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "dongia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "thanhtien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton1.Image = global::CoffeeManagement.Properties.Resources.printer;
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(793, 8);
@@ -226,7 +259,7 @@
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(100, 35);
             this.bunifuTextBox2.Modified = false;
             this.bunifuTextBox2.Name = "bunifuTextBox2";
-            this.bunifuTextBox2.PasswordChar = '\0';
+            this.bunifuTextBox2.PasswordChar = '●';
             this.bunifuTextBox2.ReadOnly = false;
             this.bunifuTextBox2.SelectedText = "";
             this.bunifuTextBox2.SelectionLength = 0;
@@ -238,8 +271,8 @@
             this.bunifuTextBox2.TabStop = false;
             this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox2.TextMarginLeft = 5;
-            this.bunifuTextBox2.TextPlaceholder = "";
-            this.bunifuTextBox2.UseSystemPasswordChar = false;
+            this.bunifuTextBox2.TextPlaceholder = "Time";
+            this.bunifuTextBox2.UseSystemPasswordChar = true;
             // 
             // tb_tien_cthd
             // 
@@ -264,7 +297,7 @@
             this.tb_tien_cthd.IconPadding = 10;
             this.tb_tien_cthd.IconRight = null;
             this.tb_tien_cthd.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_tien_cthd.Location = new System.Drawing.Point(644, 110);
+            this.tb_tien_cthd.Location = new System.Drawing.Point(644, 119);
             this.tb_tien_cthd.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_tien_cthd.MaxLength = 32767;
             this.tb_tien_cthd.MinimumSize = new System.Drawing.Size(100, 35);
@@ -282,7 +315,7 @@
             this.tb_tien_cthd.TabStop = false;
             this.tb_tien_cthd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_tien_cthd.TextMarginLeft = 5;
-            this.tb_tien_cthd.TextPlaceholder = "Name";
+            this.tb_tien_cthd.TextPlaceholder = "Total";
             this.tb_tien_cthd.UseSystemPasswordChar = false;
             // 
             // tb_nv_cthd
@@ -373,35 +406,10 @@
             this.tb_mahd_ct.TextPlaceholder = "Mã HD...";
             this.tb_mahd_ct.UseSystemPasswordChar = false;
             // 
-            // TenSP
+            // bunifuElipse1
             // 
-            this.TenSP.DataPropertyName = "tensp";
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.Name = "TenSP";
-            // 
-            // MaDV
-            // 
-            this.MaDV.DataPropertyName = "tendv";
-            this.MaDV.HeaderText = "Tên loại";
-            this.MaDV.Name = "MaDV";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "soluong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "dongia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "thanhtien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this.btn_note_QLHD;
             // 
             // QLHD_CTHD
             // 
@@ -412,7 +420,7 @@
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.bunifuTextBox2);
-            this.Controls.Add(this.bunifuMetroTextbox1);
+            this.Controls.Add(this.btn_note_QLHD);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.tb_tien_cthd);
             this.Controls.Add(this.bunifuCustomLabel4);
@@ -442,7 +450,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_tien_cthd;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox btn_note_QLHD;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox2;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
@@ -451,5 +459,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

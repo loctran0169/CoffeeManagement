@@ -54,6 +54,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Thêm mới";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
@@ -70,8 +71,8 @@
             this.bunifuButton1.Location = new System.Drawing.Point(537, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
@@ -102,7 +103,7 @@
             this.bunifuTextBox3.IconPadding = 10;
             this.bunifuTextBox3.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox3.IconRight")));
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox3.Location = new System.Drawing.Point(46, 29);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(12, 29);
             this.bunifuTextBox3.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(100, 35);
@@ -114,7 +115,7 @@
             this.bunifuTextBox3.SelectionLength = 0;
             this.bunifuTextBox3.SelectionStart = 0;
             this.bunifuTextBox3.ShortcutsEnabled = true;
-            this.bunifuTextBox3.Size = new System.Drawing.Size(320, 35);
+            this.bunifuTextBox3.Size = new System.Drawing.Size(354, 35);
             this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox3.TabIndex = 31;
             this.bunifuTextBox3.TabStop = false;
@@ -131,6 +132,7 @@
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.ButtonText = "Xuất file";
             this.bunifuButton2.ButtonTextMarginLeft = 0;
+            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;

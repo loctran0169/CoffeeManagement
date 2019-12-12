@@ -34,13 +34,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLMENU));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.dataGridSP = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_search_menu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_search_menu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,9 +69,9 @@
             this.dataGridSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSP,
             this.Column1,
+            this.tendv,
             this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Column3});
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -112,6 +112,41 @@
             this.dataGridSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellContentClick);
             this.dataGridSP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellDoubleClick);
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "masp";
+            this.MaSP.HeaderText = "Mã đồ uống";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tensp";
+            this.Column1.HeaderText = "Tên đồ uống";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // tendv
+            // 
+            this.tendv.DataPropertyName = "tendv";
+            this.tendv.HeaderText = "Đơn vị tính";
+            this.tendv.Name = "tendv";
+            this.tendv.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "dongia";
+            this.Column2.HeaderText = "Giá bán";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "hinhanh";
+            this.Column3.HeaderText = "Hình ảnh";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // bunifuButton1
             // 
             this.bunifuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -120,6 +155,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Thêm thức uống";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
@@ -136,8 +172,8 @@
             this.bunifuButton1.Location = new System.Drawing.Point(650, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
@@ -169,7 +205,7 @@
             this.btn_search_menu.IconPadding = 10;
             this.btn_search_menu.IconRight = ((System.Drawing.Image)(resources.GetObject("btn_search_menu.IconRight")));
             this.btn_search_menu.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_search_menu.Location = new System.Drawing.Point(46, 29);
+            this.btn_search_menu.Location = new System.Drawing.Point(12, 29);
             this.btn_search_menu.MaximumSize = new System.Drawing.Size(400, 100);
             this.btn_search_menu.MaxLength = 32767;
             this.btn_search_menu.MinimumSize = new System.Drawing.Size(100, 35);
@@ -181,7 +217,7 @@
             this.btn_search_menu.SelectionLength = 0;
             this.btn_search_menu.SelectionStart = 0;
             this.btn_search_menu.ShortcutsEnabled = true;
-            this.btn_search_menu.Size = new System.Drawing.Size(320, 35);
+            this.btn_search_menu.Size = new System.Drawing.Size(340, 35);
             this.btn_search_menu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.btn_search_menu.TabIndex = 7;
             this.btn_search_menu.TabStop = false;
@@ -190,36 +226,6 @@
             this.btn_search_menu.TextPlaceholder = "Nhập tên hoặc mã đồ uống";
             this.btn_search_menu.UseSystemPasswordChar = false;
             this.btn_search_menu.OnIconRightClick += new System.EventHandler(this.btn_search_menu_OnIconRightClick);
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "masp";
-            this.MaSP.HeaderText = "Mã đồ uống";
-            this.MaSP.Name = "MaSP";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tensp";
-            this.Column1.HeaderText = "Tên đồ uống";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "dongia";
-            this.Column2.HeaderText = "Giá bán";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "hinhanh";
-            this.Column3.HeaderText = "Hình ảnh";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "donvi";
-            this.Column4.HeaderText = "ĐVT";
-            this.Column4.Name = "Column4";
             // 
             // QLMENU
             // 
@@ -246,8 +252,8 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox btn_search_menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

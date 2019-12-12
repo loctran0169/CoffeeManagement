@@ -573,6 +573,7 @@
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.ButtonText = "Thêm ";
             this.btnAdd.ButtonTextMarginLeft = 0;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showEdit.SetDecoration(this.btnAdd, BunifuAnimatorNS.DecorationType.None);
             this.btnAdd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnAdd.DisabledFillColor = System.Drawing.Color.Gray;

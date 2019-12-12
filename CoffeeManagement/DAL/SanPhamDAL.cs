@@ -285,20 +285,10 @@ namespace DAL
         {
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
-
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
             try
             {
                 kn.Open();
-                string sql = "select masp,tensp,madv,hinhanh,dongia from sanpham";
+                string sql = "select sp.masp,sp.tensp,dv.tendv,sp.hinhanh,sp.dongia from sanpham sp, donvi dv where sp.madv=dv.madv";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();

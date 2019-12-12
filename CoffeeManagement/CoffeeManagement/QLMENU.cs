@@ -38,7 +38,6 @@ namespace CoffeeManagement
         {
             this.Invoke(new MethodInvoker(delegate
             {
-
                 dt = bus.selectByKeyWord(btn_search_menu.Text);
                 if (dt.Rows.Count > 0)                
                     dt.Rows.Clear();
@@ -63,7 +62,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(this, new QLMENU_ADD("", "Thêm"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLMENU_ADD("", "Thêm"));
         }
     }
 }

@@ -49,5 +49,10 @@ namespace CoffeeManagement
             }
             return true;
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

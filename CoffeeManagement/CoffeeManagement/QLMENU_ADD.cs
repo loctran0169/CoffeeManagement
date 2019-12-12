@@ -19,6 +19,7 @@ namespace CoffeeManagement
         private string tag;
         private bool chiTiet = true;
         SanPhamBUS bus = new SanPhamBUS();
+
         public QLMENU_ADD(string _userID, string _tag)
         {
             InitializeComponent();

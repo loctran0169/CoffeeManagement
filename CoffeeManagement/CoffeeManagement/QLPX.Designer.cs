@@ -156,6 +156,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Thêm phiếu xuất";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
@@ -172,8 +173,8 @@
             this.bunifuButton1.Location = new System.Drawing.Point(650, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
@@ -205,7 +206,7 @@
             this.bunifuTextBox1.IconPadding = 10;
             this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.Location = new System.Drawing.Point(46, 29);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(12, 29);
             this.bunifuTextBox1.MaximumSize = new System.Drawing.Size(400, 100);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
@@ -217,7 +218,7 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(320, 35);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(354, 35);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 10;
             this.bunifuTextBox1.TabStop = false;
