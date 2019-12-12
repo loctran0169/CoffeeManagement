@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -155,7 +156,10 @@ namespace CoffeeManagement
             {
                 sum += float.Parse(row[5].ToString());
             }
-            tb_price.Text = sum.ToString();
+            NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+            nfi.CurrencyGroupSeparator = ".";
+            nfi.CurrencyDecimalSeparator = ",";
+            tb_price.Text = sum.ToString("",nfi);
             return sum;
         }
 
