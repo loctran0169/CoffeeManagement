@@ -50,12 +50,19 @@
             this.tb_ghichu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btn_action = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_exit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(33, 9);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(32, 46);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel1.TabIndex = 1;
@@ -83,7 +90,7 @@
             this.tb_name.IconPadding = 10;
             this.tb_name.IconRight = null;
             this.tb_name.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_name.Location = new System.Drawing.Point(22, 34);
+            this.tb_name.Location = new System.Drawing.Point(21, 71);
             this.tb_name.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_name.MaxLength = 32767;
             this.tb_name.MinimumSize = new System.Drawing.Size(100, 35);
@@ -106,7 +113,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(33, 81);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(32, 118);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel2.TabIndex = 3;
@@ -134,7 +141,7 @@
             this.tb_sdt.IconPadding = 10;
             this.tb_sdt.IconRight = null;
             this.tb_sdt.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_sdt.Location = new System.Drawing.Point(22, 314);
+            this.tb_sdt.Location = new System.Drawing.Point(21, 351);
             this.tb_sdt.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_sdt.MaxLength = 32767;
             this.tb_sdt.MinimumSize = new System.Drawing.Size(100, 35);
@@ -157,7 +164,7 @@
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(33, 154);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(32, 191);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel3.TabIndex = 5;
@@ -166,7 +173,7 @@
             // cb_nam
             // 
             this.cb_nam.Checked = true;
-            this.cb_nam.Location = new System.Drawing.Point(36, 179);
+            this.cb_nam.Location = new System.Drawing.Point(35, 216);
             this.cb_nam.Name = "cb_nam";
             this.cb_nam.OutlineColor = System.Drawing.Color.Purple;
             this.cb_nam.RadioColor = System.Drawing.Color.Purple;
@@ -177,7 +184,7 @@
             // cb_nu
             // 
             this.cb_nu.Checked = false;
-            this.cb_nu.Location = new System.Drawing.Point(151, 179);
+            this.cb_nu.Location = new System.Drawing.Point(150, 216);
             this.cb_nu.Name = "cb_nu";
             this.cb_nu.OutlineColor = System.Drawing.Color.Purple;
             this.cb_nu.RadioColor = System.Drawing.Color.Purple;
@@ -188,7 +195,7 @@
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(67, 182);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(66, 219);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(72, 22);
             this.bunifuCustomLabel4.TabIndex = 8;
@@ -197,7 +204,7 @@
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(182, 182);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(181, 219);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel5.TabIndex = 3;
@@ -206,7 +213,7 @@
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(33, 289);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(32, 326);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel6.TabIndex = 10;
@@ -219,7 +226,7 @@
             this.date_birth.ForeColor = System.Drawing.Color.Black;
             this.date_birth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.date_birth.FormatCustom = "dd/MM/yyy";
-            this.date_birth.Location = new System.Drawing.Point(36, 106);
+            this.date_birth.Location = new System.Drawing.Point(35, 143);
             this.date_birth.Name = "date_birth";
             this.date_birth.Size = new System.Drawing.Size(264, 36);
             this.date_birth.TabIndex = 1;
@@ -247,7 +254,7 @@
             this.tb_diachi.IconPadding = 10;
             this.tb_diachi.IconRight = null;
             this.tb_diachi.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_diachi.Location = new System.Drawing.Point(22, 380);
+            this.tb_diachi.Location = new System.Drawing.Point(21, 417);
             this.tb_diachi.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_diachi.MaxLength = 32767;
             this.tb_diachi.MinimumSize = new System.Drawing.Size(100, 35);
@@ -270,7 +277,7 @@
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(33, 361);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(32, 398);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(92, 16);
             this.bunifuCustomLabel7.TabIndex = 13;
@@ -279,7 +286,7 @@
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(33, 217);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(32, 254);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel8.TabIndex = 14;
@@ -307,7 +314,7 @@
             this.tb_email.IconPadding = 10;
             this.tb_email.IconRight = null;
             this.tb_email.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_email.Location = new System.Drawing.Point(22, 242);
+            this.tb_email.Location = new System.Drawing.Point(21, 279);
             this.tb_email.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_email.MaxLength = 32767;
             this.tb_email.MinimumSize = new System.Drawing.Size(100, 35);
@@ -330,7 +337,7 @@
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(33, 443);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(32, 480);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(92, 16);
             this.bunifuCustomLabel9.TabIndex = 16;
@@ -358,7 +365,7 @@
             this.tb_ghichu.IconPadding = 10;
             this.tb_ghichu.IconRight = null;
             this.tb_ghichu.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_ghichu.Location = new System.Drawing.Point(22, 462);
+            this.tb_ghichu.Location = new System.Drawing.Point(21, 499);
             this.tb_ghichu.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_ghichu.MaxLength = 32767;
             this.tb_ghichu.MinimumSize = new System.Drawing.Size(100, 35);
@@ -384,6 +391,7 @@
             this.btn_action.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_action.BackgroundImage")));
             this.btn_action.ButtonText = "Lưu";
             this.btn_action.ButtonTextMarginLeft = 0;
+            this.btn_action.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_action.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btn_action.DisabledFillColor = System.Drawing.Color.Gray;
             this.btn_action.DisabledForecolor = System.Drawing.Color.White;
@@ -397,7 +405,7 @@
             this.btn_action.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_action.IdleIconLeftImage = null;
             this.btn_action.IdleIconRightImage = null;
-            this.btn_action.Location = new System.Drawing.Point(178, 565);
+            this.btn_action.Location = new System.Drawing.Point(177, 602);
             this.btn_action.Name = "btn_action";
             stateProperties1.BorderColor = System.Drawing.Color.Green;
             stateProperties1.BorderRadius = 35;
@@ -417,6 +425,7 @@
             this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
             this.btn_exit.ButtonText = "Hủy";
             this.btn_exit.ButtonTextMarginLeft = 0;
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_exit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btn_exit.DisabledFillColor = System.Drawing.Color.Gray;
             this.btn_exit.DisabledForecolor = System.Drawing.Color.White;
@@ -430,7 +439,7 @@
             this.btn_exit.IdleFillColor = System.Drawing.Color.Firebrick;
             this.btn_exit.IdleIconLeftImage = null;
             this.btn_exit.IdleIconRightImage = null;
-            this.btn_exit.Location = new System.Drawing.Point(22, 565);
+            this.btn_exit.Location = new System.Drawing.Point(21, 602);
             this.btn_exit.Name = "btn_exit";
             stateProperties2.BorderColor = System.Drawing.Color.DarkRed;
             stateProperties2.BorderRadius = 35;
@@ -444,12 +453,54 @@
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.bunifuImageButton2);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(341, 37);
+            this.panel1.TabIndex = 20;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(19, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nhân viên";
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton2.Image = global::CoffeeManagement.Properties.Resources.remove;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(307, 4);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(28, 28);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 2;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // QLNV_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(340, 637);
+            this.ClientSize = new System.Drawing.Size(340, 662);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_action);
             this.Controls.Add(this.tb_ghichu);
@@ -473,6 +524,9 @@
             this.Name = "QLNV_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NV";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +552,9 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_ghichu;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_action;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_exit;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private System.Windows.Forms.Label label1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }

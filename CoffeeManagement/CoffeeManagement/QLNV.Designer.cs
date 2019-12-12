@@ -67,7 +67,7 @@
             this.tb_name_nv.IconRight = ((System.Drawing.Image)(resources.GetObject("tb_name_nv.IconRight")));
             this.tb_name_nv.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.tb_name_nv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tb_name_nv.Location = new System.Drawing.Point(46, 29);
+            this.tb_name_nv.Location = new System.Drawing.Point(12, 29);
             this.tb_name_nv.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_name_nv.MaxLength = 32767;
             this.tb_name_nv.MinimumSize = new System.Drawing.Size(100, 35);
@@ -79,7 +79,7 @@
             this.tb_name_nv.SelectionLength = 0;
             this.tb_name_nv.SelectionStart = 0;
             this.tb_name_nv.ShortcutsEnabled = true;
-            this.tb_name_nv.Size = new System.Drawing.Size(320, 35);
+            this.tb_name_nv.Size = new System.Drawing.Size(354, 35);
             this.tb_name_nv.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.tb_name_nv.TabIndex = 1;
             this.tb_name_nv.TabStop = false;
@@ -97,6 +97,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Thêm nhân viên";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
@@ -113,8 +114,8 @@
             this.bunifuButton1.Location = new System.Drawing.Point(650, 29);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;

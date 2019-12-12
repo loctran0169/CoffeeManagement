@@ -72,6 +72,7 @@
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tshow.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuImageButton2.Image = global::CoffeeManagement.Properties.Resources.exit;
             this.bunifuImageButton2.ImageActive = null;
@@ -431,7 +432,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));

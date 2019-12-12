@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLDV_ADD));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -37,12 +38,18 @@
             this.tb_note = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(23, 13);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(23, 70);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel1.TabIndex = 3;
@@ -70,7 +77,7 @@
             this.tb_name.IconPadding = 10;
             this.tb_name.IconRight = null;
             this.tb_name.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_name.Location = new System.Drawing.Point(12, 38);
+            this.tb_name.Location = new System.Drawing.Point(12, 95);
             this.tb_name.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_name.MaxLength = 32767;
             this.tb_name.MinimumSize = new System.Drawing.Size(100, 35);
@@ -93,7 +100,7 @@
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(23, 88);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(23, 145);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(92, 16);
             this.bunifuCustomLabel7.TabIndex = 30;
@@ -121,7 +128,7 @@
             this.tb_note.IconPadding = 10;
             this.tb_note.IconRight = null;
             this.tb_note.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.tb_note.Location = new System.Drawing.Point(12, 116);
+            this.tb_note.Location = new System.Drawing.Point(12, 173);
             this.tb_note.MaximumSize = new System.Drawing.Size(400, 100);
             this.tb_note.MaxLength = 32767;
             this.tb_note.MinimumSize = new System.Drawing.Size(100, 35);
@@ -147,6 +154,7 @@
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.ButtonText = "Hủy";
             this.bunifuButton2.ButtonTextMarginLeft = 0;
+            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
@@ -160,7 +168,7 @@
             this.bunifuButton2.IdleFillColor = System.Drawing.Color.Firebrick;
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(18, 191);
+            this.bunifuButton2.Location = new System.Drawing.Point(18, 248);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties1.BorderColor = System.Drawing.Color.DarkRed;
             stateProperties1.BorderRadius = 35;
@@ -180,6 +188,7 @@
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.ButtonText = "Lưu";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
@@ -193,7 +202,7 @@
             this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(174, 191);
+            this.bunifuButton1.Location = new System.Drawing.Point(174, 248);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties2.BorderColor = System.Drawing.Color.Green;
             stateProperties2.BorderRadius = 35;
@@ -207,12 +216,53 @@
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.bunifuImageButton2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(326, 37);
+            this.panel1.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Đơn vị tính";
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton2.Image = global::CoffeeManagement.Properties.Resources.remove;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(289, 3);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(28, 28);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 2;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // QLDV_ADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(326, 268);
+            this.ClientSize = new System.Drawing.Size(326, 307);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.bunifuCustomLabel7);
@@ -224,6 +274,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QLDV_ADD";
             this.Load += new System.EventHandler(this.QLDV_ADD_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +288,9 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_note;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

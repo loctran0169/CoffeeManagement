@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLPN_CTPN));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.btn_note_QLPN = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -42,26 +43,27 @@
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuMetroTextbox1
+            // btn_note_QLPN
             // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.DimGray;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(17, 96);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(791, 50);
-            this.bunifuMetroTextbox1.TabIndex = 20;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_note_QLPN.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_note_QLPN.BorderColorFocused = System.Drawing.Color.DarkTurquoise;
+            this.btn_note_QLPN.BorderColorIdle = System.Drawing.Color.WhiteSmoke;
+            this.btn_note_QLPN.BorderColorMouseHover = System.Drawing.Color.DarkTurquoise;
+            this.btn_note_QLPN.BorderThickness = 1;
+            this.btn_note_QLPN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btn_note_QLPN.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_note_QLPN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_note_QLPN.isPassword = false;
+            this.btn_note_QLPN.Location = new System.Drawing.Point(17, 96);
+            this.btn_note_QLPN.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_note_QLPN.Name = "btn_note_QLPN";
+            this.btn_note_QLPN.Size = new System.Drawing.Size(791, 50);
+            this.btn_note_QLPN.TabIndex = 20;
+            this.btn_note_QLPN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
             // 
@@ -276,6 +278,11 @@
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(790, 313);
             this.bunifuCustomDataGrid1.TabIndex = 21;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this.btn_note_QLPN;
+            // 
             // QLPN_CTPN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,7 +290,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(827, 477);
             this.Controls.Add(this.bunifuCustomDataGrid1);
-            this.Controls.Add(this.bunifuMetroTextbox1);
+            this.Controls.Add(this.btn_note_QLPN);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuDatepicker1);
             this.Controls.Add(this.bunifuTextBox3);
@@ -304,7 +311,7 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox btn_note_QLPN;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox3;
@@ -315,5 +322,6 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
