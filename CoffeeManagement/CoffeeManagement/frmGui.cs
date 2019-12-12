@@ -14,13 +14,11 @@ namespace CoffeeManagement
     public partial class frmGui : Form
     {
         private bool isShow = true;
-        public string manv;
-        public string tennv;
-        public frmGui(string _manv,string _tennv)
+        public NhanVienDTO NV;
+        public frmGui(NhanVienDTO _nv)
         {
             InitializeComponent();
-            this.manv = _manv;
-            this.tennv = _tennv;
+            this.NV = _nv;
         }
 
         private void btn_hoadon_Click(object sender, EventArgs e)
@@ -206,7 +204,7 @@ namespace CoffeeManagement
             {
                 if (i.GetType()==tb.GetType())
                 {
-                    if((i as Bunifu.Framework.UI.BunifuFlatButton)==tb)
+                    if ((i as Bunifu.Framework.UI.BunifuFlatButton) == tb)
                         (i as Bunifu.Framework.UI.BunifuFlatButton).Textcolor = Color.FromArgb(26, 188, 156);
                     else
                         (i as Bunifu.Framework.UI.BunifuFlatButton).Textcolor = Color.White;

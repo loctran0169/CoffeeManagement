@@ -11,20 +11,20 @@ using System.Windows.Forms;
 
 namespace DAL
 {
-    public class CTPhieuXuatDAL
+    public class CTPhieuNhapDAL
     {
         private string connectionString;
 
         public string ConnectionString { get => connectionString; set => connectionString = value; }
 
-        public CTPhieuXuatDAL()
+        public CTPhieuNhapDAL()
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-        public bool them(CTPhieuXuatDTO bn)
+        public bool them(CTPhieuNhapDTO bn)
         {
             string query = string.Empty;
-            query += "INSERT INTO ctphieuxuat(mapx,manl,soluong,dongia) VALUES (@mapx,@manl,@soluong,@dongia)";
+            query += "INSERT INTO ctphieunhap(mapn,manl,soluong,dongia) VALUES (@mapn,@manl,@soluong,@dongia)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand cmd = new MySqlCommand())
@@ -32,7 +32,7 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@mapx", bn.MaPX1);
+                    cmd.Parameters.AddWithValue("@mapn", bn.MaPN1);
                     cmd.Parameters.AddWithValue("@manl", bn.MaNL1);
                     cmd.Parameters.AddWithValue("@soluong", bn.SoLuong1);
                     cmd.Parameters.AddWithValue("@dongia", bn.DonGia1);
@@ -56,7 +56,7 @@ namespace DAL
         public bool xoa(string bn)
         {
             string query = string.Empty;
-            query += "DELETE FROM ctphieuxuat WHERE mapx = @mapx";
+            query += "DELETE FROM ctphieunhap WHERE mapn = @mapn";
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
 
@@ -65,7 +65,7 @@ namespace DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@mapx", bn);
+                    cmd.Parameters.AddWithValue("@mapn", bn);
                     try
                     {
                         con.Open();
@@ -83,7 +83,7 @@ namespace DAL
             return true;
         }
 
-        public DataTable loadDuLieuChiTietPhieuXuat(string mapx)
+        public DataTable loadDuLieuChiTietPhieuNhap(string mapn)
         {
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(ConfigurationManager.AppSettings["ConnectionString"]);
@@ -91,10 +91,10 @@ namespace DAL
             {
                 string query = null;
                 query += "select ct.manl,nl.tennl,dv.tendv,ct.SoLuong,ct.dongia,(ct.SoLuong*ct.dongia) as thanhtien ";
-                query += "from ctphieuxuat ct, nguyenlieu nl , donvi dv ";
-                query += "where ct.manl=nl.manl and dv.madv=nl.madv and ct.mapx=@mapx";
+                query += "from ctphieunhap ct, nguyenlieu nl , donvi dv ";
+                query += "where ct.manl=nl.manl and dv.madv=nl.madv and ct.mapn=@mapn";
                 MySqlCommand cmd = new MySqlCommand(query, kn);
-                cmd.Parameters.AddWithValue("@mapx", mapx);
+                cmd.Parameters.AddWithValue("@mapn", mapn);
                 kn.Open();
                 MySqlDataAdapter dt = new MySqlDataAdapter(cmd);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
@@ -108,18 +108,18 @@ namespace DAL
             return k;
         }
 
-        public DataTable loadInfo(string mapx)
+        public DataTable loadInfo(string mapn)
         {
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(ConfigurationManager.AppSettings["ConnectionString"]);
             try
             {
                 string query = null;
-                query += "select px.mapx, nv.tennv, px.ngayxuat, px.diachi, px.tongtien, px.tinhtrang ";
-                query += "from phieuxuat px, nhanvien nv ";
-                query += "where px.manv=nv.manv and px.mapx=@mapx";
+                query += "select pn.mapn, nv.tennv, pn.ngaynhap, pn.diachi, pn.tongtien, pn.tinhtrang ";
+                query += "from phieunhap pn, nhanvien nv ";
+                query += "where pn.manv=nv.manv and pn.mapn=@mapn";
                 MySqlCommand cmd = new MySqlCommand(query, kn);
-                cmd.Parameters.AddWithValue("@mapx", mapx);
+                cmd.Parameters.AddWithValue("@mapn", mapn);
                 kn.Open();
                 MySqlDataAdapter dt = new MySqlDataAdapter(cmd);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
@@ -134,7 +134,7 @@ namespace DAL
         }
 
         //load by dataset
-        public DataSet loadCTPhieuXuat(string mapx)
+        public DataSet loadctphieunhap(string mapn)
         {
             DataSet k = new DataSet();
             MySqlConnection kn = new MySqlConnection(ConfigurationManager.AppSettings["ConnectionString"]);
@@ -142,13 +142,13 @@ namespace DAL
             {
                 string query = null;
                 query += "select * ";
-                query += "from ctphieuxuat ";
-                query += "where mapx=@mapx";
+                query += "from ctphieunhap ";
+                query += "where mapn=@mapn";
                 MySqlCommand cmd = new MySqlCommand(query, kn);
-                cmd.Parameters.AddWithValue("@mapx", mapx);
+                cmd.Parameters.AddWithValue("@mapn", mapn);
                 kn.Open();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(k,"ctphieuxuat");
+                adapter.Fill(k, "ctphieunhap");
                 kn.Close();
                 adapter.Dispose();
             }
@@ -163,7 +163,7 @@ namespace DAL
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter("select * from ctphieuxuat",con))
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter("select * from ctphieunhap", con))
                 {
                     using (MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter))
                         try
@@ -175,7 +175,7 @@ namespace DAL
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("dal ct "+ex.Message);
+                            MessageBox.Show("dal ct " + ex.Message);
                             con.Close();
                             return false;
                         }

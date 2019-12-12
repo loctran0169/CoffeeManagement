@@ -357,7 +357,6 @@
             this.bunifuImageButton2.TabIndex = 2;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuElipse1
             // 

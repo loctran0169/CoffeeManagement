@@ -10,6 +10,7 @@ namespace DTO
     {
         private string MaPX;
         private string MaNV;
+        private DateTime NgayLap;
         private DateTime NgayXuat;
         private string DiaChi;
         private string TinhTrang;
@@ -21,5 +22,6 @@ namespace DTO
         public string TinhTrang1 { get => TinhTrang; set => TinhTrang = value; }
         public float TongTien1 { get => TongTien; set => TongTien = value; }
         public string DiaChi1 { get => DiaChi; set => DiaChi = value; }
+        public DateTime NgayLap1 { get => NgayLap; set => NgayLap = value; }
     }
 }

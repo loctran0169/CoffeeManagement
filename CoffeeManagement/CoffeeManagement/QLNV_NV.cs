@@ -69,11 +69,6 @@ namespace CoffeeManagement
             return true;
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btn_action_Click(object sender, EventArgs e)
         {
             if (tag == "Thêm")
@@ -196,6 +191,15 @@ namespace CoffeeManagement
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -9,28 +9,28 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class PhieuXuatBUS
+    public class PhieuNhapBUS
     {
-        private PhieuXuatDAL bdal;
+        private PhieuNhapDAL bdal;
 
-        public PhieuXuatBUS()
+        public PhieuNhapBUS()
         {
-            bdal = new PhieuXuatDAL();
+            bdal = new PhieuNhapDAL();
         }
 
-        public bool them(PhieuXuatDTO lb)
+        public bool them(PhieuNhapDTO lb)
         {
             bool re = bdal.them(lb);
             return re;
         }
 
-        public bool xoa(PhieuXuatDTO lb)
+        public bool xoa(PhieuNhapDTO lb)
         {
             bool re = bdal.xoa(lb);
             return re;
         }
 
-        public bool sua(PhieuXuatDTO lb)
+        public bool sua(PhieuNhapDTO lb)
         {
             bool re = bdal.sua(lb);
             return re;
