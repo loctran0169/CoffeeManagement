@@ -50,6 +50,7 @@ namespace CoffeeManagement
             tb_name.Enabled = false;
             tb_note.Enabled = false;
         }
+
         public void loadData()
         {
             DataTable dt = bus.loadDV(MaDV);

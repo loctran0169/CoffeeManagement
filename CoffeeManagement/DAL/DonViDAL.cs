@@ -228,6 +228,7 @@ namespace DAL
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                return new DataTable();
             }
             return k;
         }

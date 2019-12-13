@@ -75,6 +75,7 @@ namespace CoffeeManagement
                 dt.Columns.Add(column);
             }
         }
+
         public void loadSP()
         {
             this.Invoke(new MethodInvoker(delegate

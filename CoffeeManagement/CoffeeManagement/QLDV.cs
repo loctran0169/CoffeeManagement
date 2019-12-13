@@ -81,8 +81,16 @@ namespace CoffeeManagement
                 DialogResult dialogResult = MessageBox.Show("Đơn vị này sẽ biến mất", "Xóa đơn vị", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    bus.xoa(new DonViDTO() { MaDV1 = (dgv_ct.DataSource as DataTable).Rows[e.RowIndex][e.ColumnIndex].ToString() });
-                    (dgv_ct.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                    bool kq = bus.xoa(new DonViDTO() { MaDV1 = (dgv_ct.DataSource as DataTable).Rows[e.RowIndex][e.ColumnIndex].ToString() });
+                    if (kq)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        (dgv_ct.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nguyên liệu đang được sử dụng không thể xóa");
+                    }
                 }
                 else if (dialogResult == DialogResult.No)
                 {

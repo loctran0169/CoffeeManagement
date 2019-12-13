@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -172,54 +173,31 @@ namespace DAL
             return listthuoc;
         }
 
-        public List<NguyenLieuDTO> selectByKeyWord(string sKeyword)
+        public DataTable selectByKeyWord(string sKeyword)
         {
             string query = string.Empty;
-            query += " SELECT *";
-            query += " FROM nguyenlieu";
-            query += " WHERE (manl LIKE CONCAT('%',@sKeyword,'%'))";
-            query += " OR (tennl LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " SELECT manl,tennl,dv.tendv,soluongton,gianhap,giaban ";
+            query += " FROM nguyenlieu nl, donvi dv ";
+            query += " WHERE ((upper(nl.manl) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and nl.madv=dv.madv) ";
+            query += " OR ((upper(nl.tennl) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and nl.madv=dv.madv)";
 
-            List<NguyenLieuDTO> listthuoc = new List<NguyenLieuDTO>();
-
-            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
             {
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
 
-                using (MySqlCommand cmd = new MySqlCommand())
-                {
-                    cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-                    try
-                    {
-                        con.Open();
-                        MySqlDataReader reader = null;
-                        reader = cmd.ExecuteReader();
-                        if (reader.HasRows == true)
-                        {
-                            while (reader.Read())
-                            {
-                                NguyenLieuDTO bn = new NguyenLieuDTO();
-                                bn.MaNL1 = reader["MaNL"].ToString();
-                                bn.TenNL1 = reader["TenNL"].ToString();
-                                bn.MaDV1 = reader["MaDV"].ToString();
-                                bn.SoLuongTon1 = float.Parse(reader["SoLuongTon"].ToString());
-                                listthuoc.Add(bn);
-                            }
-                        }
-
-                        con.Close();
-                        con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return null;
-                    }
-                }
             }
-            return listthuoc;
+            catch (Exception e)
+            {
+                return new DataTable();
+                MessageBox.Show(e.Message);
+            }
+            return k;
         }
 
         public DataTable loadDuLieuDonViTinh()
@@ -249,7 +227,7 @@ namespace DAL
             try
             {
                 kn.Open();
-                string sql = "select manl,tennl,t.madv,soluongton from donvi dv join nguyenlieu t on dv.Madv = t.MaDV";
+                string sql = "select manl,tennl,dv.tendv,soluongton,gianhap,giaban from donvi dv join nguyenlieu t on dv.Madv = t.MaDV";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
@@ -273,6 +251,27 @@ namespace DAL
                 string sql = "select nl.manl, nl.tennl,dv.madv,dv.tendv, nl.soluongton,nl.gianhap,nl.giaban " +
                     "from nguyenlieu nl, donvi dv " +
                     "where nl.madv=dv.madv";
+                MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
+                dt.Fill(k);
+                kn.Close();
+                dt.Dispose();
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
+            }
+            return k;
+        }
+
+        public DataTable loadNL(string s)
+        {
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+
+            try
+            {
+                kn.Open();
+                string sql = "select * from nguyenlieu where manl='"+s+"'";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);
                 kn.Close();

@@ -21,5 +21,10 @@ namespace CoffeeManagement
         {
 
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chưa in được");
+        }
     }
 }

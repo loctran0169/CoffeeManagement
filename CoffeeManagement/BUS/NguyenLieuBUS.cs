@@ -39,7 +39,7 @@ namespace BUS
         {
             return bdal.select();
         }
-        public List<NguyenLieuDTO> selectByKeyWord(string sKeyword)
+        public DataTable selectByKeyWord(string sKeyword)
         {
             return bdal.selectByKeyWord(sKeyword);
         }
@@ -54,6 +54,10 @@ namespace BUS
         public DataTable loadToCombobox()
         {
             return bdal.loadToCombobox();
+        }
+        public DataTable loadNL(string s)
+        {
+            return bdal.loadNL(s);
         }
     }
 }
