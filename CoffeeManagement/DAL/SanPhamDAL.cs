@@ -26,7 +26,7 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += "INSERT INTO sanpham(TenSP,HinhAnh,MaDV,DonGia) VALUES (@TenSP,@HinhAnh,@MaDV,@DonGia)";
+            query += "INSERT INTO sanpham(TenSP,HinhAnh,MaDV,DonGia,ghichu) VALUES (@TenSP,@HinhAnh,@MaDV,@DonGia,@ghichu)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
 
@@ -40,6 +40,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@HinhAnh", bn.HinhAnh1);
                     cmd.Parameters.AddWithValue("@MaDV", bn.MaDV1);
                     cmd.Parameters.AddWithValue("@DonGia", bn.DonGia1);
+                    cmd.Parameters.AddWithValue("@ghichu", bn.GhiChu1);
                     try
                     {
                         con.Open();
@@ -61,7 +62,7 @@ namespace DAL
         public bool sua(SanPhamDTO bn)
         {
             string query = string.Empty;
-            query += "UPDATE sanpham SET masp = @masp,tensp=@tensp, hinhanh = @hinhanh, madv = @madv,dongia = @dongia  WHERE masp = @masp";
+            query += "UPDATE sanpham SET masp = @masp,tensp=@tensp, hinhanh = @hinhanh, madv = @madv,dongia = @dongia, ghichu=@ghichu  WHERE masp = @masp";
 
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -76,6 +77,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@hinhanh", bn.HinhAnh1);
                     cmd.Parameters.AddWithValue("@madv", bn.MaDV1);
                     cmd.Parameters.AddWithValue("@dongia", bn.DonGia1);
+                    cmd.Parameters.AddWithValue("@ghichu", bn.GhiChu1);
 
                     try
                     {
@@ -166,7 +168,6 @@ namespace DAL
                         con.Close();
                         return null;
                     }
-
                 }
             }
             return listthuoc;
@@ -206,54 +207,6 @@ namespace DAL
             return k;
         }
 
-        //public List<SanPhamDTO> selectByKeyWord(string sKeyword)
-        //{
-        //    string query = string.Empty;
-        //    query += " SELECT *";
-        //    query += " FROM sanpham";
-        //    query += " WHERE (masp LIKE CONCAT('%',@sKeyword,'%'))";
-        //    query += " OR (tensp LIKE CONCAT('%',@sKeyword,'%'))";
-
-        //    List<SanPhamDTO> listthuoc = new List<SanPhamDTO>();
-        //    using (MySqlConnection con = new MySqlConnection(ConnectionString))
-        //    {
-        //        using (MySqlCommand cmd = new MySqlCommand())
-        //        {
-        //            cmd.Connection = con;
-        //            cmd.CommandType = System.Data.CommandType.Text;
-        //            cmd.CommandText = query;
-        //            cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-        //            try
-        //            {
-        //                con.Open();
-        //                MySqlDataReader reader = null;
-        //                reader = cmd.ExecuteReader();
-        //                if (reader.HasRows == true)
-        //                {
-        //                    while (reader.Read())
-        //                    {
-        //                        SanPhamDTO bn = new SanPhamDTO();
-        //                        bn.MaSP1 = reader["MaSp"].ToString();
-        //                        bn.MaDV1 = reader["MaDV"].ToString();
-        //                        bn.TenSP1 = reader["TenSP"].ToString();
-        //                        bn.HinhAnh1 = reader["HinhAnh"].ToString();
-        //                        bn.DonGia1 = float.Parse(reader["DonGia"].ToString());
-        //                        listthuoc.Add(bn);
-        //                    }
-        //                }
-
-        //                con.Close();
-        //                con.Dispose();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                con.Close();
-        //                return null;
-        //            }
-        //        }
-        //    }
-        //    return listthuoc;
-        //}
 
 
         public DataTable load1SP(string sKeyword)
@@ -262,7 +215,7 @@ namespace DAL
             string query = string.Empty;
             query += " SELECT *";
             query += " FROM sanpham sp, donvi dv";
-            query += " WHERE sp.madv=dv.madv, masp='" + sKeyword.ToUpper() + "'";
+            query += " WHERE sp.madv=dv.madv and masp='" + sKeyword.ToUpper() + "'";
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);

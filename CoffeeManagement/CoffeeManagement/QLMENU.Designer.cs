@@ -110,7 +110,7 @@
             this.dataGridSP.Size = new System.Drawing.Size(831, 408);
             this.dataGridSP.TabIndex = 10;
             this.dataGridSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dataGridSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellContentClick);
+            this.dataGridSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellClick);
             this.dataGridSP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellDoubleClick);
             // 
             // MaSP

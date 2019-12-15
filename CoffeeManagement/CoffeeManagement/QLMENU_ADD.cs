@@ -21,21 +21,13 @@ namespace CoffeeManagement
         DonViBUS dvBus = new DonViBUS();
         SanPhamBUS bus = new SanPhamBUS();
         DataTable dvt = new DataTable();
-        List<String> list = new List<string>();
-
+        List<string> list = new List<string>();
+        string fileName = "";
         public QLMENU_ADD(string _menuID, string _tag)
         {
             InitializeComponent();
             this.menuId = _menuID;
-            this.tag = _tag;
-            if (tag == "Thêm")
-                btn_save.ButtonText = "Lưu";
-            else if (tag == "Chi Tiết")
-            {
-                btn_save.ButtonText = "Sửa";
-                loadData();
-                disabledForm();
-            }
+            this.tag = _tag;            
         }
 
         public void loadDV()
@@ -46,7 +38,7 @@ namespace CoffeeManagement
                 if (dvt.Rows.Count > 0)
                 {
                     list = dvt.AsEnumerable()
-                    .Select(r => r.Field<string>("MaDV"))
+                    .Select(r => r.Field<string>("madv"))
                     .ToList();
                     foreach (DataRow row in dvt.Rows)
                     {
@@ -61,10 +53,10 @@ namespace CoffeeManagement
             DataTable dt = bus.load1SP(menuId);
             if (dt != null && dt.Rows.Count > 0)
             {
-                tb_name_SP.Text = dt.Rows[0][1].ToString();
-                cb_unit_SP.SelectedIndex = list.IndexOf(dt.Rows[0][3].ToString()); ;
-                cb_unit_SP.Text = dt.Rows[0][2].ToString();
-                tb_note_SP.Text = dt.Rows[0][4].ToString();
+                tb_name_SP.Text = dt.Rows[0][2].ToString();
+                cb_unit_SP.SelectedIndex = 2;
+                tb_price_SP.Text = dt.Rows[0][5].ToString();
+                tb_note_SP.Text = dt.Rows[0][6].ToString();
             }
             else
                 MessageBox.Show("không có");
@@ -89,7 +81,11 @@ namespace CoffeeManagement
                 MessageBox.Show("Vui lòng nhập đơn vị của sản phẩm");
                 return false;
             }
-           
+           else if(fileName=="")
+            {
+                MessageBox.Show("Vui lòng chọn ảnh sản phẩm");
+                return false;
+            }
             else if (tb_note_SP.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập ghi chú sản phẩm");
@@ -105,6 +101,7 @@ namespace CoffeeManagement
             tb_price_SP.Enabled = true;
             cb_unit_SP.Enabled = true;
             tb_note_SP.Enabled = true;
+            btn_img.Enabled = true;
         }
 
         public void disabledForm()
@@ -113,8 +110,10 @@ namespace CoffeeManagement
             tb_price_SP.Enabled = false;
             cb_unit_SP.Enabled = false;
             tb_note_SP.Enabled = false;
+            btn_img.Enabled = false;
         }
 
+    
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (tag == "Thêm")
@@ -125,13 +124,14 @@ namespace CoffeeManagement
                 sp.TenSP1 = tb_name_SP.Text;
                 sp.DonGia1 = float.Parse(tb_price_SP.Text);
                 sp.MaDV1 = list[cb_unit_SP.SelectedIndex];
-                sp.GhiChu1 = tb_note_SP.Text;
-                MessageBox.Show(cb_unit_SP.Text);
+                sp.HinhAnh1 = fileName;
+                sp.GhiChu1 = tb_note_SP.Text;           
                 bool kq = bus.them(sp);
                 if (kq == true)
                 {
                     MessageBox.Show("Thêm sản phẩm thành công");
                     this.Close();
+                   
                 }
                 else
                 {
@@ -139,7 +139,7 @@ namespace CoffeeManagement
                     return;
                 }
             }
-            else if (tag == "Chi tiết")
+            else if (tag == "Chi Tiết")
                 if (chiTiet)
                 {
                     btn_save.ButtonText = "Lưu";
@@ -154,6 +154,7 @@ namespace CoffeeManagement
                     sp.TenSP1 = tb_name_SP.Text;
                     sp.DonGia1 = float.Parse(tb_price_SP.Text);
                     sp.MaDV1 = list[cb_unit_SP.SelectedIndex];
+                    sp.HinhAnh1 = fileName;
                     sp.GhiChu1 = tb_note_SP.Text;
                     bool kq = bus.sua(sp);
                     if (kq == true)
@@ -162,6 +163,7 @@ namespace CoffeeManagement
                         disabledForm();
                         btn_save.ButtonText = "Sửa";
                         chiTiet = true;
+                        this.Close();
                     }
                     else
                     {
@@ -170,6 +172,8 @@ namespace CoffeeManagement
                     }
                 }
         }
+
+   
 
         private void btn_back_SP_Click(object sender, EventArgs e)
         {
@@ -184,6 +188,29 @@ namespace CoffeeManagement
         private void cb_unit_SP_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void QLMENU_ADD_Load(object sender, EventArgs e)
+        {
+            loadDV();
+            if (tag == "Thêm")
+                btn_save.ButtonText = "Lưu";
+            else if (tag == "Chi Tiết")
+            {
+                btn_save.ButtonText = "Sửa";
+                loadData();
+                disabledForm();
+            }
+        }
+
+        private void btn_img_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            DialogResult result = open.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fileName = open.FileName;
+            }
         }
     }
 }

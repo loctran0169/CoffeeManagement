@@ -55,14 +55,14 @@ namespace CoffeeManagement
             loadData();
         }
 
-        private void dataGridSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLMENU_ADD("", "Thêm"));
+        }
+
+        private void dataGridSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new transparentBg1(Application.OpenForms[0], new QLMENU_ADD((dataGridSP.DataSource as DataTable).Rows[e.RowIndex][0].ToString(), "Chi Tiết"));
         }
     }
 }
