@@ -46,14 +46,26 @@ namespace CoffeeManagement
                 if (k.Rows.Count > 0)
                 {
                     //gán các thông tin của người đăng nhập cho user
-                    us.MaTK1 = k.Rows[0][0].ToString();
-                    us.TaiKhoan1 = k.Rows[0][1].ToString();
-                    us.MatKhau1 = k.Rows[0][2].ToString();
-                    us.MaPQ1 = k.Rows[0][3].ToString();
-                    MessageBox.Show("Đăng nhập thành công");
-                    frmGui f = new frmGui(new NhanVienDTO() { MaNV1="NV0001",TenNV1="Trần Hữu Lộc"});
-                    this.Hide();
-                    f.ShowDialog();//hiển thị form chính                    
+                    us.MaTK1 = k.Rows[0][1].ToString();
+                    NhanVienBUS busNV = new NhanVienBUS();
+                    DataTable nv = busNV.loadNhanViewDangNhap(us.MaTK1);
+                    if (nv != null)
+                    {
+                        MessageBox.Show("Đăng nhập thành công");
+                        frmGui f = new frmGui(new NhanVienDTO() {
+                            MaNV1 = nv.Rows[0][1].ToString(),
+                            TenNV1 = nv.Rows[0][2].ToString(),
+                            NgaySinh1 = DateTime.Parse(nv.Rows[0][3].ToString()),
+                            GioiTinh1 = nv.Rows[0][4].ToString(),
+                            DiaChi1= nv.Rows[0][5].ToString(),
+                            SDT1= nv.Rows[0][6].ToString(),
+                            Email1= nv.Rows[0][7].ToString(),
+                            MaTK1=us.MaTK1,
+                            GhiChu1= nv.Rows[0][9].ToString()
+                        });
+                        this.Hide();
+                        f.ShowDialog();//hiển thị form chính 
+                    }                   
                 }
                 else
                     MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");

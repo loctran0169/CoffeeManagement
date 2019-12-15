@@ -18,7 +18,7 @@ namespace CoffeeManagement
         public frmGui(NhanVienDTO _nv)
         {
             InitializeComponent();
-            this.NV = _nv;
+            this.NV = _nv.copyOf();
         }
 
         private void btn_hoadon_Click(object sender, EventArgs e)

@@ -27,5 +27,20 @@ namespace DTO
         public string MaTK1 { get => MaTK; set => MaTK = value; }
         public string GhiChu1 { get => GhiChu; set => GhiChu = value; }
         public string Email1 { get => Email; set => Email = value; }
+
+        public NhanVienDTO copyOf()
+        {
+            NhanVienDTO nv = new NhanVienDTO();
+            nv.MaNV = MaNV;
+            nv.TenNV = TenNV;
+            nv.NgaySinh = NgaySinh;
+            nv.GioiTinh = GioiTinh;
+            nv.DiaChi = DiaChi;
+            nv.SDT = SDT;
+            nv.Email = Email;
+            nv.MaTK = MaTK;
+            nv.GhiChu = GhiChu;
+            return nv;
+        }
     }
 }

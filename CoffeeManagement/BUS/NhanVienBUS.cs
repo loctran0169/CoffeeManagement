@@ -60,5 +60,9 @@ namespace BUS
         {
             return nvDAL.loadOneNhanVien(s);
         }
+        public DataTable loadNhanViewDangNhap(string s)
+        {
+            return nvDAL.loadNhanViewDangNhap(s);
+        }
     }
 }
