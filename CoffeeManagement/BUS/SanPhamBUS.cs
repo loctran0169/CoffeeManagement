@@ -51,6 +51,11 @@ namespace BUS
             return bdal.loadDuLieuSanPham();
         }
 
+        public DataTable load1SP(string s)
+        {
+            return bdal.load1SP(s);
+        }
+
         public DataTable loadToCombobox()
         {
             return bdal.loadToCombobox();

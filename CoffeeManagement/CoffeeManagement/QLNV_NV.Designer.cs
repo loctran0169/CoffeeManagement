@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNV_NV));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tb_name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -111,6 +111,7 @@
             this.tb_name.TextMarginLeft = 5;
             this.tb_name.TextPlaceholder = "Họ và tên";
             this.tb_name.UseSystemPasswordChar = false;
+         
             // 
             // bunifuCustomLabel2
             // 
@@ -409,13 +410,13 @@
             this.btn_action.IdleIconRightImage = null;
             this.btn_action.Location = new System.Drawing.Point(177, 602);
             this.btn_action.Name = "btn_action";
-            stateProperties3.BorderColor = System.Drawing.Color.Green;
-            stateProperties3.BorderRadius = 35;
-            stateProperties3.BorderThickness = 0;
-            stateProperties3.FillColor = System.Drawing.Color.Green;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btn_action.onHoverState = stateProperties3;
+            stateProperties1.BorderColor = System.Drawing.Color.Green;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
+            stateProperties1.FillColor = System.Drawing.Color.Green;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btn_action.onHoverState = stateProperties1;
             this.btn_action.Size = new System.Drawing.Size(140, 48);
             this.btn_action.TabIndex = 18;
             this.btn_action.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,13 +444,13 @@
             this.btn_exit.IdleIconRightImage = null;
             this.btn_exit.Location = new System.Drawing.Point(21, 602);
             this.btn_exit.Name = "btn_exit";
-            stateProperties4.BorderColor = System.Drawing.Color.DarkRed;
-            stateProperties4.BorderRadius = 35;
-            stateProperties4.BorderThickness = 0;
-            stateProperties4.FillColor = System.Drawing.Color.DarkRed;
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btn_exit.onHoverState = stateProperties4;
+            stateProperties2.BorderColor = System.Drawing.Color.DarkRed;
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderThickness = 0;
+            stateProperties2.FillColor = System.Drawing.Color.DarkRed;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btn_exit.onHoverState = stateProperties2;
             this.btn_exit.Size = new System.Drawing.Size(140, 48);
             this.btn_exit.TabIndex = 19;
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

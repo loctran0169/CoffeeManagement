@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -25,7 +26,7 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += "INSERT INTO sanpham(MaSP,TenSP,HinhAnh,MaDV,DonGia) VALUES (@MaSP,@TenSP,@HinhAnh,@MaDV,@DonGia)";
+            query += "INSERT INTO sanpham(TenSP,HinhAnh,MaDV,DonGia) VALUES (@TenSP,@HinhAnh,@MaDV,@DonGia)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
 
@@ -49,6 +50,7 @@ namespace DAL
                     catch (Exception ex)
                     {
                         con.Close();
+                        MessageBox.Show(ex.Message);
                         return false;
                     }
                 }
@@ -259,8 +261,8 @@ namespace DAL
 
             string query = string.Empty;
             query += " SELECT *";
-            query += " FROM nhanvien";
-            query += " WHERE manv='" + sKeyword.ToUpper() + "'";
+            query += " FROM sanpham sp, donvi dv";
+            query += " WHERE sp.madv=dv.madv, masp='" + sKeyword.ToUpper() + "'";
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
