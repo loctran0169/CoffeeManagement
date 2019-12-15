@@ -24,6 +24,7 @@ namespace CoffeeManagement
         DataTable dt = new DataTable();
 
         List<string> list = new List<string>();
+        List<string> listMaSP = new List<string>();
         bool isFirstLoad = false;
         DateTime timeNow;
         float tongtien;
@@ -127,7 +128,7 @@ namespace CoffeeManagement
             int index = listSP.SelectedItems[0].Index;
             list = (dgv_ct.DataSource as DataTable).AsEnumerable()
                         .Select(r => r.Field<string>("tensp"))
-                        .ToList();
+                        .ToList();            
             if (list.Contains(dtSP.Rows[index][1].ToString()))
             {
                 MessageBox.Show("Đã có danh sách");
@@ -140,7 +141,7 @@ namespace CoffeeManagement
                 row[1] = 1;
                 row[2] = dtSP.Rows[index][4].ToString();
                 row[3] = dtSP.Rows[index][4].ToString();
-                
+                listMaSP.Add(dtSP.Rows[index][0].ToString());
                 (dgv_ct.DataSource as DataTable).Rows.Add(row);
                 tongTien();
             }
@@ -155,6 +156,7 @@ namespace CoffeeManagement
             if (e.ColumnIndex == dgv_ct.Columns["delete"].Index)
             {
                 (dgv_ct.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                listMaSP.RemoveAt(e.RowIndex);
                 tongTien();
                 return;
             }
@@ -240,15 +242,16 @@ namespace CoffeeManagement
                                 column.ColumnName = "dongia";
                                 temp.Columns.Add(column);
                             }
+                            int i = 0;
                             foreach (DataRow row in (dgv_ct.DataSource as DataTable).Rows)
                             {
-
                                 dataRow = temp.NewRow();
                                 dataRow["mahd"] = mahd;
-                                dataRow["masp"] = row[0];
+                                dataRow["masp"] = listMaSP[i];
                                 dataRow["soluong"] = row[1];
                                 dataRow["dongia"] = row[2];
                                 temp.Rows.Add(dataRow);
+                                i++;
                             }
 
                             if (busCT.updateData(temp))
