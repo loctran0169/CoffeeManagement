@@ -33,7 +33,7 @@ namespace CoffeeManagement
         public QLPX_CTPX(string _mapx)
         {
             InitializeComponent();
-            this.mapx = _mapx;
+            this.mapx = _mapx;          
         }
 
         private void QLPX_CTPX_Load(object sender, EventArgs e)
@@ -45,6 +45,7 @@ namespace CoffeeManagement
             disableAll();
             bunifuImageButton1.Visible = true;
             showEdit.Hide(panelEdit);
+            btn_confirm.Visible = false;
         }
 
         //tổng tiền

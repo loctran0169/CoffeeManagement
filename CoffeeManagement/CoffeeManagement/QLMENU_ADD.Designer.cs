@@ -319,7 +319,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 23);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Đồ uống";
+            this.label1.Text = "Đồ uống";           
             // 
             // bunifuElipse1
             // 

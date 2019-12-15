@@ -162,7 +162,7 @@ namespace CoffeeManagement
             nfi.CurrencyGroupSeparator = ".";
             nfi.CurrencyDecimalSeparator = ",";
             nfi.CurrencySymbol = "";
-            tb_price.Text = Convert.ToDecimal(sum).ToString("C2", nfi);
+            tb_price.Text = Convert.ToDecimal(sum).ToString("C0", nfi);
             tongtien = sum;
         }
 

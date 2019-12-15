@@ -31,5 +31,9 @@ namespace BUS
         {
             return bdal.loadDuLieuChiTietHoaHon(hd);
         }
+        public bool updateData(DataTable ds)
+        {
+            return bdal.updateData(ds);
+        }
     }
 }
