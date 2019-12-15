@@ -217,6 +217,12 @@
     <Compile Include="transparentBg1.Designer.cs">
       <DependentUpon>transparentBg1.cs</DependentUpon>
     </Compile>
+    <Compile Include="USER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER.Designer.cs">
+      <DependentUpon>USER.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmGui.resx">
       <DependentUpon>frmGui.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="transparentBg1.resx">
       <DependentUpon>transparentBg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER.resx">
+      <DependentUpon>USER.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
