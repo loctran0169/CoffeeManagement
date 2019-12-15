@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -180,10 +181,10 @@ namespace DAL
         {
 
             string query = string.Empty;
-            query += " SELECT masp, tensp, hinhanh, madv, dongia";
-            query += " FROM sanpham";
-            query += " WHERE (masp LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
-            query += " OR (upper(tensp) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+            query += "select sp.masp,sp.tensp,dv.tendv,sp.hinhanh,sp.dongia ";
+            query += "from sanpham sp, donvi dv ";
+            query += "WHERE ((upper(sp.masp) LIKE CONCAT('%','"+sKeyword.ToUpper()+"','%')) and sp.madv=dv.madv) ";
+            query += "or ((upper(sp.tensp) LIKE CONCAT('%','"+sKeyword.ToUpper()+"','%')) and sp.madv=dv.madv)";
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);
@@ -194,12 +195,12 @@ namespace DAL
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();
                 dt.Dispose();
-
             }
             catch (Exception e)
+
             {
-                return new DataTable();
-               // MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
+                return new DataTable();             
             }   
             return k;
         }
@@ -288,7 +289,9 @@ namespace DAL
             try
             {
                 kn.Open();
-                string sql = "select sp.masp,sp.tensp,dv.tendv,sp.hinhanh,sp.dongia from sanpham sp, donvi dv where sp.madv=dv.madv";
+                string sql = "select sp.masp,sp.tensp,dv.tendv,sp.hinhanh,sp.dongia " +
+                    "from sanpham sp, donvi dv " +
+                    "where sp.madv=dv.madv";
                 MySqlDataAdapter dt = new MySqlDataAdapter(sql, kn);
                 dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
                 kn.Close();

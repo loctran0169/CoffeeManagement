@@ -39,7 +39,7 @@ namespace CoffeeManagement
             this.Invoke(new MethodInvoker(delegate
             {
                 dt = bus.selectByKeyWord(btn_search_menu.Text);
-                if (dt.Rows.Count > 0)                
+                if (dt.Rows.Count == 0)                
                     dt.Rows.Clear();
                 dataGridSP.DataSource = dt;
             }));

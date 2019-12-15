@@ -16,7 +16,7 @@ namespace CoffeeManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmGui(new DTO.TaiKhoanDTO()));
+            //Application.Run(new ORDER());
             Application.Run(new frmGui(new DTO.NhanVienDTO() { MaNV1="NV0001", TenNV1="Trần Hữu Lộc" }));
         }
         public static bool IsInDesignMode()
