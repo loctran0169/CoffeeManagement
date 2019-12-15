@@ -30,12 +30,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLPX));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.tb_search = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.MaPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,14 +93,14 @@
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -151,49 +153,49 @@
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
-            // bunifuTextBox1
+            // tb_search
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.MediumTurquoise;
-            this.bunifuTextBox1.BorderRadius = 30;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuTextBox1.Location = new System.Drawing.Point(12, 29);
-            this.bunifuTextBox1.MaximumSize = new System.Drawing.Size(400, 100);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(354, 35);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 10;
-            this.bunifuTextBox1.TabStop = false;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginLeft = 5;
-            this.bunifuTextBox1.TextPlaceholder = "Nhập mã phiếu...";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.OnIconRightClick += new System.EventHandler(this.bunifuTextBox1_OnIconRightClick);
+            this.tb_search.AcceptsReturn = false;
+            this.tb_search.AcceptsTab = false;
+            this.tb_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tb_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tb_search.BackColor = System.Drawing.Color.Transparent;
+            this.tb_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tb_search.BackgroundImage")));
+            this.tb_search.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tb_search.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tb_search.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tb_search.BorderColorIdle = System.Drawing.Color.MediumTurquoise;
+            this.tb_search.BorderRadius = 30;
+            this.tb_search.BorderThickness = 1;
+            this.tb_search.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tb_search.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_search.HideSelection = true;
+            this.tb_search.IconLeft = null;
+            this.tb_search.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.tb_search.IconPadding = 10;
+            this.tb_search.IconRight = ((System.Drawing.Image)(resources.GetObject("tb_search.IconRight")));
+            this.tb_search.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.tb_search.Location = new System.Drawing.Point(12, 29);
+            this.tb_search.MaximumSize = new System.Drawing.Size(400, 100);
+            this.tb_search.MaxLength = 32767;
+            this.tb_search.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tb_search.Modified = false;
+            this.tb_search.Name = "tb_search";
+            this.tb_search.PasswordChar = '\0';
+            this.tb_search.ReadOnly = false;
+            this.tb_search.SelectedText = "";
+            this.tb_search.SelectionLength = 0;
+            this.tb_search.SelectionStart = 0;
+            this.tb_search.ShortcutsEnabled = true;
+            this.tb_search.Size = new System.Drawing.Size(354, 35);
+            this.tb_search.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tb_search.TabIndex = 10;
+            this.tb_search.TabStop = false;
+            this.tb_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_search.TextMarginLeft = 5;
+            this.tb_search.TextPlaceholder = "Nhập mã phiếu...";
+            this.tb_search.UseSystemPasswordChar = false;
+            this.tb_search.OnIconRightClick += new System.EventHandler(this.bunifuTextBox1_OnIconRightClick);
             // 
             // MaPX
             // 
@@ -212,6 +214,9 @@
             // ngaylap
             // 
             this.ngaylap.DataPropertyName = "ngaylap";
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ngaylap.DefaultCellStyle = dataGridViewCellStyle3;
             this.ngaylap.HeaderText = "Ngày lập";
             this.ngaylap.Name = "ngaylap";
             this.ngaylap.ReadOnly = true;
@@ -219,6 +224,9 @@
             // ngayxuat
             // 
             this.ngayxuat.DataPropertyName = "ngayxuat";
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ngayxuat.DefaultCellStyle = dataGridViewCellStyle4;
             this.ngayxuat.HeaderText = "Ngày xuất";
             this.ngayxuat.Name = "ngayxuat";
             this.ngayxuat.ReadOnly = true;
@@ -244,7 +252,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(855, 516);
             this.Controls.Add(this.bunifuButton1);
-            this.Controls.Add(this.bunifuTextBox1);
+            this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bunifuDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLPX";
@@ -258,7 +266,7 @@
         #endregion
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tb_search;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPX;
         private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;

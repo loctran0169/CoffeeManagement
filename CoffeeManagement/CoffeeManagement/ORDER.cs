@@ -32,7 +32,8 @@ namespace CoffeeManagement
         {
             InitializeComponent();
             imageList.ImageSize = new Size(80, 80);
-            tb_name.Text = (Application.OpenForms[0] as frmGui).NV.TenNV1;
+            //MessageBox.Show((Application.OpenForms[0] as frmGui).NV.TenNV1);
+            tb_name.Text = (Application.OpenForms[1] as frmGui).NV.TenNV1;
         }
 
         private void ORDER_Load(object sender, EventArgs e)

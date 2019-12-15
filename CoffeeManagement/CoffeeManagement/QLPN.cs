@@ -31,8 +31,6 @@ namespace CoffeeManagement
                 dt = bus.loadToDataTable();
                 if (dt.Rows.Count > 0)
                 {
-                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                    bunifuDataGridView1.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
                     bunifuDataGridView1.DataSource = dt;
                 }
             }));
@@ -47,6 +45,19 @@ namespace CoffeeManagement
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLPN_ADD());
+        }
+
+        private void bunifuTextBox1_OnIconRightClick(object sender, EventArgs e)
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dt = bus.selectByKeyWord(bunifuTextBox1.Text);
+                if (dt.Rows.Count  <1)
+                {
+                    dt.Clear();
+                }
+                bunifuDataGridView1.DataSource = dt;
+            }));
         }
     }
 }

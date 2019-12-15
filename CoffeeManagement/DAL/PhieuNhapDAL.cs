@@ -151,7 +151,7 @@ namespace DAL
             string query = string.Empty;
             query += " SELECT pn.mapn, nv.tennv, pn.ngaynhap, pn.tongtien,pn.tinhtrang";
             query += " FROM phieunhap pn, nhanvien nv";
-            query += " WHERE ((upper(pn.mapx) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and pn.manv=nv.manv)";
+            query += " WHERE ((upper(pn.mapn) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and pn.manv=nv.manv)";
             query += " OR ((upper(nv.tennv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and pn.manv=nv.manv)";
 
             DataTable k = new DataTable();

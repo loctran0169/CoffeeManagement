@@ -151,7 +151,7 @@ namespace DAL
         public DataTable selectByKeyWord(string sKeyword)
         {
             string query = string.Empty;
-            query += " SELECT px.mapx, nv.tennv, px.ngayxuat, px.tongtien,px.tinhtrang";
+            query += " SELECT px.mapx, nv.tennv,px.ngaylap, px.ngayxuat, px.tongtien,px.tinhtrang";
             query += " FROM phieuxuat px, nhanvien nv";
             query += " WHERE ((upper(px.mapx) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and px.manv=nv.manv)";
             query += " OR ((upper(nv.tennv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%')) and px.manv=nv.manv)";
