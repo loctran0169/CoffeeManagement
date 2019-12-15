@@ -224,6 +224,7 @@
             // dgv_ct
             // 
             this.dgv_ct.AllowCustomTheming = false;
+            this.dgv_ct.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgv_ct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;

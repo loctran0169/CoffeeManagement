@@ -264,5 +264,28 @@ namespace DAL
             return k;
         }
 
+        public DataTable loadMaHD()
+        {
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
+            {
+                string query = null;
+                //query += "select * from phieuxuat where ngaylap='"+date.ToString("yyyy-MM-dd HH:mm:ss")+"'";
+                query = "SELECT mahd FROM hoadon ORDER BY id DESC LIMIT 1";
+                MySqlCommand cmd = new MySqlCommand(query, kn);
+                kn.Open();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(k);
+                kn.Close();
+                adapter.Dispose();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return new DataTable();
+            }
+            return k;
+        }
     }
 }

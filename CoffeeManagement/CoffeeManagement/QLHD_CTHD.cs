@@ -42,6 +42,11 @@ namespace CoffeeManagement
                     bunifuDataGridView1.DataSource = dt;
                 }
             }));
-        }       
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

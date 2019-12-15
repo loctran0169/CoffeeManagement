@@ -107,5 +107,29 @@ namespace DAL
             }
             return k;
         }
+        public bool updateData(DataTable ds)
+        {
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter("select * from cthoadon", con))
+                {
+                    using (MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter))
+                        try
+                        {
+                            con.Open();
+                            adapter.Update(ds);
+                            con.Close();
+                            con.Dispose();
+                        }
+                        catch (Exception ex)
+                        {
+                            con.Close();
+                            MessageBox.Show(ex.Message);
+                            return false;
+                        }
+                }
+            }
+            return true;
+        }
     }
 }

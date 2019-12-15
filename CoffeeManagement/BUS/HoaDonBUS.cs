@@ -51,5 +51,10 @@ namespace BUS
         {
             return bdal.loadToDataTable(a,b);
         }
+        public DataTable loadMaHD()
+        {
+            return bdal.loadMaHD();
+        }
+        
     }
 }
