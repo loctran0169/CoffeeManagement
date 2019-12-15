@@ -42,7 +42,7 @@ namespace DAL
                         cmd.ExecuteNonQuery();
                         con.Close();
                         con.Dispose();
-                    }
+                    }   
                     catch (Exception ex)
                     {
                         con.Close();
