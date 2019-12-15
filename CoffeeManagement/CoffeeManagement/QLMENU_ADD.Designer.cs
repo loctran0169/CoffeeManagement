@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLMENU_ADD));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.tb_price_SP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,7 +48,7 @@
             this.btn_img = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.cb_unit_SP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back_SP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_img)).BeginInit();
@@ -241,13 +241,13 @@
             this.btn_cancel.IdleIconRightImage = null;
             this.btn_cancel.Location = new System.Drawing.Point(13, 403);
             this.btn_cancel.Name = "btn_cancel";
-            stateProperties1.BorderColor = System.Drawing.Color.DarkRed;
-            stateProperties1.BorderRadius = 35;
-            stateProperties1.BorderThickness = 0;
-            stateProperties1.FillColor = System.Drawing.Color.DarkRed;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btn_cancel.onHoverState = stateProperties1;
+            stateProperties5.BorderColor = System.Drawing.Color.DarkRed;
+            stateProperties5.BorderRadius = 35;
+            stateProperties5.BorderThickness = 0;
+            stateProperties5.FillColor = System.Drawing.Color.DarkRed;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.btn_cancel.onHoverState = stateProperties5;
             this.btn_cancel.Size = new System.Drawing.Size(140, 48);
             this.btn_cancel.TabIndex = 32;
             this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,13 +275,13 @@
             this.btn_save.IdleIconRightImage = null;
             this.btn_save.Location = new System.Drawing.Point(169, 403);
             this.btn_save.Name = "btn_save";
-            stateProperties2.BorderColor = System.Drawing.Color.Green;
-            stateProperties2.BorderRadius = 35;
-            stateProperties2.BorderThickness = 0;
-            stateProperties2.FillColor = System.Drawing.Color.Green;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btn_save.onHoverState = stateProperties2;
+            stateProperties6.BorderColor = System.Drawing.Color.Green;
+            stateProperties6.BorderRadius = 35;
+            stateProperties6.BorderThickness = 0;
+            stateProperties6.FillColor = System.Drawing.Color.Green;
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.btn_save.onHoverState = stateProperties6;
             this.btn_save.Size = new System.Drawing.Size(140, 48);
             this.btn_save.TabIndex = 31;
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,20 +321,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Đồ uống";
             // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = global::CoffeeManagement.Properties.Resources.remove;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(289, 3);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(28, 28);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 2;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 15;
@@ -367,42 +353,44 @@
             this.bunifuElipse2.ElipseRadius = 15;
             this.bunifuElipse2.TargetControl = this.btn_img;
             // 
-            // bunifuDropdown1
+            // cb_unit_SP
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuDropdown1.BorderRadius = 5;
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = false;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.ItemHeight = 25;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.LightSlateGray;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(13, 234);
-            this.bunifuDropdown1.MinimumSize = new System.Drawing.Size(48, 0);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(294, 31);
-            this.bunifuDropdown1.TabIndex = 37;
+            this.cb_unit_SP.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cb_unit_SP.BorderRadius = 5;
+            this.cb_unit_SP.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cb_unit_SP.DisabledColor = System.Drawing.Color.Gray;
+            this.cb_unit_SP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_unit_SP.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.cb_unit_SP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_unit_SP.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cb_unit_SP.FillDropDown = false;
+            this.cb_unit_SP.FillIndicator = false;
+            this.cb_unit_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_unit_SP.ForeColor = System.Drawing.Color.Purple;
+            this.cb_unit_SP.FormattingEnabled = true;
+            this.cb_unit_SP.Icon = null;
+            this.cb_unit_SP.IndicatorColor = System.Drawing.Color.Purple;
+            this.cb_unit_SP.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cb_unit_SP.ItemBackColor = System.Drawing.Color.White;
+            this.cb_unit_SP.ItemBorderColor = System.Drawing.Color.White;
+            this.cb_unit_SP.ItemForeColor = System.Drawing.Color.Purple;
+            this.cb_unit_SP.ItemHeight = 25;
+            this.cb_unit_SP.ItemHighLightColor = System.Drawing.Color.LightSlateGray;
+            this.cb_unit_SP.Location = new System.Drawing.Point(13, 234);
+            this.cb_unit_SP.MinimumSize = new System.Drawing.Size(48, 0);
+            this.cb_unit_SP.Name = "cb_unit_SP";
+            this.cb_unit_SP.Size = new System.Drawing.Size(294, 31);
+            this.cb_unit_SP.TabIndex = 37;
+            this.cb_unit_SP.Text = null;
+            this.cb_unit_SP.SelectedIndexChanged += new System.EventHandler(this.cb_unit_SP_SelectedIndexChanged);
             // 
             // QLMENU_ADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(321, 462);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.ClientSize = new System.Drawing.Size(322, 462);
+            this.Controls.Add(this.cb_unit_SP);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btn_img);
             this.Controls.Add(this.panel1);
@@ -444,6 +432,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuImageButton btn_img;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuDropdown cb_unit_SP;
     }
 }

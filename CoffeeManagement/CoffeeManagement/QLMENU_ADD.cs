@@ -18,7 +18,10 @@ namespace CoffeeManagement
         private string menuId;
         private string tag;
         private bool chiTiet = true;
+        DonViBUS dvBus = new DonViBUS();
         SanPhamBUS bus = new SanPhamBUS();
+        DataTable dvt = new DataTable();
+        List<String> list = new List<string>();
 
         public QLMENU_ADD(string _menuID, string _tag)
         {
@@ -35,15 +38,33 @@ namespace CoffeeManagement
             }
         }
 
+        public void loadDV()
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dvt = dvBus.loadDuLieuDonViTinh();
+                if (dvt.Rows.Count > 0)
+                {
+                    list = dvt.AsEnumerable()
+                    .Select(r => r.Field<string>("MaDV"))
+                    .ToList();
+                    foreach (DataRow row in dvt.Rows)
+                    {
+                        cb_unit_SP.Items.Add("  " + row[1]);
+                    }
+                }
+            }));
+        }
+
         private void loadData()
         {
             DataTable dt = bus.load1SP(menuId);
             if (dt != null && dt.Rows.Count > 0)
             {
                 tb_name_SP.Text = dt.Rows[0][1].ToString();
-                tb_price_SP.Text = dt.Rows[0][3].ToString();
-                tb_unit_SP.Text = dt.Rows[0][2].ToString();
-                // tb_note_SP.Text = dt.Rows[0][4].ToString();
+                cb_unit_SP.SelectedIndex = list.IndexOf(dt.Rows[0][3].ToString()); ;
+                cb_unit_SP.Text = dt.Rows[0][2].ToString();
+                tb_note_SP.Text = dt.Rows[0][4].ToString();
             }
             else
                 MessageBox.Show("không có");
@@ -63,10 +84,9 @@ namespace CoffeeManagement
                 tb_price_SP.Focus();
                 return false;
             }
-            else if (tb_unit_SP.Text == "")
+            else if (cb_unit_SP.SelectedIndex==-1)
             {
                 MessageBox.Show("Vui lòng nhập đơn vị của sản phẩm");
-                tb_unit_SP.Focus();
                 return false;
             }
            
@@ -83,7 +103,7 @@ namespace CoffeeManagement
         {
             tb_name_SP.Enabled = true;
             tb_price_SP.Enabled = true;
-            tb_unit_SP.Enabled = true;
+            cb_unit_SP.Enabled = true;
             tb_note_SP.Enabled = true;
         }
 
@@ -91,7 +111,7 @@ namespace CoffeeManagement
         {
             tb_name_SP.Enabled = false;
             tb_price_SP.Enabled = false;
-            tb_unit_SP.Enabled = false;
+            cb_unit_SP.Enabled = false;
             tb_note_SP.Enabled = false;
         }
 
@@ -104,9 +124,9 @@ namespace CoffeeManagement
                 SanPhamDTO sp = new SanPhamDTO();
                 sp.TenSP1 = tb_name_SP.Text;
                 sp.DonGia1 = float.Parse(tb_price_SP.Text);
-                sp.MaDV1 = tb_unit_SP.Text;
+                sp.MaDV1 = list[cb_unit_SP.SelectedIndex];
                 sp.GhiChu1 = tb_note_SP.Text;
-                MessageBox.Show(tb_unit_SP.Text);
+                MessageBox.Show(cb_unit_SP.Text);
                 bool kq = bus.them(sp);
                 if (kq == true)
                 {
@@ -133,7 +153,7 @@ namespace CoffeeManagement
                     sp.MaSP1 = menuId;
                     sp.TenSP1 = tb_name_SP.Text;
                     sp.DonGia1 = float.Parse(tb_price_SP.Text);
-                    sp.TenDV1 = tb_unit_SP.Text;
+                    sp.MaDV1 = list[cb_unit_SP.SelectedIndex];
                     sp.GhiChu1 = tb_note_SP.Text;
                     bool kq = bus.sua(sp);
                     if (kq == true)
@@ -159,6 +179,11 @@ namespace CoffeeManagement
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_unit_SP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

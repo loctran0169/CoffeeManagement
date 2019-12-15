@@ -100,7 +100,7 @@ namespace CoffeeManagement
             }
             else
                 MessageBox.Show("không có");
-        }
+        }   
         public bool checkData()
         {
             if (tb_name.Text == "")
