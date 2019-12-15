@@ -56,8 +56,7 @@ namespace CoffeeManagement
                 else
                     dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
-            }));
-           
+            }));           
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

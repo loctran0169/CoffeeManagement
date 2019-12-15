@@ -32,7 +32,10 @@ namespace CoffeeManagement
             {
                 dt = bus.selectByKeyWord(bunifuTextBox1.Text);
                 if (dt.Rows.Count > 0)
+                {
                     bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+                }
                 else
                     dt.Rows.Clear();
                 bunifuDataGridView1.DataSource = dt;
@@ -47,6 +50,7 @@ namespace CoffeeManagement
                 if (dt.Rows.Count > 0)
                 {
                     bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    bunifuDataGridView1.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
                     bunifuDataGridView1.DataSource = dt;
                 }
             }));

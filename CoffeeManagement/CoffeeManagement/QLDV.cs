@@ -33,8 +33,7 @@ namespace CoffeeManagement
                 dt = bus.loadDuLieuDonViTinh();
                 if (dt.Rows.Count > 0)
                 {
-                   // bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                    bunifuDataGridView1.DataSource = dt;
+                    dgv_ct.DataSource = dt;
                 }
             }));         
         }
@@ -45,16 +44,16 @@ namespace CoffeeManagement
             {
                 dt = bus.SelectByKeyWordDV(tb_name.Text);
                 if (dt.Rows.Count > 0)
-                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    dgv_ct.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
                 else
                     dt.Rows.Clear();
-                bunifuDataGridView1.DataSource = dt;
+                dgv_ct.DataSource = dt;
             }));
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0],new QLDV_ADD());
+            new CoffeeManagement.transparentBg1(Application.OpenForms[0],new QLDV_ADD("","Thêm"));
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -68,11 +67,42 @@ namespace CoffeeManagement
             {
                 dt = bus.SelectByKeyWordDV(tb_name.Text);
                 if (dt.Rows.Count > 0)
-                    bunifuDataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                    dgv_ct.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
                 else
                     dt.Rows.Clear();
-                bunifuDataGridView1.DataSource = dt;
+                dgv_ct.DataSource = dt;
             }));
+        }
+
+        private void dgv_ct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgv_ct.Columns["delete"].Index)
+            {
+                DialogResult dialogResult = MessageBox.Show("Đơn vị này sẽ biến mất", "Xóa đơn vị", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bool kq = bus.xoa(new DonViDTO() { MaDV1 = (dgv_ct.DataSource as DataTable).Rows[e.RowIndex][e.ColumnIndex].ToString() });
+                    if (kq)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        (dgv_ct.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nguyên liệu đang được sử dụng không thể xóa");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+                
+                return;
+            }
+            else
+            {
+                new transparentBg1(Application.OpenForms[0],new QLDV_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
+            }
         }
     }
 }

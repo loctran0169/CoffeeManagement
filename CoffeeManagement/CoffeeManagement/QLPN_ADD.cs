@@ -12,48 +12,34 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class QLPX_ADD : Form
+    public partial class QLPN_ADD : Form
     {
         DataTable dtCbb = new DataTable();
         NguyenLieuBUS busSp = new NguyenLieuBUS();
         List<string> list = new List<string>();
 
-        PhieuXuatBUS busPX = new PhieuXuatBUS();
-        CTPhieuXuatBUS busCT = new CTPhieuXuatBUS();
+        PhieuNhapBUS busPX = new PhieuNhapBUS();
+        CTPhieuNhapBUS busCT = new CTPhieuNhapBUS();
 
         private bool flagThem = true;
         private bool daLap = false;
         private int indexRow = -1;
         private float tongtien = 0;
-        private string mapx;
+        private string mapn;
         private DateTime timeNow;
         DataTable dt = new DataTable();
-        public QLPX_ADD()
+        public QLPN_ADD()
         {
             InitializeComponent();
         }
 
-        private void QLPX_ADD_Load(object sender, EventArgs e)
+        private void QLPN_ADD_Load(object sender, EventArgs e)
         {
             tb_name.Text = ((frmGui)Application.OpenForms[0]).NV.TenNV1;
             initDataTable();
             dgv_ct.DataSource = dt;
             loadSP();
         }
-
-        public void loadSP()
-        {
-            this.Invoke(new MethodInvoker(delegate
-            {
-                dtCbb = busSp.loadToCombobox();
-                if (dtCbb.Rows.Count > 0)
-                {
-                    foreach (DataRow row in dtCbb.Rows)
-                        cbb.Items.Add(row[1]);
-                }
-            }));
-        }
-
         public void initDataTable()
         {
             DataColumn column;
@@ -80,7 +66,7 @@ namespace CoffeeManagement
                 //dongia
                 column = new DataColumn();
                 column.DataType = Type.GetType("System.Single");
-                column.ColumnName = "dongia";
+                column.ColumnName = "gianhap";
                 dt.Columns.Add(column);
                 //
                 column = new DataColumn();
@@ -90,6 +76,19 @@ namespace CoffeeManagement
             }
         }
 
+        public void loadSP()
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                dtCbb = busSp.loadToCombobox();
+                if (dtCbb.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dtCbb.Rows)
+                        cbb.Items.Add(row[1]);
+                }
+            }));
+        }
+
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -97,7 +96,7 @@ namespace CoffeeManagement
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (flagThem&&!daLap)
+            if (flagThem && !daLap)
             {
                 int index = cbb.SelectedIndex;
                 if (index != -1)
@@ -146,6 +145,7 @@ namespace CoffeeManagement
                 cbb.Enabled = true;
             }
         }
+
         public void emptyAdd()
         {
             cbb.SelectedIndex = -1;
@@ -162,8 +162,8 @@ namespace CoffeeManagement
             nfi.CurrencyGroupSeparator = ".";
             nfi.CurrencyDecimalSeparator = ",";
             nfi.CurrencySymbol = "";
-            tb_price.Text = Convert.ToDecimal(sum).ToString("C2",nfi);
-            tongtien= sum;
+            tb_price.Text = Convert.ToDecimal(sum).ToString("C2", nfi);
+            tongtien = sum;
         }
 
         private void dgv_ct_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -193,11 +193,11 @@ namespace CoffeeManagement
             }
         }
 
-        private void btn_lappx_Click(object sender, EventArgs e)
+        private void btn_lappn_Click(object sender, EventArgs e)
         {
             if (!daLap)
             {
-                if((dgv_ct.DataSource as DataTable)==null||(dgv_ct.DataSource as DataTable).Rows.Count == 0)
+                if ((dgv_ct.DataSource as DataTable) == null || (dgv_ct.DataSource as DataTable).Rows.Count == 0)
                 {
                     MessageBox.Show("Chưa có nguyên liệu xuất");
                     return;
@@ -205,30 +205,30 @@ namespace CoffeeManagement
                 try
                 {
                     timeNow = DateTime.Now;
-                    if (busPX.them(new DTO.PhieuXuatDTO()
+                    if (busPX.them(new DTO.PhieuNhapDTO()
                     {
                         MaNV1 = (Application.OpenForms[0] as frmGui).NV.MaNV1,
                         NgayLap1 = timeNow,
-                        NgayXuat1 = date_ngayxuat.Value.Date,
+                        NgayNhap1 = date_ngayxuat.Value.Date,
                         DiaChi1 = tb_diachi.Text,
                         TinhTrang1 = "False",
                         TongTien1 = tongtien
-                    })==true)
+                    }) == true)
                     {
                         DataTable dtMaPX = busPX.loadMaPX(timeNow);
                         if (dtMaPX != null && dtMaPX.Rows.Count == 1)
                         {
-                            mapx = dtMaPX.Rows[0][0].ToString();
+                            mapn = dtMaPX.Rows[0][0].ToString();
                             try
                             {
-                                DataTable temp = new DataTable("ctphieuxuat");
+                                DataTable temp = new DataTable("ctphieunhap");
                                 DataColumn column;
                                 DataRow dataRow;
                                 //mapx
                                 {
                                     column = new DataColumn();
                                     column.DataType = Type.GetType("System.String");
-                                    column.ColumnName = "mapx";
+                                    column.ColumnName = "mapn";
                                     temp.Columns.Add(column);
                                     //manl
                                     column = new DataColumn();
@@ -250,7 +250,7 @@ namespace CoffeeManagement
                                 {
 
                                     dataRow = temp.NewRow();
-                                    dataRow["mapx"] = mapx;
+                                    dataRow["mapn"] = mapn;
                                     dataRow["manl"] = row[0];
                                     dataRow["soluong"] = row[3];
                                     dataRow["dongia"] = row[4];
@@ -263,7 +263,7 @@ namespace CoffeeManagement
                                 }
                                 else
                                 {
-                                    busPX.xoa(new DTO.PhieuXuatDTO() { MaPX1 = mapx });
+                                    busPX.xoa(new DTO.PhieuNhapDTO() { MaNV1 = mapn });
                                     MessageBox.Show("Lập phiếu xuất thất bai");
                                 }
                             }
@@ -281,7 +281,7 @@ namespace CoffeeManagement
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm phiếu xuất "+ex.Message);
+                    MessageBox.Show("Thêm phiếu xuất " + ex.Message);
                 }
             }
             else
@@ -298,6 +298,7 @@ namespace CoffeeManagement
                 }
             }
         }
+
         public void clearData()
         {
             tb_diachi.Text = "";

@@ -228,6 +228,7 @@ namespace DAL
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                return new DataTable();
             }
             return k;
         }
@@ -240,6 +241,34 @@ namespace DAL
             query += " FROM donvi";
             query += " WHERE (upper(madv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
             query += " OR (upper(tendv) LIKE CONCAT('%','" + sKeyword.ToUpper() + "','%'))";
+
+            DataTable k = new DataTable();
+            MySqlConnection kn = new MySqlConnection(connectionString);
+            try
+            {
+                kn.Open();
+                MySqlDataAdapter dt = new MySqlDataAdapter(query, kn);
+                dt.Fill(k);//đổ dữ liệu từ DataBase sang bảng
+                kn.Close();
+                dt.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                return new DataTable();
+                MessageBox.Show(e.Message);
+            }
+            return k;
+        }
+
+        public DataTable loadDV(string sKeyword)
+        {
+
+            string query = string.Empty;
+            query += " SELECT *";
+            query += " FROM donvi";
+            query += " WHERE madv= '"+sKeyword+"'";
+           
 
             DataTable k = new DataTable();
             MySqlConnection kn = new MySqlConnection(connectionString);

@@ -131,6 +131,12 @@
     <Compile Include="QLK.Designer.cs">
       <DependentUpon>QLK.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLK_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLK_ADD.Designer.cs">
+      <DependentUpon>QLK_ADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLMENU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="QLMENU_ADD.Designer.cs">
       <DependentUpon>QLMENU_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPN_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPN_ADD.Designer.cs">
+      <DependentUpon>QLPN_ADD.cs</DependentUpon>
     </Compile>
     <Compile Include="QLPN_CTPN.cs">
       <SubType>Form</SubType>
@@ -230,11 +242,17 @@
     <EmbeddedResource Include="QLK.resx">
       <DependentUpon>QLK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLK_ADD.resx">
+      <DependentUpon>QLK_ADD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLMENU.resx">
       <DependentUpon>QLMENU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLMENU_ADD.resx">
       <DependentUpon>QLMENU_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPN_ADD.resx">
+      <DependentUpon>QLPN_ADD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLPN_CTPN.resx">
       <DependentUpon>QLPN_CTPN.cs</DependentUpon>

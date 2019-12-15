@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CTHoaDonBUS.cs" />
+    <Compile Include="CTPhieuNhapBUS.cs" />
     <Compile Include="CTPhieuXuatBUS.cs" />
     <Compile Include="DonViBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
     <Compile Include="NguyenLieuBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="PhanQuyenBUS.cs" />
+    <Compile Include="PhieuNhapBUS.cs" />
     <Compile Include="PhieuXuatBUS.cs" />
     <Compile Include="SanPhamBUS.cs" />
     <Compile Include="TaiKhoanBUS.cs" />
