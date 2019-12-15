@@ -75,5 +75,11 @@ namespace CoffeeManagement
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void emptyValue()
+        {
+            txt_tk.Text = "";
+            txt_mk.Text = "";
+        }
     }
 }

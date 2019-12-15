@@ -81,11 +81,11 @@ namespace CoffeeManagement
         {
             int selected = e.RowIndex;
             HoaDonDTO hd = new HoaDonDTO();
-            hd.MaHD1 = dt.Rows[0][0].ToString();
-            hd.MaNV1 = dt.Rows[0][1].ToString();
-            hd.NgayLap1 = DateTime.Parse(dt.Rows[0][2].ToString());
-            hd.TongTien1 = float.Parse(dt.Rows[0][3].ToString());
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLHD_CTHD(hd));
+            hd.MaHD1 = dt.Rows[selected][0].ToString();
+            hd.MaNV1 = dt.Rows[selected][1].ToString();
+            hd.NgayLap1 = DateTime.Parse(dt.Rows[selected][2].ToString());
+            hd.TongTien1 = float.Parse(dt.Rows[selected][3].ToString());
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1], new QLHD_CTHD(hd));
         }
 
         private void bunifuTextBox1_TextChange(object sender, EventArgs e)

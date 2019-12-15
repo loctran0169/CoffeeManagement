@@ -39,14 +39,32 @@ namespace CoffeeManagement
                 dt = bus.loadData(hd.MaHD1);
                 if (dt.Rows.Count > 0)
                 {
-                    bunifuDataGridView1.DataSource = dt;
+                    dgv_ct.DataSource = dt;
+
+                    tongTien();
                 }
             }));
+        }
+
+        public float tongTien()
+        {
+            float sum = 0;
+            foreach (DataRow row in (dgv_ct.DataSource as DataTable).Rows)
+            {
+                sum += float.Parse(row[4].ToString());
+            }
+            tb_tien_cthd.Text = sum.ToString();
+            return sum;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

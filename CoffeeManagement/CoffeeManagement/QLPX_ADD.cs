@@ -35,7 +35,7 @@ namespace CoffeeManagement
 
         private void QLPX_ADD_Load(object sender, EventArgs e)
         {
-            tb_name.Text = ((frmGui)Application.OpenForms[0]).NV.TenNV1;
+            tb_name.Text = ((frmGui)Application.OpenForms[1]).NV.TenNV1;
             initDataTable();
             dgv_ct.DataSource = dt;
             loadSP();
@@ -207,7 +207,7 @@ namespace CoffeeManagement
                     timeNow = DateTime.Now;
                     if (busPX.them(new DTO.PhieuXuatDTO()
                     {
-                        MaNV1 = (Application.OpenForms[0] as frmGui).NV.MaNV1,
+                        MaNV1 = (Application.OpenForms[1] as frmGui).NV.MaNV1,
                         NgayLap1 = timeNow,
                         NgayXuat1 = date_ngayxuat.Value.Date,
                         DiaChi1 = tb_diachi.Text,

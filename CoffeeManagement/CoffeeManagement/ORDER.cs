@@ -32,7 +32,6 @@ namespace CoffeeManagement
         {
             InitializeComponent();
             imageList.ImageSize = new Size(80, 80);
-            //MessageBox.Show((Application.OpenForms[0] as frmGui).NV.TenNV1);
             tb_name.Text = (Application.OpenForms[1] as frmGui).NV.TenNV1;
         }
 
@@ -205,7 +204,7 @@ namespace CoffeeManagement
                 timeNow = DateTime.Now;
                 if (busHD.them(new DTO.HoaDonDTO()
                 {
-                    MaNV1 = (Application.OpenForms[0] as frmGui).NV.MaNV1,
+                    MaNV1 = (Application.OpenForms[1] as frmGui).NV.MaNV1,
                     NgayLap1 = timeNow,
                     TongTien1 = tongtien
                 }) == true)
@@ -273,7 +272,7 @@ namespace CoffeeManagement
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

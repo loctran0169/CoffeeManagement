@@ -35,7 +35,7 @@ namespace CoffeeManagement
 
         private void QLPN_ADD_Load(object sender, EventArgs e)
         {
-            tb_name.Text = ((frmGui)Application.OpenForms[0]).NV.TenNV1;
+            tb_name.Text = ((frmGui)Application.OpenForms[1]).NV.TenNV1;
             initDataTable();
             dgv_ct.DataSource = dt;
             loadSP();

@@ -57,7 +57,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLMENU_ADD("", "Thêm"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1], new QLMENU_ADD("", "Thêm"));
         }
 
         private void dataGridSP_CellClick(object sender, DataGridViewCellEventArgs e)

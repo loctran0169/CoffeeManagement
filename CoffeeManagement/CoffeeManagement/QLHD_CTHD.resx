@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="TenSP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -145,25 +148,6 @@
         3Met2e/3GoQfG4P8U810sVg4BwO+0s+T9TNlG4M8CO/D4dA5GPCVdr+Ttd+xMQiCMAwftceLbhWuCYCP
         tKGdBKFkY3Asbfqr/U5dEwDfpGmq94OLbR9TPSKxM8Bno9FId4JUOzzapX9eel/Qbtja8IteR/CFNrae
         z+f5cUh2gs+rIThVpVJ5ksF9CcVSnvm7VqDgvkRydiegKOpUQfALlRQtNjknC4oAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="tb_tien_cthd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAjCAYAAADG+dUWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALfSURBVHhe7ZwvjBpBFMZXVlZWVlZWnqw8WVlHFf8EBEOa
-        ICBBHILkMKQJgkswFYgVCAwJCJILhiaYE4gVGAwphpyce9/cay5wc9dte8nB7PeSX8gls7snvm/fezM7
-        EzAYjH+IbDZ7lsvlavI7lN9xpVIx8kvIaxIJY6WWz+fPVa4vG8Vi8a084LJcLptGo2HCMDTz+dwsFguz
-        Wq3Mbrcj5NWABqFFAG22Wi1TKBRgkKtMJvNeZfx/AYfhrT8cDs16vXb+I4QcG9vt1kwmE1OtVmGIy1Qq
-        9UYl/XeBLIDyBw7bbDbOhxFy7MAQeImLGa6lZHqn8o4XSCfNZtOWP66bE3JqLJdLU6/XjZjho8r8+UAm
-        gAlwoeuGhJwqKO1hhlh9A8ohZgLiK1EU2TIJL3yV/OOQAReDwcB5A0J8YTqdwgw/VPb7gUYCs0NoLlwX
-        E+ITT/YLmGJCd+26iBDfmM1mRtqAUOV/H5hjxWIZp0lJkoDm96ZU5Y9zrMa5BhPiK71eD71CVm3Asogk
-        k0flEadMSRLRqdQbtYE1wk8uoJGkgZ5YtP9LbRAEpVKJjTJJJJIRjNrA9gjOQYT4zp4R8O02F9JIEjnM
-        CDdoHFwDCfEVvPxF+7dqA2uEMXb3uAYT4ivY2Sbaj9QGdtbo+2g0cg4mxFewZIClA7WB3YjztdvtOgcT
-        4ivYfSkZoaY2uN+MgylU12BCfMX5BaqkiBBLzq4LCPENLCBjIVnl/xBwBhziuogQ32i32yiLPqv894NZ
-        gSSBJ7PB78C32eKSax7aRXwFnxJB4+l0+oPK3h0okXCaHVeaiY88WxIdBjbqwAw82Y74AjIBTIClApV5
-        vEBmQB3FFWdy6qAnQDkUOxMchvYMYx74RU4R9LqdTsc2xn/sCeKEpJNPuBkOVO33+/bUYfYQ5BiBNnE2
-        F0p7eYlHotsvKuOXC7hKbvwNWUK4FfAwQo4JaPNCdHqmsmUwGPEiCO4AlBwMlSsnnM8AAAAASUVORK5C
-        YII=
 </value>
   </data>
   <data name="tb_nv_cthd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -203,7 +187,7 @@
         3Am4GDkPcM+v5P5fqA4Mxr+OIPgFx7ClPp2HxM8AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>

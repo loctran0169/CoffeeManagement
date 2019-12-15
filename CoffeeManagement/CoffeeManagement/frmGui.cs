@@ -18,7 +18,7 @@ namespace CoffeeManagement
         public frmGui(NhanVienDTO _nv)
         {
             InitializeComponent();
-            this.NV = _nv.copyOf();
+            this.NV = _nv;
         }
 
         private void btn_hoadon_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace CoffeeManagement
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btn_banhang_Click(object sender, EventArgs e)
@@ -262,6 +262,32 @@ namespace CoffeeManagement
             {
                 frm.Activate();
             }
+        }
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            changeColor(btn_user);
+            Form frm = kiemtraform(typeof(USER));
+            if (frm == null)
+            {
+                USER forms = new USER();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            (Application.OpenForms[0] as frmDangNhap).Show();
+            (Application.OpenForms[0] as frmDangNhap).emptyValue();
         }
     }
 }
