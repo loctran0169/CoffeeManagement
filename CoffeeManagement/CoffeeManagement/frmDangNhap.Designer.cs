@@ -50,10 +50,10 @@
             this.txt_tk.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_tk.BackColor = System.Drawing.Color.Transparent;
             this.txt_tk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_tk.BackgroundImage")));
-            this.txt_tk.BorderColorActive = System.Drawing.Color.Silver;
+            this.txt_tk.BorderColorActive = System.Drawing.Color.Blue;
             this.txt_tk.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txt_tk.BorderColorHover = System.Drawing.Color.Blue;
-            this.txt_tk.BorderColorIdle = System.Drawing.Color.SeaGreen;
+            this.txt_tk.BorderColorIdle = System.Drawing.Color.Silver;
             this.txt_tk.BorderRadius = 30;
             this.txt_tk.BorderThickness = 2;
             this.txt_tk.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -64,7 +64,7 @@
             this.txt_tk.IconPadding = 10;
             this.txt_tk.IconRight = null;
             this.txt_tk.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_tk.Location = new System.Drawing.Point(147, 89);
+            this.txt_tk.Location = new System.Drawing.Point(115, 89);
             this.txt_tk.MaximumSize = new System.Drawing.Size(400, 100);
             this.txt_tk.MaxLength = 32767;
             this.txt_tk.MinimumSize = new System.Drawing.Size(100, 35);
@@ -76,7 +76,7 @@
             this.txt_tk.SelectionLength = 0;
             this.txt_tk.SelectionStart = 0;
             this.txt_tk.ShortcutsEnabled = true;
-            this.txt_tk.Size = new System.Drawing.Size(209, 45);
+            this.txt_tk.Size = new System.Drawing.Size(247, 45);
             this.txt_tk.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_tk.TabIndex = 0;
             this.txt_tk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -103,16 +103,16 @@
             this.btn_dangnhap.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btn_dangnhap.IdleIconLeftImage = null;
             this.btn_dangnhap.IdleIconRightImage = null;
-            this.btn_dangnhap.Location = new System.Drawing.Point(75, 220);
+            this.btn_dangnhap.Location = new System.Drawing.Point(115, 220);
             this.btn_dangnhap.Name = "btn_dangnhap";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
+            stateProperties1.BorderRadius = 25;
+            stateProperties1.BorderThickness = 0;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
             this.btn_dangnhap.onHoverState = stateProperties1;
-            this.btn_dangnhap.Size = new System.Drawing.Size(134, 45);
+            this.btn_dangnhap.Size = new System.Drawing.Size(121, 45);
             this.btn_dangnhap.TabIndex = 8;
             this.btn_dangnhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
@@ -136,16 +136,16 @@
             this.btn_exit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btn_exit.IdleIconLeftImage = null;
             this.btn_exit.IdleIconRightImage = null;
-            this.btn_exit.Location = new System.Drawing.Point(222, 220);
+            this.btn_exit.Location = new System.Drawing.Point(242, 220);
             this.btn_exit.Name = "btn_exit";
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 1;
+            stateProperties2.BorderRadius = 25;
+            stateProperties2.BorderThickness = 0;
             stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.btn_exit.onHoverState = stateProperties2;
-            this.btn_exit.Size = new System.Drawing.Size(134, 45);
+            this.btn_exit.Size = new System.Drawing.Size(120, 45);
             this.btn_exit.TabIndex = 9;
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
@@ -154,7 +154,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(72, 99);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(40, 100);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(69, 17);
             this.bunifuCustomLabel1.TabIndex = 10;
@@ -164,7 +164,7 @@
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(72, 149);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(40, 140);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(69, 17);
             this.bunifuCustomLabel2.TabIndex = 11;
@@ -175,7 +175,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(140, 9);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(143, 23);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(161, 37);
             this.bunifuCustomLabel3.TabIndex = 12;
@@ -189,10 +189,10 @@
             this.txt_mk.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_mk.BackColor = System.Drawing.Color.Transparent;
             this.txt_mk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_mk.BackgroundImage")));
-            this.txt_mk.BorderColorActive = System.Drawing.Color.Silver;
+            this.txt_mk.BorderColorActive = System.Drawing.Color.Blue;
             this.txt_mk.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txt_mk.BorderColorHover = System.Drawing.Color.Blue;
-            this.txt_mk.BorderColorIdle = System.Drawing.Color.SeaGreen;
+            this.txt_mk.BorderColorIdle = System.Drawing.Color.Silver;
             this.txt_mk.BorderRadius = 30;
             this.txt_mk.BorderThickness = 2;
             this.txt_mk.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -203,7 +203,7 @@
             this.txt_mk.IconPadding = 10;
             this.txt_mk.IconRight = null;
             this.txt_mk.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_mk.Location = new System.Drawing.Point(147, 140);
+            this.txt_mk.Location = new System.Drawing.Point(115, 140);
             this.txt_mk.MaximumSize = new System.Drawing.Size(400, 100);
             this.txt_mk.MaxLength = 32767;
             this.txt_mk.MinimumSize = new System.Drawing.Size(100, 35);
@@ -215,7 +215,7 @@
             this.txt_mk.SelectionLength = 0;
             this.txt_mk.SelectionStart = 0;
             this.txt_mk.ShortcutsEnabled = true;
-            this.txt_mk.Size = new System.Drawing.Size(209, 45);
+            this.txt_mk.Size = new System.Drawing.Size(247, 45);
             this.txt_mk.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_mk.TabIndex = 1;
             this.txt_mk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -225,7 +225,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
             // frmDangNhap

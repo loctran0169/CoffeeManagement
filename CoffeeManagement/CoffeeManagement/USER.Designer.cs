@@ -431,6 +431,189 @@
             this.tb_name.TextPlaceholder = "Tên nhân viên";
             this.tb_name.UseSystemPasswordChar = false;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.ButtonText = "Đăng xuất";
+            this.btnAdd.ButtonTextMarginLeft = 0;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnAdd.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btnAdd.DisabledForecolor = System.Drawing.Color.White;
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdd.IconPadding = 10;
+            this.btnAdd.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdd.IdleBorderColor = System.Drawing.Color.White;
+            this.btnAdd.IdleBorderRadius = 35;
+            this.btnAdd.IdleBorderThickness = 0;
+            this.btnAdd.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAdd.IdleIconLeftImage = null;
+            this.btnAdd.IdleIconRightImage = null;
+            this.btnAdd.Location = new System.Drawing.Point(200, 182);
+            this.btnAdd.Name = "btnAdd";
+            stateProperties1.BorderColor = System.Drawing.Color.Green;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 0;
+            stateProperties1.FillColor = System.Drawing.Color.Green;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnAdd.onHoverState = stateProperties1;
+            this.btnAdd.Size = new System.Drawing.Size(150, 48);
+            this.btnAdd.TabIndex = 25;
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.ButtonText = "Đổi mật khẩu";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.White;
+            this.bunifuButton1.IdleBorderRadius = 35;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Location = new System.Drawing.Point(40, 182);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties2.BorderColor = System.Drawing.Color.Green;
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderThickness = 0;
+            stateProperties2.FillColor = System.Drawing.Color.Green;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties2;
+            this.bunifuButton1.Size = new System.Drawing.Size(143, 48);
+            this.bunifuButton1.TabIndex = 26;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(46, 19);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(117, 22);
+            this.bunifuCustomLabel4.TabIndex = 48;
+            this.bunifuCustomLabel4.Text = "Tên đăng nhập:";
+            // 
+            // bunifuTextBox5
+            // 
+            this.bunifuTextBox5.AcceptsReturn = false;
+            this.bunifuTextBox5.AcceptsTab = false;
+            this.bunifuTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox5.BackgroundImage")));
+            this.bunifuTextBox5.BorderColorActive = System.Drawing.Color.Black;
+            this.bunifuTextBox5.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuTextBox5.BorderColorHover = System.Drawing.Color.Black;
+            this.bunifuTextBox5.BorderColorIdle = System.Drawing.Color.Black;
+            this.bunifuTextBox5.BorderRadius = 15;
+            this.bunifuTextBox5.BorderThickness = 1;
+            this.bunifuTextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox5.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuTextBox5.HideSelection = true;
+            this.bunifuTextBox5.IconLeft = null;
+            this.bunifuTextBox5.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox5.IconPadding = 10;
+            this.bunifuTextBox5.IconRight = null;
+            this.bunifuTextBox5.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox5.Location = new System.Drawing.Point(40, 44);
+            this.bunifuTextBox5.MaximumSize = new System.Drawing.Size(400, 100);
+            this.bunifuTextBox5.MaxLength = 32767;
+            this.bunifuTextBox5.MinimumSize = new System.Drawing.Size(100, 35);
+            this.bunifuTextBox5.Modified = false;
+            this.bunifuTextBox5.Name = "bunifuTextBox5";
+            this.bunifuTextBox5.PasswordChar = '\0';
+            this.bunifuTextBox5.ReadOnly = false;
+            this.bunifuTextBox5.SelectedText = "";
+            this.bunifuTextBox5.SelectionLength = 0;
+            this.bunifuTextBox5.SelectionStart = 0;
+            this.bunifuTextBox5.ShortcutsEnabled = true;
+            this.bunifuTextBox5.Size = new System.Drawing.Size(310, 35);
+            this.bunifuTextBox5.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox5.TabIndex = 49;
+            this.bunifuTextBox5.TabStop = false;
+            this.bunifuTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox5.TextMarginLeft = 5;
+            this.bunifuTextBox5.TextPlaceholder = "User";
+            this.bunifuTextBox5.UseSystemPasswordChar = false;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(46, 101);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(117, 22);
+            this.bunifuCustomLabel5.TabIndex = 50;
+            this.bunifuCustomLabel5.Text = "Mật khẩu:";
+            // 
+            // bunifuTextBox6
+            // 
+            this.bunifuTextBox6.AcceptsReturn = false;
+            this.bunifuTextBox6.AcceptsTab = false;
+            this.bunifuTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox6.BackgroundImage")));
+            this.bunifuTextBox6.BorderColorActive = System.Drawing.Color.Black;
+            this.bunifuTextBox6.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuTextBox6.BorderColorHover = System.Drawing.Color.Black;
+            this.bunifuTextBox6.BorderColorIdle = System.Drawing.Color.Black;
+            this.bunifuTextBox6.BorderRadius = 15;
+            this.bunifuTextBox6.BorderThickness = 1;
+            this.bunifuTextBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox6.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuTextBox6.HideSelection = true;
+            this.bunifuTextBox6.IconLeft = null;
+            this.bunifuTextBox6.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox6.IconPadding = 10;
+            this.bunifuTextBox6.IconRight = null;
+            this.bunifuTextBox6.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox6.Location = new System.Drawing.Point(40, 126);
+            this.bunifuTextBox6.MaximumSize = new System.Drawing.Size(400, 100);
+            this.bunifuTextBox6.MaxLength = 32767;
+            this.bunifuTextBox6.MinimumSize = new System.Drawing.Size(100, 35);
+            this.bunifuTextBox6.Modified = false;
+            this.bunifuTextBox6.Name = "bunifuTextBox6";
+            this.bunifuTextBox6.PasswordChar = '\0';
+            this.bunifuTextBox6.ReadOnly = false;
+            this.bunifuTextBox6.SelectedText = "";
+            this.bunifuTextBox6.SelectionLength = 0;
+            this.bunifuTextBox6.SelectionStart = 0;
+            this.bunifuTextBox6.ShortcutsEnabled = true;
+            this.bunifuTextBox6.Size = new System.Drawing.Size(310, 35);
+            this.bunifuTextBox6.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox6.TabIndex = 51;
+            this.bunifuTextBox6.TabStop = false;
+            this.bunifuTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox6.TextMarginLeft = 5;
+            this.bunifuTextBox6.TextPlaceholder = "Password:";
+            this.bunifuTextBox6.UseSystemPasswordChar = false;
+            // 
+            // panel_MK
+            // 
+            this.panel_MK.Controls.Add(this.bunifuTextBox6);
+            this.panel_MK.Controls.Add(this.bunifuCustomLabel5);
+            this.panel_MK.Controls.Add(this.bunifuTextBox5);
+            this.panel_MK.Controls.Add(this.bunifuCustomLabel4);
+            this.panel_MK.Controls.Add(this.bunifuButton1);
+            this.panel_MK.Controls.Add(this.btnAdd);
+            this.panel_MK.Location = new System.Drawing.Point(12, 270);
+            this.panel_MK.Name = "panel_MK";
+            this.panel_MK.Size = new System.Drawing.Size(387, 233);
+            this.panel_MK.TabIndex = 54;
+            // 
             // USER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

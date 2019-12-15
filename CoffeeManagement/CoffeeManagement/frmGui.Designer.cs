@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGui));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.tshow.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -232,7 +232,7 @@
             this.btn_donvi.IconRightVisible = true;
             this.btn_donvi.IconRightZoom = 0D;
             this.btn_donvi.IconVisible = true;
-            this.btn_donvi.IconZoom = 90D;
+            this.btn_donvi.IconZoom = 85D;
             this.btn_donvi.IsTab = false;
             this.btn_donvi.Location = new System.Drawing.Point(8, 321);
             this.btn_donvi.Name = "btn_donvi";
@@ -304,7 +304,7 @@
             this.btn_nhaphang.IconRightVisible = true;
             this.btn_nhaphang.IconRightZoom = 0D;
             this.btn_nhaphang.IconVisible = true;
-            this.btn_nhaphang.IconZoom = 90D;
+            this.btn_nhaphang.IconZoom = 120D;
             this.btn_nhaphang.IsTab = false;
             this.btn_nhaphang.Location = new System.Drawing.Point(8, 245);
             this.btn_nhaphang.Name = "btn_nhaphang";
@@ -340,7 +340,7 @@
             this.btn_nguyenlieu.IconRightVisible = true;
             this.btn_nguyenlieu.IconRightZoom = 0D;
             this.btn_nguyenlieu.IconVisible = true;
-            this.btn_nguyenlieu.IconZoom = 90D;
+            this.btn_nguyenlieu.IconZoom = 85D;
             this.btn_nguyenlieu.IsTab = false;
             this.btn_nguyenlieu.Location = new System.Drawing.Point(8, 207);
             this.btn_nguyenlieu.Name = "btn_nguyenlieu";
@@ -376,7 +376,7 @@
             this.btn_douong.IconRightVisible = true;
             this.btn_douong.IconRightZoom = 0D;
             this.btn_douong.IconVisible = true;
-            this.btn_douong.IconZoom = 90D;
+            this.btn_douong.IconZoom = 85D;
             this.btn_douong.IsTab = false;
             this.btn_douong.Location = new System.Drawing.Point(8, 169);
             this.btn_douong.Name = "btn_douong";
@@ -412,7 +412,7 @@
             this.btn_hoadon.IconRightVisible = true;
             this.btn_hoadon.IconRightZoom = 0D;
             this.btn_hoadon.IconVisible = true;
-            this.btn_hoadon.IconZoom = 90D;
+            this.btn_hoadon.IconZoom = 85D;
             this.btn_hoadon.IsTab = false;
             this.btn_hoadon.Location = new System.Drawing.Point(8, 131);
             this.btn_hoadon.Name = "btn_hoadon";
@@ -448,7 +448,7 @@
             this.btn_banhang.IconRightVisible = true;
             this.btn_banhang.IconRightZoom = 0D;
             this.btn_banhang.IconVisible = true;
-            this.btn_banhang.IconZoom = 90D;
+            this.btn_banhang.IconZoom = 85D;
             this.btn_banhang.IsTab = false;
             this.btn_banhang.Location = new System.Drawing.Point(8, 95);
             this.btn_banhang.Name = "btn_banhang";
@@ -486,22 +486,22 @@
             // 
             this.tshow.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.tshow.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.tshow.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 1F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.tshow.DefaultAnimation = animation2;
             this.tshow.TimeStep = 0.01F;
             // 
             // bunifuButton1
