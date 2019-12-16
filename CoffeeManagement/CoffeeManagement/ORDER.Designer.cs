@@ -39,6 +39,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_price = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.dgv_ct = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minus = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -47,7 +48,6 @@
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tb_price = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuTextBox5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -71,8 +71,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgv_ct);
             this.panel1.Controls.Add(this.tb_price);
+            this.panel1.Controls.Add(this.dgv_ct);
             this.panel1.Controls.Add(this.bunifuButton2);
             this.panel1.Controls.Add(this.bunifuButton1);
             this.panel1.Controls.Add(this.bunifuTextBox5);
@@ -91,6 +91,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(509, 516);
             this.panel1.TabIndex = 7;
+            // 
+            // tb_price
+            // 
+            this.tb_price.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tb_price.BorderColorIdle = System.Drawing.Color.Gray;
+            this.tb_price.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tb_price.BorderThickness = 1;
+            this.tb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_price.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_price.ForeColor = System.Drawing.Color.Red;
+            this.tb_price.isPassword = false;
+            this.tb_price.Location = new System.Drawing.Point(326, 364);
+            this.tb_price.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_price.Name = "tb_price";
+            this.tb_price.Size = new System.Drawing.Size(128, 27);
+            this.tb_price.TabIndex = 65;
+            this.tb_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // dgv_ct
             // 
@@ -157,7 +174,7 @@
             this.dgv_ct.RowHeadersVisible = false;
             this.dgv_ct.RowTemplate.Height = 40;
             this.dgv_ct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ct.Size = new System.Drawing.Size(483, 301);
+            this.dgv_ct.Size = new System.Drawing.Size(483, 272);
             this.dgv_ct.TabIndex = 64;
             this.dgv_ct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_ct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ct_CellClick);
@@ -240,27 +257,6 @@
             this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.delete.Width = 40;
             // 
-            // tb_price
-            // 
-            this.tb_price.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_price.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_price.ForeColor = System.Drawing.Color.Red;
-            this.tb_price.HintForeColor = System.Drawing.Color.Empty;
-            this.tb_price.HintText = "";
-            this.tb_price.isPassword = false;
-            this.tb_price.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tb_price.LineIdleColor = System.Drawing.Color.Black;
-            this.tb_price.LineMouseHoverColor = System.Drawing.Color.Cyan;
-            this.tb_price.LineThickness = 2;
-            this.tb_price.Location = new System.Drawing.Point(325, 364);
-            this.tb_price.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_price.Name = "tb_price";
-            this.tb_price.Size = new System.Drawing.Size(128, 33);
-            this.tb_price.TabIndex = 42;
-            this.tb_price.Text = "0";
-            this.tb_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // bunifuButton2
             // 
             this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
@@ -283,10 +279,10 @@
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.Location = new System.Drawing.Point(10, 469);
             this.bunifuButton2.Name = "bunifuButton2";
-            stateProperties1.BorderColor = System.Drawing.Color.DarkRed;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             stateProperties1.BorderRadius = 35;
             stateProperties1.BorderThickness = 0;
-            stateProperties1.FillColor = System.Drawing.Color.DarkRed;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
             this.bunifuButton2.onHoverState = stateProperties1;
@@ -546,7 +542,7 @@
             this.tb_search_sp.SelectionLength = 0;
             this.tb_search_sp.SelectionStart = 0;
             this.tb_search_sp.ShortcutsEnabled = true;
-            this.tb_search_sp.Size = new System.Drawing.Size(189, 35);
+            this.tb_search_sp.Size = new System.Drawing.Size(236, 35);
             this.tb_search_sp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.tb_search_sp.TabIndex = 2;
             this.tb_search_sp.TabStop = false;
@@ -594,7 +590,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox tb_price;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox5;
@@ -619,5 +614,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien;
         private System.Windows.Forms.DataGridViewImageColumn delete;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tb_price;
     }
 }

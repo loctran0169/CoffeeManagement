@@ -219,15 +219,23 @@ namespace CoffeeManagement
                 isShow = false;
                 drawer.Width = 50;
                 drawer.Visible = false;
-                tshow.Show(drawer);                           
+                tshow.Show(drawer);
 
+
+
+                btn_user.Visible = false;
+                hide_avatar.HideSync(btn_user);
             }
             else
             {
                 isShow = true;
-                drawer.Width = 200;
+                drawer.Width = 174;
                 drawer.Visible = false;
                 tshow.ShowSync(drawer);
+
+                btn_user.Visible = false;
+                hide_avatar.ShowSync(btn_user);
+
             }
         }
 
@@ -283,11 +291,12 @@ namespace CoffeeManagement
             }
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void btn_logout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            (Application.OpenForms[0] as frmDangNhap).Show();
-            (Application.OpenForms[0] as frmDangNhap).emptyValue();
+                this.Close();
+                (Application.OpenForms[0] as frmDangNhap).Show();
+                (Application.OpenForms[0] as frmDangNhap).emptyValue();
         }
+    
     }
 }
