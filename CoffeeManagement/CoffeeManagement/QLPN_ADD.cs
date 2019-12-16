@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +30,7 @@ namespace CoffeeManagement
         private string mapn;
         private DateTime timeNow;
         DataTable dt = new DataTable();
+        bool isLap = false;
         public QLPN_ADD()
         {
             InitializeComponent();
@@ -207,7 +210,7 @@ namespace CoffeeManagement
                     timeNow = DateTime.Now;
                     if (busPX.them(new DTO.PhieuNhapDTO()
                     {
-                        MaNV1 = (Application.OpenForms[0] as frmGui).NV.MaNV1,
+                        MaNV1 = (Application.OpenForms[1] as frmGui).NV.MaNV1,
                         NgayLap1 = timeNow,
                         NgayNhap1 = date_ngayxuat.Value.Date,
                         DiaChi1 = tb_diachi.Text,
@@ -276,12 +279,12 @@ namespace CoffeeManagement
                             MessageBox.Show("Thêm thất bại");
                     }
                     else
-                        MessageBox.Show("Lập phiếu xuất thất bại");
+                        MessageBox.Show("Lập phiếu nhập thất bại");
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm phiếu xuất " + ex.Message);
+                    MessageBox.Show("Thêm phiếu nhập " + ex.Message);
                 }
             }
             else
@@ -309,7 +312,25 @@ namespace CoffeeManagement
 
         private void btn_in_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chưa in dc");
+            if (daLap)
+            {
+                DateTime date = DateTime.Now;
+                inNhapXuat inHD = new inNhapXuat(tb_price.Text, date.ToLongDateString(),"Phiếu nhập hàng",tb_name.Text,tb_diachi.Text);
+                GridControl control = new GridControl();
+                control.DataSource = (dgv_ct.DataSource as DataTable);
+                inHD.GridControl = control;
+                ReportPrintTool printTool = new ReportPrintTool(inHD);
+                printTool.ShowPreviewDialog();
+                isLap = false;
+            }
+            else
+                MessageBox.Show("Chưa lập phiếu nhập");
+        }
+
+        private void tb_soluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

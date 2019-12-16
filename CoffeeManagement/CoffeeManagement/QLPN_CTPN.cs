@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -142,6 +144,7 @@ namespace CoffeeManagement
             {
                 cancel = false;
                 btn_confirm.Visible = true;
+                btn_in.Visible = false;
                 btnEdit.Image = Properties.Resources.cancel;
                 showEdit.ShowSync(panelEdit);
                 enableAll();
@@ -151,6 +154,7 @@ namespace CoffeeManagement
                 showEdit.Hide(panelEdit);
                 cancel = true;
                 btn_confirm.Visible = false;
+                btn_in.Visible = true;
                 btnEdit.Image = Properties.Resources.pencil_tron;
                 infoToView();
                 dgv_ct.DataSource = dt;
@@ -306,6 +310,23 @@ namespace CoffeeManagement
                 flagThem = true;
                 cbb.Enabled = true;
             }
+        }
+
+        private void btn_in_Click(object sender, EventArgs e)
+        {
+            DateTime date = DateTime.Now;
+            inNhapXuat inHD = new inNhapXuat(tb_price.Text, date.ToLongDateString(), "Phiếu nhập hàng", tb_name.Text, tb_diachi.Text);
+            GridControl control = new GridControl();
+            control.DataSource = (dgv_ct.DataSource as DataTable);
+            inHD.GridControl = control;
+            ReportPrintTool printTool = new ReportPrintTool(inHD);
+            printTool.ShowPreviewDialog();
+        }
+
+        private void tb_soluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

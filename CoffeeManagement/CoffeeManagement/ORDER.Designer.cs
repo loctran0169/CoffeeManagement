@@ -432,6 +432,7 @@
             this.tb_nhan.TabIndex = 34;
             this.tb_nhan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_nhan.OnValueChanged += new System.EventHandler(this.tb_nhan_OnValueChanged);
+            this.tb_nhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_nhan_KeyPress);
             // 
             // tb_tienthoi
             // 
@@ -440,6 +441,7 @@
             this.tb_tienthoi.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.tb_tienthoi.BorderThickness = 1;
             this.tb_tienthoi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_tienthoi.Enabled = false;
             this.tb_tienthoi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tb_tienthoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tb_tienthoi.isPassword = false;

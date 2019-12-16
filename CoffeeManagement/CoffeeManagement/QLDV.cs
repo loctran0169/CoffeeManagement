@@ -53,7 +53,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0],new QLDV_ADD("","Thêm"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1],new QLDV_ADD("","Thêm"));
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -66,9 +66,7 @@ namespace CoffeeManagement
             this.Invoke(new MethodInvoker(delegate
             {
                 dt = bus.SelectByKeyWordDV(tb_name.Text);
-                if (dt.Rows.Count > 0)
-                    dgv_ct.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                else
+                if (dt.Rows.Count <= 0)
                     dt.Rows.Clear();
                 dgv_ct.DataSource = dt;
             }));
@@ -101,8 +99,13 @@ namespace CoffeeManagement
             }
             else
             {
-                new transparentBg1(Application.OpenForms[0],new QLDV_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
+                new transparentBg1(Application.OpenForms[1],new QLDV_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
             }
+        }
+
+        private void tb_name_TextChange(object sender, EventArgs e)
+        {
+
         }
     }
 }

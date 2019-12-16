@@ -177,6 +177,7 @@ namespace CoffeeManagement
 
         private void btn_back_SP_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Application.OpenForms.Count.ToString());
             this.Close();
         }
 
@@ -211,6 +212,12 @@ namespace CoffeeManagement
             {
                 fileName = open.FileName;
             }
+        }
+
+        private void tb_price_SP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

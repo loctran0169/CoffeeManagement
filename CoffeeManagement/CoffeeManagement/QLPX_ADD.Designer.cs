@@ -520,6 +520,7 @@
             this.tb_soluong.TextMarginLeft = 5;
             this.tb_soluong.TextPlaceholder = "Số lượng";
             this.tb_soluong.UseSystemPasswordChar = false;
+            this.tb_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_soluong_KeyPress);
             // 
             // bunifuCustomLabel4
             // 

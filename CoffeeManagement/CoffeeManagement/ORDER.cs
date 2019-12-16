@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,8 @@ namespace CoffeeManagement
         DateTime timeNow;
         float tongtien;
         string mahd;
+
+        public bool isPaid;
         public ORDER()
         {
             InitializeComponent();
@@ -179,6 +183,7 @@ namespace CoffeeManagement
                 return;
             }
         }
+
         public void tongTien()
         {
             float sum = 0;
@@ -196,6 +201,11 @@ namespace CoffeeManagement
 
         private void bunifuButton2_Click_1(object sender, EventArgs e)
         {
+            if (isPaid == true)
+            {
+                MessageBox.Show("Chưa in hóa đơn");
+                return;
+            }
             if ((dgv_ct.DataSource as DataTable) == null || (dgv_ct.DataSource as DataTable).Rows.Count == 0)
             {
                 MessageBox.Show("Chưa chọn sản phẩm");
@@ -256,6 +266,7 @@ namespace CoffeeManagement
 
                             if (busCT.updateData(temp))
                             {
+                                isPaid = true;
                                 MessageBox.Show("Lập hóa đơn thành công");
                             }
                             else
@@ -296,9 +307,29 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
-
+            if (isPaid)
+            {
+                DateTime date = DateTime.Now;
+                inHoaDon inHD = new inHoaDon(tb_price.Text,
+                    date.ToLongDateString(),
+                    mahd,
+                    tb_name.Text);
+                GridControl control = new GridControl();
+                control.DataSource = (dgv_ct.DataSource as DataTable);
+                inHD.GridControl = control;
+                ReportPrintTool printTool = new ReportPrintTool(inHD);
+                printTool.ShowPreviewDialog();
+                (dgv_ct.DataSource as DataTable).Rows.Clear();
+                isPaid = false;
+            }
+            else
+                MessageBox.Show("Chưa lập hóa đơn");
         }
 
-      
+        private void tb_nhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

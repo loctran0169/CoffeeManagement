@@ -34,19 +34,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLMENU));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.dataGridSP = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_search_menu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_search_menu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSP)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridSP
             // 
             this.dataGridSP.AllowCustomTheming = false;
+            this.dataGridSP.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -71,8 +73,9 @@
             this.MaSP,
             this.Column1,
             this.tendv,
+            this.Column3,
             this.Column2,
-            this.Column3});
+            this.delete});
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -112,41 +115,6 @@
             this.dataGridSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dataGridSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellClick);
             this.dataGridSP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSP_CellDoubleClick);
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "masp";
-            this.MaSP.HeaderText = "Mã đồ uống";
-            this.MaSP.Name = "MaSP";
-            this.MaSP.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tensp";
-            this.Column1.HeaderText = "Tên đồ uống";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // tendv
-            // 
-            this.tendv.DataPropertyName = "tendv";
-            this.tendv.HeaderText = "Đơn vị tính";
-            this.tendv.Name = "tendv";
-            this.tendv.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "dongia";
-            this.Column2.HeaderText = "Giá bán";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "hinhanh";
-            this.Column3.HeaderText = "Hình ảnh";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // bunifuButton1
             // 
@@ -228,6 +196,49 @@
             this.btn_search_menu.UseSystemPasswordChar = false;
             this.btn_search_menu.OnIconRightClick += new System.EventHandler(this.btn_search_menu_OnIconRightClick);
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "masp";
+            this.MaSP.HeaderText = "Mã đồ uống";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tensp";
+            this.Column1.HeaderText = "Tên đồ uống";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // tendv
+            // 
+            this.tendv.DataPropertyName = "tendv";
+            this.tendv.HeaderText = "Đơn vị tính";
+            this.tendv.Name = "tendv";
+            this.tendv.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "hinhanh";
+            this.Column3.HeaderText = "Hình ảnh";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "dongia";
+            this.Column2.HeaderText = "Giá bán";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "";
+            this.delete.Image = global::CoffeeManagement.Properties.Resources.remove;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // QLMENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +265,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tendv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }

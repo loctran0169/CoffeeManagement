@@ -201,7 +201,14 @@ namespace CoffeeManagement
         }
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Application.OpenForms.Count.ToString());
             this.Close();
+        }
+
+        private void tb_sdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

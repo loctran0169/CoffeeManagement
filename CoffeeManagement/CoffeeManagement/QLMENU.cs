@@ -62,7 +62,31 @@ namespace CoffeeManagement
 
         private void dataGridSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            new transparentBg1(Application.OpenForms[0], new QLMENU_ADD((dataGridSP.DataSource as DataTable).Rows[e.RowIndex][0].ToString(), "Chi Tiết"));
+            if (e.ColumnIndex == dataGridSP.Columns["delete"].Index)
+            {
+                DialogResult dialogResult = MessageBox.Show("Sản phẩm này sẽ biến mất", "Xóa sản phẩm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bool kq = bus.xoa(new SanPhamDTO() { MaSP1 = (dataGridSP.DataSource as DataTable).Rows[e.RowIndex][e.ColumnIndex].ToString() });
+                    if (kq)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        (dataGridSP.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sản phẩm đang được sử dụng không thể xóa");
+                        return;
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+
+                return;
+            }
+            new transparentBg1(Application.OpenForms[1], new QLMENU_ADD((dataGridSP.DataSource as DataTable).Rows[e.RowIndex][0].ToString(), "Chi Tiết"));
         }
     }
 }

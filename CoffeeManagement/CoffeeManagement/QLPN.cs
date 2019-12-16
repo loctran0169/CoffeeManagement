@@ -39,12 +39,12 @@ namespace CoffeeManagement
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLPN_CTPN(dt.Rows[e.RowIndex][0].ToString()));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1], new QLPN_CTPN(dt.Rows[e.RowIndex][0].ToString()));
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLPN_ADD());
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1], new QLPN_ADD());
         }
 
         private void bunifuTextBox1_OnIconRightClick(object sender, EventArgs e)

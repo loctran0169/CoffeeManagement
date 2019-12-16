@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +53,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new transparentBg1(Application.OpenForms[0], new QLK_ADD("", "Thêm"));
+            new transparentBg1(Application.OpenForms[1], new QLK_ADD("", "Thêm"));
         }
 
         private void dgv_ct_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -78,13 +80,28 @@ namespace CoffeeManagement
             }
             else
             {
-                new transparentBg1(Application.OpenForms[0], new QLK_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(), "Chi Tiết"));
+                new transparentBg1(Application.OpenForms[1], new QLK_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(), "Chi Tiết"));
             }
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chưa in được");
+            if ((dgv_ct.DataSource as DataTable).Rows.Count > 0)
+            {
+                DateTime date = DateTime.Now;
+                inBaoCao inHD = new inBaoCao("BÁO CÁO KHO",
+                    (Application.OpenForms[1] as frmGui).NV.TenNV1,
+                    date,
+                    "");
+                GridControl control = new GridControl();
+                control.DataSource = (dgv_ct.DataSource as DataTable);
+                inHD.GridControl = control;
+                ReportPrintTool printTool = new ReportPrintTool(inHD);
+                printTool.ShowPreviewDialog();
+
+            }
+            else
+                MessageBox.Show("Chưa có thông tin");
         }
     }
 }

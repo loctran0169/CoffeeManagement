@@ -52,13 +52,13 @@
             this.btn_action = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_exit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -111,7 +111,6 @@
             this.tb_name.TextMarginLeft = 5;
             this.tb_name.TextPlaceholder = "Họ và tên";
             this.tb_name.UseSystemPasswordChar = false;
-         
             // 
             // bunifuCustomLabel2
             // 
@@ -163,6 +162,7 @@
             this.tb_sdt.TextMarginLeft = 5;
             this.tb_sdt.TextPlaceholder = "Phone number";
             this.tb_sdt.UseSystemPasswordChar = false;
+            this.tb_sdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_sdt_KeyPress);
             // 
             // bunifuCustomLabel3
             // 
@@ -467,16 +467,6 @@
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -500,6 +490,16 @@
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel10.TabIndex = 51;
             this.bunifuCustomLabel10.Text = "Nhân viên";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // QLNV_NV
             // 
@@ -533,8 +533,8 @@
             this.Text = "NV";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }

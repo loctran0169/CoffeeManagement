@@ -24,7 +24,7 @@ namespace CoffeeManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            new CoffeeManagement.transparentBg1(this,new QLNV_NV("","Thêm"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1],new QLNV_NV("","Thêm"));
         }
 
         private void QLNV_Load(object sender, EventArgs e)
@@ -61,12 +61,34 @@ namespace CoffeeManagement
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new CoffeeManagement.transparentBg1(Application.OpenForms[0], new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
+            new CoffeeManagement.transparentBg1(Application.OpenForms[1], new QLNV_NV(dt.Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
         }
 
-        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void bunifuDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == bunifuDataGridView1.Columns["delete"].Index)
+            {
+                DialogResult dialogResult = MessageBox.Show("Nhân viên này sẽ biến mất", "Xóa nhân viên", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bool kq = bus.xoa(new NhanVienDTO() { MaNV1 = (bunifuDataGridView1.DataSource as DataTable).Rows[e.RowIndex][e.ColumnIndex].ToString() });
+                    if (kq)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        (bunifuDataGridView1.DataSource as DataTable).Rows.RemoveAt(e.RowIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhân viên đang được sử dụng không thể xóa");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
 
+                return;
+            }
         }
     }
 }

@@ -99,6 +99,7 @@
             this.tb_gianhap.TextMarginLeft = 5;
             this.tb_gianhap.TextPlaceholder = "Giá nhập";
             this.tb_gianhap.UseSystemPasswordChar = false;
+            this.tb_gianhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_gianhap_KeyPress);
             // 
             // bunifuCustomLabel3
             // 
@@ -215,6 +216,7 @@
             this.tb_giaban.TextMarginLeft = 5;
             this.tb_giaban.TextPlaceholder = "Giá bán";
             this.tb_giaban.UseSystemPasswordChar = false;
+            this.tb_giaban.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_giaban_KeyPress);
             // 
             // bunifuCustomLabel4
             // 
@@ -268,6 +270,7 @@
             this.tb_soluong.TextMarginLeft = 5;
             this.tb_soluong.TextPlaceholder = "Số lượng tồn";
             this.tb_soluong.UseSystemPasswordChar = false;
+            this.tb_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_soluong_KeyPress);
             // 
             // bunifuCustomLabel5
             // 

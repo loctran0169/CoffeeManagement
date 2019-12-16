@@ -198,6 +198,7 @@ namespace CoffeeManagement
                 frm.Activate();
             }
         }
+
         public void changeColor(Bunifu.Framework.UI.BunifuFlatButton tb)
         {
             foreach(Control i in drawer.Controls)
@@ -293,10 +294,28 @@ namespace CoffeeManagement
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-                this.Close();
-                (Application.OpenForms[0] as frmDangNhap).Show();
-                (Application.OpenForms[0] as frmDangNhap).emptyValue();
+            Application.Restart();
         }
-    
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            pnl_leftbar.Height = bunifuFlatButton1.Height;
+            pnl_leftbar.Top = bunifuFlatButton1.Top;
+            changeColor(bunifuFlatButton1);
+            Form frm = kiemtraform(typeof(QLBC));
+            if (frm == null)
+            {
+                QLBC forms = new QLBC();
+                forms.TopLevel = false;
+                content.Controls.Clear();
+                content.Controls.Add(forms);
+                forms.Dock = DockStyle.Fill;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }

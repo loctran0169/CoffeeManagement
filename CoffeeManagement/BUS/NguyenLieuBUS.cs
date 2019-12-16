@@ -59,5 +59,10 @@ namespace BUS
         {
             return bdal.loadNL(s);
         }
+
+        public bool them(BaoCaoDTO baoCaoDTO)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

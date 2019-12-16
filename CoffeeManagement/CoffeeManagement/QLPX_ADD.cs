@@ -1,4 +1,6 @@
 ﻿using BUS;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -308,7 +310,25 @@ namespace CoffeeManagement
 
         private void btn_in_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chưa in dc");
+            if (daLap)
+            {
+                DateTime date = DateTime.Now;
+                inNhapXuat inHD = new inNhapXuat(tb_price.Text, date.ToLongDateString(), "Phiếu xuất hàng", tb_name.Text, tb_diachi.Text);
+                GridControl control = new GridControl();
+                control.DataSource = (dgv_ct.DataSource as DataTable);
+                inHD.GridControl = control;
+                ReportPrintTool printTool = new ReportPrintTool(inHD);
+                printTool.ShowPreviewDialog();
+
+            }
+            else
+                MessageBox.Show("Chưa lập phiếu nhập");
+        }
+
+        private void tb_soluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

@@ -201,11 +201,11 @@ namespace DAL
             DataTable k = new DataTable();
             string sql = "select distinct a.mahd,a.tennv,a.ngaylap,a.tongtien " +
                          "from (select hd.mahd, nv.tennv, hd.ngaylap, hd.tongtien from hoadon hd, nhanvien nv " +
-                         "where hd.manv = nv.manv and hd.ngaylap <= @right) a " +
+                         "where hd.manv = nv.manv and hd.ngaylap <= date(@right)) a " +
                          "Inner Join " +
                          "(select hd.mahd, nv.tennv, hd.ngaylap, hd.tongtien " +
                          "from hoadon hd, nhanvien nv " +
-                         "where hd.manv = nv.manv and hd.ngaylap >= @left) b " +
+                         "where hd.manv = nv.manv and hd.ngaylap >= (@left)) b " +
                          "where a.mahd = b.mahd ";
             MySqlConnection kn = new MySqlConnection(connectionString);
             try
