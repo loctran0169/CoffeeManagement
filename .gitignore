@@ -55,6 +55,7 @@ artifacts/
 *.pdb
 *.pgc
 *.pgd
+*.dll
 *.rsp
 *.sbr
 *.tlb
