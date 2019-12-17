@@ -244,6 +244,7 @@
             this.tinhtrang.HeaderText = "Tình Trạng";
             this.tinhtrang.Name = "tinhtrang";
             this.tinhtrang.ReadOnly = true;
+            this.tinhtrang.Visible = false;
             // 
             // QLPX
             // 
