@@ -1,0 +1,11 @@
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\bin\Debug\DTO.dll
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\bin\Debug\DTO.pdb
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\obj\Debug\DTO.dll
+D:\Winforms c#\CoffeeManagement\CoffeeManagement\DTO\obj\Debug\DTO.pdb
+D:\Lộc Pro\backup1\backup1\CoffeeManagement\DTO\bin\Debug\DTO.dll
+D:\Lộc Pro\backup1\backup1\CoffeeManagement\DTO\bin\Debug\DTO.pdb
+D:\Lộc Pro\backup1\backup1\CoffeeManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Lộc Pro\backup1\backup1\CoffeeManagement\DTO\obj\Debug\DTO.dll
+D:\Lộc Pro\backup1\backup1\CoffeeManagement\DTO\obj\Debug\DTO.pdb

@@ -1,0 +1,6 @@
+﻿Máy phải cài mysql.
+Tiến hành cài đặt file mysql.
+
+Tài khoản phần mềm
+tk: admin
+mk: admin
