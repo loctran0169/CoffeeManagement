@@ -1,6 +1,7 @@
 ﻿Máy phải cài mysql.
 Tiến hành cài đặt file mysql.
 
+Mở ứng dụng đầu tiên thoát publish hiện ra
 Tài khoản phần mềm
 tk: admin
 mk: admin
