@@ -87,8 +87,9 @@ namespace CoffeeManagement
             {
                 dt.Rows.Clear();
                 (dgv_ct.DataSource as DataTable).Rows.Clear();
+                tongTien();
             }
-            tongTien();
+            
         }
     }
 }

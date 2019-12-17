@@ -66,7 +66,9 @@ namespace CoffeeManagement
             this.Invoke(new MethodInvoker(delegate
             {
                 dt = bus.SelectByKeyWordDV(tb_name.Text);
-                if (dt.Rows.Count <= 0)
+                if (dt.Rows.Count > 0)
+                    dgv_ct.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                else
                     dt.Rows.Clear();
                 dgv_ct.DataSource = dt;
             }));
@@ -101,11 +103,6 @@ namespace CoffeeManagement
             {
                 new transparentBg1(Application.OpenForms[1],new QLDV_ADD((dgv_ct.DataSource as DataTable).Rows[e.RowIndex][0].ToString(),"Chi Tiết"));
             }
-        }
-
-        private void tb_name_TextChange(object sender, EventArgs e)
-        {
-
         }
     }
 }

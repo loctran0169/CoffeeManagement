@@ -201,7 +201,6 @@ namespace CoffeeManagement
         }
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Application.OpenForms.Count.ToString());
             this.Close();
         }
 

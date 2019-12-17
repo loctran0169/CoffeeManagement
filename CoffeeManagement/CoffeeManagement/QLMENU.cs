@@ -19,6 +19,7 @@ namespace CoffeeManagement
         public QLMENU()
         {
             InitializeComponent();
+            dataGridSP.RowTemplate.Height = 100;
         }
 
         public void loadData()

@@ -294,7 +294,9 @@ namespace CoffeeManagement
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+                this.Close();
+                (Application.OpenForms[0] as frmDangNhap).Show();
+                (Application.OpenForms[0] as frmDangNhap).emptyValue();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)

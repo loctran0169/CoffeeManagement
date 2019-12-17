@@ -32,7 +32,7 @@ namespace CoffeeManagement
 
         private void date_month_onValueChanged(object sender, EventArgs e)
         {
-            if ((dgv_ct.DataSource as DataTable)!=null&&(dgv_ct.DataSource as DataTable).Rows.Count > 0)
+            if ((dgv_ct.DataSource as DataTable) != null && (dgv_ct.DataSource as DataTable).Rows.Count > 0)
             {
                 dt.Rows.Clear();
                 (dgv_ct.DataSource as DataTable).Rows.Clear();

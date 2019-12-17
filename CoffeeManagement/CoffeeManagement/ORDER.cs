@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,7 +65,8 @@ namespace CoffeeManagement
                     int i = 0;
                     foreach (DataRow row in dtSP.Rows)
                     {
-                        Image image = Image.FromFile(row[3].ToString());
+                        
+                        Image image = byteArrayToImage(row[3] as Byte[]);
                         imageList.Images.Add(image);
                         ListViewItem item = new ListViewItem();
                         item.ForeColor = Color.Blue;
@@ -330,6 +332,12 @@ namespace CoffeeManagement
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }

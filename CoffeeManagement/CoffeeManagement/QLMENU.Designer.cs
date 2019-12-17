@@ -39,7 +39,7 @@
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhanh = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSP)).BeginInit();
@@ -73,7 +73,7 @@
             this.MaSP,
             this.Column1,
             this.tendv,
-            this.Column3,
+            this.hinhanh,
             this.Column2,
             this.delete});
             this.dataGridSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -108,7 +108,7 @@
             this.dataGridSP.Location = new System.Drawing.Point(12, 96);
             this.dataGridSP.Name = "dataGridSP";
             this.dataGridSP.RowHeadersVisible = false;
-            this.dataGridSP.RowTemplate.Height = 40;
+            this.dataGridSP.RowTemplate.Height = 100;
             this.dataGridSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridSP.Size = new System.Drawing.Size(831, 408);
             this.dataGridSP.TabIndex = 10;
@@ -217,12 +217,15 @@
             this.tendv.Name = "tendv";
             this.tendv.ReadOnly = true;
             // 
-            // Column3
+            // hinhanh
             // 
-            this.Column3.DataPropertyName = "hinhanh";
-            this.Column3.HeaderText = "Hình ảnh";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.hinhanh.DataPropertyName = "hinhanh";
+            this.hinhanh.HeaderText = "Hình ảnh";
+            this.hinhanh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.hinhanh.Name = "hinhanh";
+            this.hinhanh.ReadOnly = true;
+            this.hinhanh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hinhanh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Column2
             // 
@@ -265,7 +268,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tendv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewImageColumn hinhanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn delete;
     }

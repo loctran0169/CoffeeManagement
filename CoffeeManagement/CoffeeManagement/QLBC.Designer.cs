@@ -38,16 +38,16 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.dgv_ct = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.mabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_doanhthu = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_kho = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tb_search = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.mabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,30 +117,6 @@
             this.dgv_ct.TabIndex = 34;
             this.dgv_ct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // mabc
-            // 
-            this.mabc.DataPropertyName = "mabc";
-            this.mabc.HeaderText = "Mã báo cáo";
-            this.mabc.Name = "mabc";
-            // 
-            // tennv
-            // 
-            this.tennv.DataPropertyName = "tennv";
-            this.tennv.HeaderText = "Tên nhân viên";
-            this.tennv.Name = "tennv";
-            // 
-            // loai
-            // 
-            this.loai.DataPropertyName = "loai";
-            this.loai.HeaderText = "Loại";
-            this.loai.Name = "loai";
-            // 
-            // thoigian
-            // 
-            this.thoigian.DataPropertyName = "thoigian";
-            this.thoigian.HeaderText = "Thời gian";
-            this.thoigian.Name = "thoigian";
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
@@ -201,7 +177,7 @@
             this.bunifuButton3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
-            this.bunifuButton3.Location = new System.Drawing.Point(112, 74);
+            this.bunifuButton3.Location = new System.Drawing.Point(112, 67);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 1;
@@ -234,7 +210,7 @@
             this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(12, 74);
+            this.bunifuButton2.Location = new System.Drawing.Point(12, 67);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties3.BorderRadius = 1;
@@ -327,6 +303,30 @@
             this.tb_search.TextPlaceholder = "Nhập mã phiếu báo cáo";
             this.tb_search.UseSystemPasswordChar = false;
             this.tb_search.OnIconRightClick += new System.EventHandler(this.tb_search_OnIconRightClick);
+            // 
+            // mabc
+            // 
+            this.mabc.DataPropertyName = "mabc";
+            this.mabc.HeaderText = "Mã báo cáo";
+            this.mabc.Name = "mabc";
+            // 
+            // tennv
+            // 
+            this.tennv.DataPropertyName = "tennv";
+            this.tennv.HeaderText = "Tên nhân viên";
+            this.tennv.Name = "tennv";
+            // 
+            // loai
+            // 
+            this.loai.DataPropertyName = "loai";
+            this.loai.HeaderText = "Loại";
+            this.loai.Name = "loai";
+            // 
+            // thoigian
+            // 
+            this.thoigian.DataPropertyName = "thoigian";
+            this.thoigian.HeaderText = "Thời gian";
+            this.thoigian.Name = "thoigian";
             // 
             // QLBC
             // 

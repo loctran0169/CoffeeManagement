@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,8 @@ namespace DAL
 
         public bool them(SanPhamDTO bn)
         {
-
+            FileStream fs;
+            BinaryReader br;
             string query = string.Empty;
             query += "INSERT INTO sanpham(TenSP,HinhAnh,MaDV,DonGia,ghichu) VALUES (@TenSP,@HinhAnh,@MaDV,@DonGia,@ghichu)";
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -37,7 +39,13 @@ namespace DAL
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@MaSP", bn.MaSP1);
                     cmd.Parameters.AddWithValue("@TenSP", bn.TenSP1);
-                    cmd.Parameters.AddWithValue("@HinhAnh", bn.HinhAnh1);
+                    byte[] ImageData;
+                    fs = new FileStream(bn.HinhAnh1, FileMode.Open, FileAccess.Read);
+                    br = new BinaryReader(fs);
+                    ImageData = br.ReadBytes((int)fs.Length);
+                    br.Close();
+                    fs.Close();
+                    cmd.Parameters.Add("@hinhAnh", MySqlDbType.MediumBlob).Value = ImageData;
                     cmd.Parameters.AddWithValue("@MaDV", bn.MaDV1);
                     cmd.Parameters.AddWithValue("@DonGia", bn.DonGia1);
                     cmd.Parameters.AddWithValue("@ghichu", bn.GhiChu1);
@@ -61,8 +69,13 @@ namespace DAL
 
         public bool sua(SanPhamDTO bn)
         {
+            FileStream fs;
+            BinaryReader br;
             string query = string.Empty;
-            query += "UPDATE sanpham SET masp = @masp,tensp=@tensp, hinhanh = @hinhanh, madv = @madv,dongia = @dongia, ghichu=@ghichu  WHERE masp = @masp";
+            if(bn.HinhAnh1!="")
+                query += "UPDATE sanpham SET masp = @masp,tensp=@tensp, hinhanh = @hinhanh, madv = @madv,dongia = @dongia, ghichu=@ghichu  WHERE masp = @masp";
+            else
+                query += "UPDATE sanpham SET masp = @masp,tensp=@tensp, madv = @madv,dongia = @dongia, ghichu=@ghichu  WHERE masp = @masp";
 
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -74,7 +87,16 @@ namespace DAL
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@masp", bn.MaSP1);
                     cmd.Parameters.AddWithValue("@tensp", bn.TenSP1);
-                    cmd.Parameters.AddWithValue("@hinhanh", bn.HinhAnh1);
+                    if (bn.HinhAnh1 != "")
+                    {
+                        byte[] ImageData;
+                        fs = new FileStream(bn.HinhAnh1, FileMode.Open, FileAccess.Read);
+                        br = new BinaryReader(fs);
+                        ImageData = br.ReadBytes((int)fs.Length);
+                        br.Close();
+                        fs.Close();
+                        cmd.Parameters.Add("@hinhAnh", MySqlDbType.MediumBlob).Value = ImageData;
+                    }
                     cmd.Parameters.AddWithValue("@madv", bn.MaDV1);
                     cmd.Parameters.AddWithValue("@dongia", bn.DonGia1);
                     cmd.Parameters.AddWithValue("@ghichu", bn.GhiChu1);

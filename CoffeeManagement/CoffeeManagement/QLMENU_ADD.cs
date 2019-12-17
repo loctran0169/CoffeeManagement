@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,9 +58,16 @@ namespace CoffeeManagement
                 cb_unit_SP.SelectedIndex = 2;
                 tb_price_SP.Text = dt.Rows[0][5].ToString();
                 tb_note_SP.Text = dt.Rows[0][6].ToString();
+                btn_img.BackgroundImage=(byteArrayToImage(dt.Rows[0][3] as Byte[]));
             }
             else
                 MessageBox.Show("không có");
+        }
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
 
         private bool checkInfor()
@@ -81,7 +89,7 @@ namespace CoffeeManagement
                 MessageBox.Show("Vui lòng nhập đơn vị của sản phẩm");
                 return false;
             }
-           else if(fileName=="")
+           else if(fileName==""&&tag=="Thêm")
             {
                 MessageBox.Show("Vui lòng chọn ảnh sản phẩm");
                 return false;
@@ -177,7 +185,6 @@ namespace CoffeeManagement
 
         private void btn_back_SP_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Application.OpenForms.Count.ToString());
             this.Close();
         }
 
@@ -204,20 +211,22 @@ namespace CoffeeManagement
             }
         }
 
-        private void btn_img_Click(object sender, EventArgs e)
+        private void tb_price_SP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             DialogResult result = open.ShowDialog();
             if (result == DialogResult.OK)
             {
                 fileName = open.FileName;
+                Image image = Image.FromFile(fileName);
+                btn_img.BackgroundImage = (image);
             }
-        }
-
-        private void tb_price_SP_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-                e.Handled = true;
         }
     }
 }

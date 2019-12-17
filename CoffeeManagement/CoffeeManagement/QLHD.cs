@@ -53,7 +53,7 @@ namespace CoffeeManagement
 
         private void dataLeft_onValueChanged(object sender, EventArgs e)
         {
-                this.Invoke(new MethodInvoker(delegate
+            this.Invoke(new MethodInvoker(delegate
             {
                 dt = bus.loadToDataTable(dataLeft.Value.Date, dateRight.Value.Date);
                 if (dt.Rows.Count > 0)
@@ -89,11 +89,6 @@ namespace CoffeeManagement
         }
 
         private void bunifuTextBox1_TextChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
